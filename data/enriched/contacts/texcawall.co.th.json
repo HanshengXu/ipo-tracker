@@ -1,0 +1,18 @@
+{
+ "domain": "texcawall.co.th",
+ "company_url": "http://www.texcawall.co.th",
+ "pages_read": [
+  "https://texcawall.co.th/",
+  "https://texcawall.co.th/contact-us-th/",
+  "https://texcawall.co.th/contact-us/",
+  "https://texcawall.co.th/contact-us/",
+  "https://texcawall.co.th/contact-us/"
+ ],
+ "emails": [
+  {
+   "email": "sales@texcawall.co.th",
+   "source_url": "https://texcawall.co.th/"
+  }
+ ],
+ "collected_at": "2026-10-19T03:01:51.505241+00:00"
+}

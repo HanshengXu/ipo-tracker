@@ -1,0 +1,19 @@
+{
+ "domain": "voltage-x.com",
+ "company_url": "https://voltage-x.com",
+ "pages_read": [
+  "https://voltage-x.com/en/",
+  "https://voltage-x.com/en/contact-us/",
+  "https://voltage-x.com/en/contact-us/",
+  "https://voltage-x.com/en/",
+  "https://voltage-x.com/en/contact-us/",
+  "https://voltage-x.com/en/"
+ ],
+ "emails": [
+  {
+   "email": "info@voltage-x.com",
+   "source_url": "https://voltage-x.com/en/"
+  }
+ ],
+ "collected_at": "2026-10-19T03:02:44.411469+00:00"
+}

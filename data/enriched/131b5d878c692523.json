@@ -1,0 +1,26 @@
+{
+ "record_id": "XLON|Liberty Minerals plc",
+ "company_name": "Liberty Minerals plc",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:45.076914+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Metals & Mining",
+   "quote": "Liberty Minerals is a mineral exploration company focused on tungsten, with interests in antimony, molybdenum copper, silver and zinc within Arizona and Idaho, USA.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals"
+  },
+  "business_description": {
+   "value": "Liberty Minerals is a mineral exploration company focused on tungsten, with interests in antimony, molybdenum, copper, silver and zinc in Arizona and Idaho, USA. On Admission it will hold the Boriana and Buckhorn projects, with Boriana as its main focus.",
+   "quote": "Liberty Minerals is a mineral exploration company focused on tungsten, with interests in antimony, molybdenum copper, silver and zinc within Arizona and Idaho, USA.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

@@ -1,0 +1,23 @@
+{
+ "domain": "thearchitects.co.th",
+ "company_url": "https://www.thearchitects.co.th/",
+ "pages_read": [
+  "https://www.thearchitects.co.th/th/index",
+  "https://www.thearchitects.co.th/th/contact",
+  "https://www.thearchitects.co.th/th/contact",
+  "https://www.thearchitects.co.th/th/ir-contact",
+  "https://www.thearchitects.co.th/contact",
+  "https://www.thearchitects.co.th/error-404.html?aspxerrorpath=/contact-us"
+ ],
+ "emails": [
+  {
+   "email": "contact@thearchitects.co.th",
+   "source_url": "https://www.thearchitects.co.th/th/index"
+  },
+  {
+   "email": "ir@thearchitects.co.th",
+   "source_url": "https://www.thearchitects.co.th/th/index"
+  }
+ ],
+ "collected_at": "2026-10-19T03:02:14.567827+00:00"
+}

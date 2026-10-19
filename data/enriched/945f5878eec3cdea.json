@@ -1,0 +1,36 @@
+{
+ "record_id": "XSES|Metasurface Technologies Holdings Limited",
+ "company_name": "Metasurface Technologies Holdings Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:23.872103+00:00",
+ "sources": [
+  {
+   "label": "offer document",
+   "url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Industrials",
+   "quote": "Our customer base primarily comprises reputable international companies in the semiconductor, aerospace, and data storage industries.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf"
+  },
+  "business_description": {
+   "value": "The company provides precision component engineering services, including precision machining and precision welding, mainly to customers in the semiconductor industry, as well as aerospace and data storage customers.",
+   "quote": "The Group sells parts that undergo the precision machining process which includes turning, milling, grinding and drilling, etc.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf"
+  },
+  "ceo_name": {
+   "value": "Dato’ Sri Chua Chwee Lee",
+   "quote": "BOARD OF DIRECTORS : Dato’ Sri Chua Chwee Lee (Founder, Executive Director and Chief Executive Officer)",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf"
+  },
+  "cfo_name": {
+   "value": "Hou Jing",
+   "quote": "is of the opinion that Ms. Hou Jing has the necessary expertise and experience to discharge her duties as our Group CFO.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

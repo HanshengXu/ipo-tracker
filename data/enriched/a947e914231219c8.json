@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|8058",
+ "company_name": "Nytex Composites Co., Ltd.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:44.054156+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Industrials",
+   "quote": "Main business: 依客戶之產品設計及功能需求，提供高性能複合材料解決方案",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company provides high-performance composite material solutions tailored to customers' product designs and functional requirements. Its listed industry classification is other electronics.",
+   "quote": "Main business: 依客戶之產品設計及功能需求，提供高性能複合材料解決方案",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

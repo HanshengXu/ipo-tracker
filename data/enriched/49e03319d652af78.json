@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|TEBP",
+ "company_name": "THAI EASTERN BIO POWER PUBLIC COMPANY LIMITED",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:27.441750+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Energy",
+   "quote": "The Company operates in 3 main businesses1. Organic Waste Management (\"OWM\") service.2. producing and selling biogas.3. selling electricity generated from biogas.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  },
+  "business_description": {
+   "value": "The company provides organic waste management services, produces and sells biogas, and sells electricity generated from biogas.",
+   "quote": "The Company operates in 3 main businesses1. Organic Waste Management (\"OWM\") service.2. producing and selling biogas.3. selling electricity generated from biogas.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

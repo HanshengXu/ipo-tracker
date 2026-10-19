@@ -1,0 +1,23 @@
+{
+ "domain": "embestor.com",
+ "company_url": "http://www.embestor.com",
+ "pages_read": [
+  "http://www.embestor.com/",
+  "http://www.embestor.com/contact/",
+  "http://www.embestor.com/inv_Investor_Conference/",
+  "http://www.embestor.com/Investor-list/",
+  "http://www.embestor.com/contact",
+  "http://www.embestor.com/contact-us"
+ ],
+ "emails": [
+  {
+   "email": "hr@embestor.com",
+   "source_url": "http://www.embestor.com/contact/"
+  },
+  {
+   "email": "ir@embestor.com",
+   "source_url": "http://www.embestor.com/contact/"
+  }
+ ],
+ "collected_at": "2026-10-19T03:03:57.837872+00:00"
+}

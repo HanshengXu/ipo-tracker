@@ -1,0 +1,5 @@
+# Local-only enrichment tools (tools/extract.py, tools/contacts.py).
+# Never needed by the cron: their output is committed to data/enriched/.
+-r requirements.txt
+anthropic==1.15.0
+pypdf==6.21.1

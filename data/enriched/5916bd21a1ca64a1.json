@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7763",
+ "company_name": "Johnson Fine Chemical Co., Ltd.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:27:10.007318+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Industrials",
+   "quote": "Main business: 特殊胺類固化劑、特殊異氰酸酯固化劑、功能性塗料及其他",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "Johnson Fine Chemical is a chemical-industry company. It makes specialty amine curing agents, specialty isocyanate curing agents, functional coatings and other products.",
+   "quote": "Main business: 特殊胺類固化劑、特殊異氰酸酯固化劑、功能性塗料及其他",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

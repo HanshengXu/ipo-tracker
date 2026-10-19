@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7901",
+ "company_name": "DADA Broadband Co., Ltd.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:34.119898+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Software & Internet",
+   "quote": "Main business: 寬頻服務",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "DADA Broadband provides broadband services and belongs to the communications network industry.",
+   "quote": "Main business: 寬頻服務",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

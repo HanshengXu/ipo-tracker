@@ -1,0 +1,28 @@
+{
+ "domain": "finnomena.com",
+ "company_url": "http://www.finnomena.com",
+ "pages_read": [
+  "https://www.finnomena.com/",
+  "https://www.finnomena.com/contact-us/",
+  "https://www.finnomena.com/contact-us/"
+ ],
+ "emails": [
+  {
+   "email": "complain@finnomena.com",
+   "source_url": "https://www.finnomena.com/contact-us/"
+  },
+  {
+   "email": "connect@finnomena.com",
+   "source_url": "https://www.finnomena.com/contact-us/"
+  },
+  {
+   "email": "feedback@finnomena.com",
+   "source_url": "https://www.finnomena.com/contact-us/"
+  },
+  {
+   "email": "whistleblowing@finnomena.com",
+   "source_url": "https://www.finnomena.com/contact-us/"
+  }
+ ],
+ "collected_at": "2026-10-19T03:01:32.631983+00:00"
+}

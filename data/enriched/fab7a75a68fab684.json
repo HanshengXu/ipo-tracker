@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7909",
+ "company_name": "YE SIANG ENTERPRISE CO., LTD.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:09.436761+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Semiconductors & Hardware",
+   "quote": "Industry: 半導體業",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company provides micro-contamination solution services and researches, develops, regenerates and sells chemical filters; it is classified in the semiconductor industry.",
+   "quote": "Main business: 微污染解決方案服務、化學濾網研發、再生及銷售",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|ENRICH",
+ "company_name": "RICHEST SUPPLY PUBLIC COMPANY LIMITED",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:49.208738+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Industrials",
+   "quote": "Operates as a comprehensive importer and distributor of lighting products, including lamps, luminaires, street lighting poles, and related products under proprietary brands, ENRICH and RICH, as well as through OEM arrangements and third-party brands.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  },
+  "business_description": {
+   "value": "The company imports and distributes lighting products such as lamps, luminaires and street lighting poles under its own ENRICH and RICH brands, OEM arrangements and third-party brands. It also provides lighting system design and consultancy, and distributes and installs solar energy systems.",
+   "quote": "The business also provides lighting system design and consultancy services, and engages in the distribution and installation of solar energy systems.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

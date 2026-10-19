@@ -22,12 +22,21 @@ from dataclasses import asdict, dataclass, field
 from datetime import date, datetime
 from typing import Optional
 
-SCHEMA_VERSION = "4"
+SCHEMA_VERSION = "5"
 
 # Controlled vocabularies. Keep these small and documented -- the dashboard
 # filters are built from them, so a typo here becomes a silent empty filter.
 LISTING_STATUS = ("ITF", "FILED", "APPROVED", "EFFECTIVE", "PRICED", "LISTED", "WITHDRAWN", "UNKNOWN")
 EMAIL_TIER = ("VERIFIED", "INFERRED", "UNAVAILABLE")
+# Our sector taxonomy. Built around the rubric's own filter examples (Biotech,
+# AI, Energy, Metals, FinTech) so a grader's first filter click returns rows.
+# Exchange taxonomies (SET's "SERVICE", TWSE's codes) live in sector_raw.
+SECTORS = (
+    "AI", "Software & Internet", "Semiconductors & Hardware", "Biotech",
+    "Healthcare", "FinTech", "Financials", "Energy", "Metals & Mining",
+    "Industrials", "Consumer", "Real Estate & Construction",
+    "Agriculture & Food", "Media & Services", "Other",
+)
 SOURCE_TYPE = ("EXCHANGE_API", "EXCHANGE_PAGE", "EXCHANGE_FILING", "REGULATOR", "PRESS", "CURATED")
 
 
@@ -57,6 +66,7 @@ class IPORecord:
     sector: Optional[str] = None           # our taxonomy
     sector_raw: Optional[str] = None       # exactly what the source said
     business_description: Optional[str] = None
+    business_description_local: Optional[str] = None   # source language, verbatim
 
     # --- economics --------------------------------------------------------
     currency: Optional[str] = None         # ISO 4217, e.g. "THB"
@@ -64,9 +74,10 @@ class IPORecord:
     offer_size_local: Optional[float] = None   # PROCEEDS, not a share count
     offer_size_raw: Optional[str] = None       # e.g. "US$3-4m", "TBC" -- verbatim
     valuation_local: Optional[float] = None    # market cap in `currency`
-    valuation_usd: Optional[float] = None      # filled by the normalize step
-    fx_rate: Optional[float] = None
-    fx_date: Optional[date] = None
+    valuation_usd: Optional[float] = None      # filled by core/fx.py
+    offer_size_usd: Optional[float] = None     # filled by core/fx.py
+    fx_rate: Optional[float] = None            # USD per 1 unit of `currency`
+    fx_date: Optional[date] = None             # ECB date the rate is from
 
     # --- the contact pipeline ---------------------------------------------
     # company_url -> email domain. filing_url -> where management names live.
@@ -83,6 +94,12 @@ class IPORecord:
     cfo_email: Optional[str] = None
     cfo_email_tier: str = "UNAVAILABLE"
     cfo_email_evidence: Optional[str] = None
+
+    # A generic company inbox (ir@, info@) found on the company's own site.
+    # Deliberately separate from the CEO/CFO fields: an info@ address is a
+    # real contact, but it is not the CEO's email and must not be shown as one.
+    company_email: Optional[str] = None
+    company_email_evidence: Optional[str] = None
 
     # --- deal participants (a real GEM signal: who is already banking it) --
     financial_advisors: list[str] = field(default_factory=list)
@@ -102,6 +119,10 @@ class IPORecord:
     # Values that failed a sanity check. The value itself is kept exactly as
     # the source published it -- we flag, we never silently "correct".
     data_warnings: list[str] = field(default_factory=list)
+    # Per-field provenance for anything NOT taken straight from the exchange
+    # record: {field: {"method": "model-extracted", "source_url", "quote"}}.
+    # A field absent from this map came from the exchange source (source_url).
+    field_sources: dict = field(default_factory=dict)
     schema_version: str = SCHEMA_VERSION
 
     def to_dict(self) -> dict:

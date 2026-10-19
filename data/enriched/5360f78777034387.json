@@ -1,0 +1,26 @@
+{
+ "record_id": "XLON|Voltage X Limited",
+ "company_name": "Voltage X Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:53.560330+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Media & Services",
+   "quote": "Founded in 2021 and headquartered in Melbourne, Australia, the Group provides public relations, digital marketing, content creation, marketing analytics and influencer management services to an international client base, with a primary focus on the real estate, hospitality, sports and retail sectors.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited"
+  },
+  "business_description": {
+   "value": "Voltage X is a creative and communications group providing public relations, digital marketing, content creation, marketing analytics and influencer management services to international clients. It uses AI-enabled platforms to support its services, mainly for clients in real estate, hospitality, sports and retail.",
+   "quote": "Voltage X is an AI-native creative and communications group.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

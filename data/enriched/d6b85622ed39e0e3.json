@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|FINNO",
+ "company_name": "Finnomena Public Company Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:57.072384+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "FinTech",
+   "quote": "Operate as a holding company by investing in other companies whose core businesses are related to a WealthTech platform and other related businesses",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  },
+  "business_description": {
+   "value": "Finnomena is a holding company that invests in other companies whose core businesses are related to a WealthTech platform and other related businesses.",
+   "quote": "Operate as a holding company by investing in other companies whose core businesses are related to a WealthTech platform and other related businesses",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

@@ -1,0 +1,53 @@
+# Daily refresh: run the pipeline, commit the new data, and GitHub Pages
+# redeploys the dashboard from /docs on that push.
+#
+# No secrets. The cron never calls the model: model extractions and website
+# contacts are produced locally (tools/) and committed under data/enriched/,
+# so this job only re-fetches exchange data and re-applies the cached work.
+#
+# If an exchange blocks GitHub's IP range, run.py keeps that exchange's rows
+# from the previous run and marks them "stale" on the dashboard rather than
+# publishing an empty table.
+
+name: refresh-data
+
+on:
+  schedule:
+    - cron: "17 22 * * *"   # 22:17 UTC = 06:17 in Singapore/KL/Taipei, before Asian markets open
+  workflow_dispatch: {}      # "Run workflow" button for manual refreshes
+
+permissions:
+  contents: write            # to commit docs/data/ipos.json
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python run.py
+
+      - name: Commit if the data changed
+        run: |
+          git config user.name  "ipo-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/ipos.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: daily refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi

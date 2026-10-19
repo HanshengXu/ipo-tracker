@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|6798",
+ "company_name": "Flight International Co.,Ltd.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:13.347529+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Media & Services",
+   "quote": "Main business: 運動活動服務 （體育賽事舉辦、運動品牌行銷、運動經紀)、運動場館運營及運動教育課程、自有IP運動相關及廣告業務",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company provides sports activity services, including sports event organization, sports brand marketing and sports agency. It also operates sports venues, offers sports education courses, and runs its own sports IP and advertising business.",
+   "quote": "Main business: 運動活動服務 （體育賽事舉辦、運動品牌行銷、運動經紀)、運動場館運營及運動教育課程、自有IP運動相關及廣告業務",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

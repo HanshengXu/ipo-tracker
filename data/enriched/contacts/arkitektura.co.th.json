@@ -1,0 +1,21 @@
+{
+ "domain": "arkitektura.co.th",
+ "company_url": "https://arkitektura.co.th",
+ "pages_read": [
+  "https://arkitektura.co.th/",
+  "https://arkitektura.co.th/pages/contact",
+  "https://arkitektura.co.th/pages/ir-contact",
+  "https://arkitektura.co.th/pages/investor-relations"
+ ],
+ "emails": [
+  {
+   "email": "info@arkitektura.co.th",
+   "source_url": "https://arkitektura.co.th/pages/contact"
+  },
+  {
+   "email": "ir@arkitektura.co.th",
+   "source_url": "https://arkitektura.co.th/pages/ir-contact"
+  }
+ ],
+ "collected_at": "2026-10-19T02:59:32.803297+00:00"
+}

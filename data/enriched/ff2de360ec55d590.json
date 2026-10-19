@@ -1,0 +1,26 @@
+{
+ "record_id": "XLON|TEK 4 Group Plc",
+ "company_name": "TEK 4 Group Plc",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:49.207859+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Industrials",
+   "quote": "The Company, with its wholly-owned subsidiaries (together, the \"Group\"), is a precision engineering business focused on the design, manufacture and support of specialist hole-drilling systems used in the production of aero engine and industrial gas turbine components.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group"
+  },
+  "business_description": {
+   "value": "TEK 4 Group is a precision engineering business that designs, manufactures and supports specialist hole-drilling systems used to produce aero engine and industrial gas turbine components. It offers cooling-hole manufacturing solutions including EDM, laser drilling, laser ablation and STEM/ECM.",
+   "quote": "The Group provides customers with a broad suite of specialist cooling-hole manufacturing solutions from a single supplier, including electrical discharge machining (EDM), laser drilling, laser ablation and shaped tube electrolytic machining (STEM/ECM), enabling customers to produce the complex cooling-hole geometries required by increasingly high-temperature aero engines and industrial gas turbines.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

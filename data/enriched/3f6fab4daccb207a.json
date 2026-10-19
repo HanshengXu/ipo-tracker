@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|PETPAL",
+ "company_name": "Petpal Products Public Company Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:31.199523+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Consumer",
+   "quote": "Manufacture dry pet food under our clients trademarks as an Original Design Manufacturer (ODM), providing a comprehensive one-stop service as well as our house brand pet food products.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  },
+  "business_description": {
+   "value": "The company manufactures dry pet food under its clients' trademarks as an Original Design Manufacturer (ODM), offering a one-stop service. It also sells its own house brand pet food products.",
+   "quote": "Manufacture dry pet food under our clients trademarks as an Original Design Manufacturer (ODM), providing a comprehensive one-stop service as well as our house brand pet food products.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

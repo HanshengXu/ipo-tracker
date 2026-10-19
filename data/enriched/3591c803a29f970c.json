@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|SUEN",
+ "company_name": "SUEN CORP PUBLIC COMPANY LIMITED",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:52.985602+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Real Estate & Construction",
+   "quote": "The group operates a construction materials and home products retail business under the trade name We MAKE and \"Riki Riki\" , a ready-mixed and precast concrete manufacturing and distribution business under the trade name 'SC', and an industrial granite mining business for use in the construction industry.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  },
+  "business_description": {
+   "value": "The group runs a construction materials and home products retail business (We MAKE and \"Riki Riki\"), manufactures and distributes ready-mixed and precast concrete under the 'SC' name, and mines industrial granite for the construction industry.",
+   "quote": "The group operates a construction materials and home products retail business under the trade name We MAKE and \"Riki Riki\" , a ready-mixed and precast concrete manufacturing and distribution business under the trade name 'SC', and an industrial granite mining business for use in the construction industry.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

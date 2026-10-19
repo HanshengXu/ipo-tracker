@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7710",
+ "company_name": "ASRock Industrial Computer Corporation",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:55.621926+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Semiconductors & Hardware",
+   "quote": "Main business: 工業電腦主機板、嵌入式工業電腦系統、工業級強固邊緣AIoT系統平台",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company makes industrial computer motherboards, embedded industrial computer systems, and industrial-grade rugged edge AIoT system platforms.",
+   "quote": "Main business: 工業電腦主機板、嵌入式工業電腦系統、工業級強固邊緣AIoT系統平台",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

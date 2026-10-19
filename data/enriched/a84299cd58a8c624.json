@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7867",
+ "company_name": "TEST RITE RETAIL CO., LTD.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:27:01.873148+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Consumer",
+   "quote": "Main business: 居家裝修相關商品及服務之銷售",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company sells home renovation-related products and services, operating in the home living industry.",
+   "quote": "Main business: 居家裝修相關商品及服務之銷售",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

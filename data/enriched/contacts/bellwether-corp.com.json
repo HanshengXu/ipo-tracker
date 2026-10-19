@@ -1,0 +1,19 @@
+{
+ "domain": "bellwether-corp.com",
+ "company_url": "http://www.bellwether-corp.com",
+ "pages_read": [
+  "https://www.bellwether-corp.com/",
+  "https://www.bellwether-corp.com/en/investor/index.aspx",
+  "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1017",
+  "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1016",
+  "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1014",
+  "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1013"
+ ],
+ "emails": [
+  {
+   "email": "ir@bellwether-corp.com",
+   "source_url": "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1017"
+  }
+ ],
+ "collected_at": "2026-10-19T03:05:03.470233+00:00"
+}

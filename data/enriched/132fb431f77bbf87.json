@@ -1,0 +1,26 @@
+{
+ "record_id": "XLON|Axies Ventures Limited",
+ "company_name": "Axies Ventures Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:41.388159+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Metals & Mining",
+   "quote": "Axies Ventures is a junior mineral exploration company focused on the discovery and development of copper and gold assets in Cyprus and Canada.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited"
+  },
+  "business_description": {
+   "value": "Axies Ventures is a junior mineral exploration company focused on discovering and developing copper and gold assets. It holds prospecting and reconnaissance permits in Cyprus (about 36 km2, mainly on the northern flanks of the Troodos Mountains) and mineral claims across four properties in Ontario, Canada (about 43 km2).",
+   "quote": "Axies Ventures is a junior mineral exploration company focused on the discovery and development of copper and gold assets in Cyprus and Canada.",
+   "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

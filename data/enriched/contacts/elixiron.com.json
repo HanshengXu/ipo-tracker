@@ -1,0 +1,20 @@
+{
+ "domain": "elixiron.com",
+ "company_url": "https://elixiron.com",
+ "pages_read": [
+  "https://elixiron.com/",
+  "https://elixiron.com/contact.php",
+  "https://elixiron.com/investor.php?rid=12&lang=en"
+ ],
+ "emails": [
+  {
+   "email": "info@elixiron.com",
+   "source_url": "https://elixiron.com/contact.php"
+  },
+  {
+   "email": "ir@elixiron.com",
+   "source_url": "https://elixiron.com/contact.php"
+  }
+ ],
+ "collected_at": "2026-10-19T03:03:18.700585+00:00"
+}

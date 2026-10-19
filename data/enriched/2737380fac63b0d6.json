@@ -1,0 +1,41 @@
+{
+ "record_id": "XSES|The Assembly Place Holdings Ltd.",
+ "company_name": "The Assembly Place Holdings Ltd.",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:37.798623+00:00",
+ "sources": [
+  {
+   "label": "offer document",
+   "url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Real Estate & Construction",
+   "quote": "We are Singapore’s largest1 Community Living operator by the number of keys under management and operation, and the most diversiﬁ ed1 Community Living operator in the market.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  },
+  "business_description": {
+   "value": "The company is a Singapore Community Living operator that runs an asset-light model to manage and operate residential and other property assets under six brands. It also provides property management, referral and project management services, and takes minority stakes in companies that own property assets.",
+   "quote": "We operate an asset-light model that leverages our digital infrastructure to manage and operate our portfolio of property assets through our Group and Associated Companies.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  },
+  "ceo_name": {
+   "value": "Eugene Lim",
+   "quote": "Mr Eugene Lim – Executive Director and CEO",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  },
+  "offer_size_local": {
+   "value": 18340000.0,
+   "quote": "Based on the Invitation Price of S$0.23, the gross proceeds from the Invitation and the Cornerstone Tranche will be approximately S$18.34 million due to us and the Vendors.",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  },
+  "valuation_local": {
+   "value": 88090000.0,
+   "quote": "Market capitalisation based on the Invitation Price and our Company’s post-Invitation and post-Cornerstone Tranche share capital of 383,000,000 Shares S$88.09 million",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

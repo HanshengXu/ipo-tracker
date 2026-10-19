@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7807",
+ "company_name": "Apistek Technology (Cayman) Ltd",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:27:17.129319+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Semiconductors & Hardware",
+   "quote": "Main business: 散熱風扇及散熱模組之研發、製造及銷售",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company researches, develops, manufactures and sells cooling fans and thermal (heat-dissipation) modules.",
+   "quote": "Main business: 散熱風扇及散熱模組之研發、製造及銷售",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

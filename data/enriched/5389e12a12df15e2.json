@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|7871",
+ "company_name": "Elixiron Immunotherapeutics (Cayman) Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:19.755603+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Biotech",
+   "quote": "Main business: 免疫療法醫藥研發",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "The company conducts research and development of immunotherapy drugs.",
+   "quote": "Main business: 免疫療法醫藥研發",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

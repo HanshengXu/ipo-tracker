@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|SIAA",
+ "company_name": "SIAM INTER AUCTION PUBLIC COMPANY LIMITED",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:44.746996+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Media & Services",
+   "quote": "Integrated Auction Services for Used Vehicles and Related Assets",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  },
+  "business_description": {
+   "value": "The company provides integrated auction services for used vehicles and related assets.",
+   "quote": "Integrated Auction Services for Used Vehicles and Related Assets",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

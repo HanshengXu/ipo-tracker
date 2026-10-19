@@ -1,0 +1,19 @@
+{
+ "domain": "dadabroadband.com",
+ "company_url": "https://www.dadabroadband.com/",
+ "pages_read": [
+  "https://www.dadabroadband.com/",
+  "https://www.dadabroadband.com/investor/Financials",
+  "https://www.dadabroadband.com/cs/contact",
+  "https://www.dadabroadband.com/investor/CSR",
+  "https://www.dadabroadband.com/investor/ShareholdersServices",
+  "https://www.dadabroadband.com/investor/CorporateGovernance"
+ ],
+ "emails": [
+  {
+   "email": "ir@dadabroadband.com",
+   "source_url": "https://www.dadabroadband.com/investor/CSR"
+  }
+ ],
+ "collected_at": "2026-10-19T03:03:40.003270+00:00"
+}

@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|EB",
+ "company_name": "EVEANDBOY Public Company Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:08:04.185956+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Consumer",
+   "quote": "Beauty and Health Retail Specialist under the EVEANDBOY brand and related businesses.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  },
+  "business_description": {
+   "value": "EVEANDBOY is a beauty and health retail specialist operating under the EVEANDBOY brand. It sells through its own retail stores and online via its website, app, e-commerce marketplaces and social commerce platforms.",
+   "quote": "The Company's main distribution channels comprise (1) offline channels through the Company's retail stores and (2) online channels through the Company's website and application, including e-commerce marketplaces and social commerce platforms.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

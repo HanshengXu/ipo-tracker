@@ -1,0 +1,26 @@
+{
+ "record_id": "XTAI|6842",
+ "company_name": "Nexora Technology Co., Limited",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:26:24.436173+00:00",
+ "sources": [
+  {
+   "label": "company filing (original language)",
+   "url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Semiconductors & Hardware",
+   "quote": "Industry: 半導體業",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  },
+  "business_description": {
+   "value": "Nexora Technology is classified in the semiconductor industry. Its main businesses are defense and aerospace control, communication modules, a semiconductor chip design verification platform (EDA), fintech, and other products and services.",
+   "quote": "Main business: 國防航太控制、通訊模組、半導體晶片設計驗證平台(EDA)、金融科技及其他產品服務",
+   "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

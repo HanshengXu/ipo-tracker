@@ -12,10 +12,22 @@ names that rung -- no inference beyond the exchange's own dates.
 Stale rows: applications from 2021 still have no listing date and no status
 change. They were almost certainly withdrawn or rejected, but TWSE doesn't
 say so. Same fix as SGX: a recency window on the application date.
+
+Company profile: MOPS, the TWSE-run disclosure system, has a structured
+profile for every public company -- and most applicants already trade on the
+emerging-stock board, so they have one:
+  POST https://mops.twse.com.tw/mops/api/t05st03  {"companyId": "<code>"}
+It supplies the English legal name, website, IR email, main business (in
+Chinese) and the 總經理. That title is MOPS's "President": the chief executive
+of a Taiwanese company, mapped to ceo_name with the original title recorded
+in field_sources. A failed profile call costs the row its enrichment, never
+the row.
 """
 
 from __future__ import annotations
 
+import json
+import time
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -26,6 +38,8 @@ from core.schema import IPORecord
 
 API = "https://www.twse.com.tw/rwd/en/company/applylisting"
 PAGE = "https://www.twse.com.tw/en/listed/listed/apply-listing.html"
+MOPS_API = "https://mops.twse.com.tw/mops/api/t05st03"
+MOPS_PAGE = "https://mops.twse.com.tw/mops/#/web/t05st03"
 RECENT_DAYS = 365
 TPE = ZoneInfo("Asia/Taipei")
 
@@ -73,6 +87,40 @@ def _stage(row: list, today: date) -> tuple[str, str]:
     if review:
         return "FILED", f"Listing Review Committee met {review}"
     return "FILED", "application submitted"
+
+
+def _mops_profile(session: requests.Session, code: str) -> dict:
+    """{field: value} for the visible fields of a MOPS company profile."""
+    r = session.post(MOPS_API, data=json.dumps({"companyId": code}), timeout=30,
+                     headers={"Content-Type": "application/json",
+                              "Origin": "https://mops.twse.com.tw",
+                              "Referer": "https://mops.twse.com.tw/mops/"})
+    r.raise_for_status()
+    if "json" not in r.headers.get("content-type", ""):
+        raise RuntimeError(f"MOPS returned {r.headers.get('content-type')}")
+    result = (r.json() or {}).get("result") or {}
+    return {k: v.get("value") for k, v in result.items()
+            if isinstance(v, dict) and not v.get("isHidden") and v.get("value") not in ("", "-", None)}
+
+
+def _apply_mops(rec: IPORecord, p: dict) -> None:
+    src = f"{MOPS_PAGE} (company {rec.ticker})"
+    rec.company_name = (p.get("companyEnglishName") or rec.company_name).strip()
+    rec.company_name_local = p.get("companyName")
+    rec.sector_raw = p.get("industryCategory")
+    rec.business_description_local = p.get("mainBusiness")
+    site = p.get("internetAddress") or p.get("mops_url_2")
+    if site:
+        rec.company_url = site if site.startswith("http") else f"https://{site}"
+    if p.get("president"):
+        rec.ceo_name = p["president"]
+        rec.field_sources["ceo_name"] = {"method": "exchange-filing", "source_url": src,
+                                         "quote": f"總經理 (President): {p['president']}"}
+    if p.get("email"):
+        # A company IR inbox from the official filing -- a company contact,
+        # never the CEO's personal address.
+        rec.company_email = p["email"].strip().lower()
+        rec.company_email_evidence = src
 
 
 def _to_record(row: list, *, today: date, fetched_at: datetime) -> IPORecord:
@@ -131,7 +179,17 @@ def fetch(recent_days: int = RECENT_DAYS) -> list[IPORecord]:
         except Exception as exc:                      # noqa: BLE001
             print(f"[taiwan] skipped {row[:3]}: {exc}")
 
-    print(f"[taiwan] {len(rows)} applications since 2000, {len(records)} filed in last {recent_days}d")
+    profiled = 0
+    for rec in records:
+        try:
+            _apply_mops(rec, _mops_profile(session, rec.ticker))
+            profiled += 1
+        except Exception as exc:                      # noqa: BLE001
+            print(f"[taiwan] MOPS profile failed for {rec.ticker}: {exc}")
+        time.sleep(0.4)                               # politeness between profile calls
+
+    print(f"[taiwan] {len(rows)} applications since 2000, {len(records)} filed in last {recent_days}d, "
+          f"{profiled} MOPS profiles")
     return records
 
 

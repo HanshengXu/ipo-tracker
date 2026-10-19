@@ -1,0 +1,2 @@
+# Pipeline (run.py) -- what the GitHub Actions cron installs.
+requests==2.34.2

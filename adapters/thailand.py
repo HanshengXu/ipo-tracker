@@ -18,18 +18,11 @@ from core.schema import IPORecord
 API = "https://www.set.or.th/api/set/ipo/upcoming"
 PAGE = "https://www.set.or.th/en/listing/ipo/upcoming-ipo/{board}"
 
-# SET publishes eight industry codes. Mapping them to our taxonomy is a guess,
-# which is exactly why `sector_raw` keeps the original alongside it.
-SECTOR_MAP = {
-    "AGRO": "Agriculture & Food",
-    "CONSUMP": "Consumer",
-    "FINCIAL": "Financials",
-    "INDUS": "Industrials",
-    "PROPCON": "Real Estate & Construction",
-    "RESOURC": "Energy & Resources",
-    "SERVICE": "Services",
-    "TECH": "Technology",
-}
+# SET's eight industry codes are kept verbatim in sector_raw but NOT mapped
+# onto core.schema.SECTORS here. A code-to-sector map is our guess, not
+# something SET published, and it is too coarse: it labelled Finnomena, a
+# WealthTech platform, "Financials" instead of "FinTech". Every sector is
+# classified one way -- tools/extract.py, from the description, with a quote.
 
 STATUS_MAP = {
     "submitted": "FILED",       # filing lodged with the Thai SEC
@@ -84,7 +77,6 @@ def _to_record(row: dict, *, board_param: str, source_url: str,
         listing_status=STATUS_MAP.get((status_raw or "").strip().lower(), "UNKNOWN"),
         listing_status_raw=status_raw,
 
-        sector=SECTOR_MAP.get(industry_code),
         sector_raw=row.get("industryName") or industry_code or None,
         business_description=(row.get("businessDescription") or "").strip() or None,
 

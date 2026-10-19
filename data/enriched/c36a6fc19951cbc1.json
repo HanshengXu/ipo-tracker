@@ -1,0 +1,26 @@
+{
+ "record_id": "XBKK|ARK",
+ "company_name": "ARKITEKTURA PUBLIC COMPANY LIMITED",
+ "model": "claude-opus-5-5",
+ "extracted_at": "2026-10-19T02:07:38.098669+00:00",
+ "sources": [
+  {
+   "label": "exchange listing description",
+   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ ],
+ "fields": {
+  "sector": {
+   "value": "Consumer",
+   "quote": "Import, distribution, and installation of comprehensive furniture and home furnishing products.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  },
+  "business_description": {
+   "value": "The company imports, distributes and installs furniture and home furnishing products such as wardrobes, loose furniture, kitchen sets, bathroom products, bedding and bath linens. It sells both as an appointed distributor of international brands and under its own brand, and also rents out space for business and residential use.",
+   "quote": "Our range covers wardrobes, loose furniture, kitchen sets, bathroom products, bedding and bath linens, as well as operating both as an appointed distributor of international brands and under our own company brand.",
+   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+  }
+ },
+ "rejected": [],
+ "emails_found": []
+}

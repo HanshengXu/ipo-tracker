@@ -1,0 +1,19 @@
+{
+ "domain": "suparich.co.th",
+ "company_url": "http://www.suparich.co.th",
+ "pages_read": [
+  "https://suparich.co.th/",
+  "https://suparich.co.th/contact-us/",
+  "https://suparich.co.th/investor/business-partner-code-of-conduct/",
+  "https://suparich.co.th/investor/governance/",
+  "https://suparich.co.th/investor/environmental-and-social-policy/",
+  "https://suparich.co.th/investor/business-overviews/"
+ ],
+ "emails": [
+  {
+   "email": "info@suparich.co.th",
+   "source_url": "https://suparich.co.th/"
+  }
+ ],
+ "collected_at": "2026-10-19T02:59:49.241048+00:00"
+}
