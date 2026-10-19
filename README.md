@@ -3,7 +3,7 @@
 A live dashboard of upcoming IPOs on emerging-market **growth boards**, built as a
 deal-sourcing tool for committed equity facilities.
 
-**Live:** `<LIVE_URL>` · refreshed daily by GitHub Actions
+**Live:** https://hanshengxu.github.io/ipo-tracker/ · refreshed daily by GitHub Actions
 
 Every row traces to an exchange or regulator source. Nothing is invented: a field
 that couldn't be sourced shows **N/A**, and the expanded row says where each
