@@ -368,7 +368,9 @@ footer p { margin: 0 0 8px; }
       tile("Exchanges covered", exch, "TH · SG · MY · UK · TW") +
       tile("CEO named from a source", named, `of ${up.length} upcoming; the rest are N/A, not guessed`);
 
-    const gen = fdate(data.generated_at);
+    // Exact time in UTC: "refreshed daily" should be checkable at a glance, in one timezone for every viewer.
+    const g = new Date(data.generated_at);
+    const gen = isNaN(g) ? data.generated_at : `${g.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}, ${g.toISOString().slice(11, 16)} UTC`;
     $("fresh").innerHTML = `<span>Pipeline run <b>${esc(gen)}</b></span>` +
       data.sources.map((s) => `<span>${esc(s.name)}: <b>${s.rows}</b> rows · ${esc(s.tier)}` +
         (s.status === "stale" ? ` · <b class="warn">stale — last fetched ${esc(fdate(s.as_of))}</b>` : "") + `</span>`).join("");
