@@ -22,7 +22,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import date, datetime
 from typing import Optional
 
-SCHEMA_VERSION = "3"
+SCHEMA_VERSION = "4"
 
 # Controlled vocabularies. Keep these small and documented -- the dashboard
 # filters are built from them, so a typo here becomes a silent empty filter.
@@ -45,6 +45,9 @@ class IPORecord:
     # exchange or regulator. Often the only date a pre-IPO source has.
     filed_date: Optional[date] = None
     expected_listing_date: Optional[date] = None
+    # Sources often give "Late October 2026". That is information, but not a
+    # date -- parsing it into one would invent precision. Kept verbatim here.
+    expected_listing_date_raw: Optional[str] = None
     offer_open: Optional[date] = None
     offer_close: Optional[date] = None
     listing_status: str = "UNKNOWN"        # one of LISTING_STATUS
@@ -59,6 +62,7 @@ class IPORecord:
     currency: Optional[str] = None         # ISO 4217, e.g. "THB"
     offer_price_local: Optional[float] = None
     offer_size_local: Optional[float] = None   # PROCEEDS, not a share count
+    offer_size_raw: Optional[str] = None       # e.g. "US$3-4m", "TBC" -- verbatim
     valuation_local: Optional[float] = None    # market cap in `currency`
     valuation_usd: Optional[float] = None      # filled by the normalize step
     fx_rate: Optional[float] = None
@@ -95,6 +99,9 @@ class IPORecord:
     source_type: str = "EXCHANGE_API"
     source_as_of: Optional[datetime] = None
     fetched_at: Optional[datetime] = None
+    # Values that failed a sanity check. The value itself is kept exactly as
+    # the source published it -- we flag, we never silently "correct".
+    data_warnings: list[str] = field(default_factory=list)
     schema_version: str = SCHEMA_VERSION
 
     def to_dict(self) -> dict:
