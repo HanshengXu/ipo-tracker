@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  ],
  "fields": {
   "sector": {
    "value": "Real Estate & Construction",
    "quote": "Manufacturer and distributor of steel doors, prefabricated bathroom partitions, and distributor of other construction-related products.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   },
   "business_description": {
    "value": "The company manufactures and distributes steel doors and prefabricated bathroom partitions, and distributes other construction-related products.",
    "quote": "Manufacturer and distributor of steel doors, prefabricated bathroom partitions, and distributor of other construction-related products.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  },
  "rejected": [],

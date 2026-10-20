@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  ],
  "fields": {
   "sector": {
    "value": "Energy",
    "quote": "The Company operates in 3 main businesses1. Organic Waste Management (\"OWM\") service.2. producing and selling biogas.3. selling electricity generated from biogas.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   },
   "business_description": {
    "value": "The company provides organic waste management services, produces and sells biogas, and sells electricity generated from biogas.",
    "quote": "The Company operates in 3 main businesses1. Organic Waste Management (\"OWM\") service.2. producing and selling biogas.3. selling electricity generated from biogas.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  },
  "rejected": [],

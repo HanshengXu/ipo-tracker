@@ -1,0 +1,15 @@
+{
+ "domain": "embestor.com",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "ir@embestor.com",
+   "source_url": "https://irplatform.tdcc.com.tw/ir/zh/contact/detail/40289797978e368d01978e64049e0000",
+   "hunter_confidence": 10,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 1,
+ "dropped": 0,
+ "searched_at": "2026-10-20T16:48:21.004454+00:00"
+}

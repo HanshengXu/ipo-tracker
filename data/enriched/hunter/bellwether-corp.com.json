@@ -1,0 +1,8 @@
+{
+ "domain": "bellwether-corp.com",
+ "pattern": "{first}.{last}",
+ "emails": [],
+ "returned": 10,
+ "dropped": 10,
+ "searched_at": "2026-10-20T16:48:25.409044+00:00"
+}

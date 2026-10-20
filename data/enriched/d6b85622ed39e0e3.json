@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  ],
  "fields": {
   "sector": {
    "value": "FinTech",
    "quote": "Operate as a holding company by investing in other companies whose core businesses are related to a WealthTech platform and other related businesses",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   },
   "business_description": {
    "value": "Finnomena is a holding company that invests in other companies whose core businesses are related to a WealthTech platform and other related businesses.",
    "quote": "Operate as a holding company by investing in other companies whose core businesses are related to a WealthTech platform and other related businesses",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  },
  "rejected": [],

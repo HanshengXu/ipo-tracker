@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  ],
  "fields": {
   "sector": {
    "value": "Consumer",
    "quote": "Manufacture dry pet food under our clients trademarks as an Original Design Manufacturer (ODM), providing a comprehensive one-stop service as well as our house brand pet food products.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   },
   "business_description": {
    "value": "The company manufactures dry pet food under its clients' trademarks as an Original Design Manufacturer (ODM), offering a one-stop service. It also sells its own house brand pet food products.",
    "quote": "Manufacture dry pet food under our clients trademarks as an Original Design Manufacturer (ODM), providing a comprehensive one-stop service as well as our house brand pet food products.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  },
  "rejected": [],

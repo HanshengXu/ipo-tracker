@@ -1,41 +1,41 @@
 {
  "schema_version": "6",
- "generated_at": "2026-10-20T16:44:13.953491+00:00",
+ "generated_at": "2026-10-20T16:47:27.304477+00:00",
  "sources": [
   {
    "name": "Thailand (SET, mai)",
    "tier": "automated",
    "rows": 13,
    "status": "fresh",
-   "as_of": "2026-10-20T16:44:13.953491+00:00"
+   "as_of": "2026-10-20T16:47:27.304477+00:00"
   },
   {
    "name": "Singapore (SGX Catalist)",
    "tier": "automated",
    "rows": 6,
    "status": "fresh",
-   "as_of": "2026-10-20T16:44:13.953491+00:00"
+   "as_of": "2026-10-20T16:47:27.304477+00:00"
   },
   {
    "name": "Malaysia (Bursa)",
    "tier": "semi-automated",
    "rows": 70,
    "status": "fresh",
-   "as_of": "2026-10-20T16:44:13.953491+00:00"
+   "as_of": "2026-10-20T16:47:27.304477+00:00"
   },
   {
    "name": "London (LSE AIM)",
    "tier": "automated",
    "rows": 4,
    "status": "fresh",
-   "as_of": "2026-10-20T16:44:13.953491+00:00"
+   "as_of": "2026-10-20T16:47:27.304477+00:00"
   },
   {
    "name": "Taiwan (TWSE, TIB)",
    "tier": "automated",
    "rows": 38,
    "status": "fresh",
-   "as_of": "2026-10-20T16:44:13.953491+00:00"
+   "as_of": "2026-10-20T16:47:27.304477+00:00"
   }
  ],
  "steps": {
@@ -45,10 +45,10 @@
    "cache_entries": 39,
    "contact_sites": 43,
    "offer_documents": 6,
-   "hunter_domains": 21,
+   "hunter_domains": 24,
    "thai_filings": 13
   },
-  "hunter": "3 searched, 2 addresses kept, 14 domains still due",
+  "hunter": "3 searched, 1 addresses kept, 11 domains still due",
   "hunter_verify": "no guesses to check",
   "fx": "ECB reference rates, dated per record"
  },
@@ -110,7 +110,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -131,7 +131,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Operating in business of providing consulting services and installation of complete digital systems (End-To-End Digital Transformation Provider), including design, installation, development and maintenance of the system with main expertise in Enterprise Resource Planning (ERP) systems.",
      "extracted_at": "2026-10-19T02:07:23.849610+00:00"
     }
@@ -193,7 +193,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -209,7 +209,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "The Company operates in 3 main businesses1. Organic Waste Management (\"OWM\") service.2. producing and selling biogas.3. selling electricity generated from biogas.",
      "extracted_at": "2026-10-19T02:07:27.441750+00:00"
     }
@@ -271,7 +271,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -292,7 +292,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Manufacture dry pet food under our clients trademarks as an Original Design Manufacturer (ODM), providing a comprehensive one-stop service as well as our house brand pet food products.",
      "extracted_at": "2026-10-19T02:07:31.199523+00:00"
     }
@@ -354,7 +354,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -375,7 +375,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "The company engages in joint development, manufacturing, import, and distribution of cosmetic products under the brand MERREZ'CA, Get&Glow and senlab , which is the company trademark.",
      "extracted_at": "2026-10-19T02:07:34.593546+00:00"
     }
@@ -437,7 +437,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -448,7 +448,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Import, distribution, and installation of comprehensive furniture and home furnishing products.",
      "extracted_at": "2026-10-19T02:07:38.098669+00:00"
     }
@@ -510,7 +510,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -531,7 +531,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Manufacturer and distributor of steel doors, prefabricated bathroom partitions, and distributor of other construction-related products.",
      "extracted_at": "2026-10-19T02:07:41.366476+00:00"
     }
@@ -593,7 +593,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -609,7 +609,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Integrated Auction Services for Used Vehicles and Related Assets",
      "extracted_at": "2026-10-19T02:07:44.746996+00:00"
     }
@@ -672,7 +672,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -693,7 +693,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
      "quote": "Operates as a comprehensive importer and distributor of lighting products, including lamps, luminaires, street lighting poles, and related products under proprietary brands, ENRICH and RICH, as well as through OEM arrangements and third-party brands.",
      "extracted_at": "2026-10-19T02:07:49.208738+00:00"
     }
@@ -755,7 +755,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -771,7 +771,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
      "quote": "The group operates a construction materials and home products retail business under the trade name We MAKE and \"Riki Riki\" , a ready-mixed and precast concrete manufacturing and distribution business under the trade name 'SC', and an industrial granite mining business for use in the construction industry.",
      "extracted_at": "2026-10-19T02:07:52.985602+00:00"
     }
@@ -833,7 +833,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -854,7 +854,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
      "quote": "Operate as a holding company by investing in other companies whose core businesses are related to a WealthTech platform and other related businesses",
      "extracted_at": "2026-10-19T02:07:57.072384+00:00"
     }
@@ -916,7 +916,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -932,7 +932,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
      "quote": "The company is engaged in the manufacturing, distribution, and installation services of lightweight concrete wall mixed with ceramic pellets under brand \"TEXCA WALL\" and \"CERA WALL\"",
      "extracted_at": "2026-10-19T02:08:00.618227+00:00"
     }
@@ -994,7 +994,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1015,7 +1015,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
      "quote": "Beauty and Health Retail Specialist under the EVEANDBOY brand and related businesses.",
      "extracted_at": "2026-10-19T02:08:04.185956+00:00"
     }
@@ -1077,7 +1077,7 @@
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
+   "fetched_at": "2026-10-20T16:47:27.306543+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1093,7 +1093,7 @@
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
-     "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+     "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
      "quote": "operates a turnkey construction business as the main contractor, covering structural works, architectural works, building systems, and interior works.",
      "extracted_at": "2026-10-19T02:08:07.749060+00:00"
     }
@@ -1155,7 +1155,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/metasurface-technologies-holdings-limited/2026-09-28",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1249,7 +1249,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/kin-global-limited/2026-03-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1315,7 +1315,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/assembly-place-holdings-ltd/2025-12-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1416,7 +1416,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/toku-ltd/2025-12-10",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1482,7 +1482,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/leong-guan-holdings-limited/2025-09-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1548,7 +1548,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/infinity-development-holdings-company-limited/2025-09-29",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
+   "fetched_at": "2026-10-20T16:47:31.764534+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -5678,7 +5678,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
+   "fetched_at": "2026-10-20T16:47:48.393700+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5749,7 +5749,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
+   "fetched_at": "2026-10-20T16:47:48.393700+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5819,7 +5819,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
+   "fetched_at": "2026-10-20T16:47:48.393700+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5889,7 +5889,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
+   "fetched_at": "2026-10-20T16:47:48.393700+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5955,7 +5955,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6033,7 +6033,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6118,7 +6118,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6198,7 +6198,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6283,7 +6283,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -6343,7 +6343,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6426,7 +6426,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6504,7 +6504,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6582,7 +6582,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6660,7 +6660,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6738,7 +6738,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6802,7 +6802,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6880,7 +6880,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6960,7 +6960,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7038,7 +7038,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -7096,7 +7096,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7174,7 +7174,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7252,7 +7252,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7335,7 +7335,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7404,7 +7404,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7482,7 +7482,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7560,7 +7560,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7643,7 +7643,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7707,7 +7707,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7771,7 +7771,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7835,7 +7835,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7915,7 +7915,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7979,7 +7979,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8045,7 +8045,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8111,7 +8111,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8175,7 +8175,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8244,7 +8244,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8308,7 +8308,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8388,7 +8388,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8459,7 +8459,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8523,7 +8523,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8587,7 +8587,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8651,7 +8651,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
+   "fetched_at": "2026-10-20T16:47:50.909832+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {

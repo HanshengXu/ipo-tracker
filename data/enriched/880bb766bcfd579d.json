@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  ],
  "fields": {
   "sector": {
    "value": "Software & Internet",
    "quote": "Operating in business of providing consulting services and installation of complete digital systems (End-To-End Digital Transformation Provider), including design, installation, development and maintenance of the system with main expertise in Enterprise Resource Planning (ERP) systems.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   },
   "business_description": {
    "value": "The company provides consulting services and installation of complete digital systems as an end-to-end digital transformation provider, covering system design, installation, development and maintenance. Its main expertise is in Enterprise Resource Planning (ERP) systems.",
    "quote": "Operating in business of providing consulting services and installation of complete digital systems (End-To-End Digital Transformation Provider), including design, installation, development and maintenance of the system with main expertise in Enterprise Resource Planning (ERP) systems.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai"
   }
  },
  "rejected": [],

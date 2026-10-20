@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  ],
  "fields": {
   "sector": {
    "value": "Real Estate & Construction",
    "quote": "operates a turnkey construction business as the main contractor, covering structural works, architectural works, building systems, and interior works.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   },
   "business_description": {
    "value": "The company operates a turnkey construction business as main contractor, covering structural, architectural, building systems, and interior works.",
    "quote": "operates a turnkey construction business as the main contractor, covering structural works, architectural works, building systems, and interior works.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  },
  "rejected": [],

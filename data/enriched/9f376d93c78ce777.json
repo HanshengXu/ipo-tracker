@@ -6,19 +6,19 @@
  "sources": [
   {
    "label": "exchange listing description",
-   "url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  ],
  "fields": {
   "sector": {
    "value": "Consumer",
    "quote": "Beauty and Health Retail Specialist under the EVEANDBOY brand and related businesses.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   },
   "business_description": {
    "value": "EVEANDBOY is a beauty and health retail specialist operating under the EVEANDBOY brand. It sells through its own retail stores and online via its website, app, e-commerce marketplaces and social commerce platforms.",
    "quote": "The Company's main distribution channels comprise (1) offline channels through the Company's retail stores and (2) online channels through the Company's website and application, including e-commerce marketplaces and social commerce platforms.",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en"
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set"
   }
  },
  "rejected": [],

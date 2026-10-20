@@ -141,7 +141,7 @@ footer p { margin: 0 0 8px; }
   <section class="tiles" id="tiles" aria-label="Summary"></section>
 
   <div class="controls" role="search">
-    <input type="search" id="q" placeholder="Search company, CEO, sponsor…" aria-label="Search">
+    <input type="search" id="q" placeholder="Search company or person…" aria-label="Search">
     <select id="fx" aria-label="Exchange"><option value="">All exchanges</option></select>
     <select id="fs" aria-label="Sector"><option value="">All sectors</option></select>
     <select id="fb" aria-label="Board">
@@ -231,6 +231,10 @@ footer p { margin: 0 0 8px; }
     return name.split(/(\s+)/).map((w) => /\s/.test(w) ? w : titleWord(w)).join("");
   };
   const coName = (r) => properName(r.company_name, r.business_description, r.business_description_local);
+  // The table shows the name without its legal form ("Public Company Limited",
+  // "Berhad", "Co., Ltd."); the full name is in the tooltip and the detail panel.
+  const LEGAL_FORM = /[\s,]+(?:public company limited|public co\.?,? ?ltd\.?|company limited|co\.?,? ?ltd\.?|limited|ltd\.?|berhad|bhd\.?|plc|inc\.?|corporation|corp\.?)$/i;
+  const shortName = (r) => { let n = coName(r), m; while ((m = n.replace(LEGAL_FORM, "")) !== n && m) n = m; return n; };
   // Our sector labels are sentence case on screen ("Metals & mining"), the
   // data keeps its canonical values so filters and CSV stay stable.
   const sectorLabel = (s) => s && s.split(" ").map((w, i) => i === 0 || KEEP.has(w) ? w : w.toLowerCase()).join(" ")
@@ -259,7 +263,9 @@ footer p { margin: 0 0 8px; }
   };
   const value = (r) => {
     if (r.valuation_usd != null) return { html: money(r, r.valuation_usd, r.valuation_local), key: r.valuation_usd };
-    if (r.offer_size_usd != null) return { html: `<span class="sm">Raise</span> ${money(r, r.offer_size_usd, r.offer_size_local)}`, key: null };
+    // No valuation published: show the raise, and sort by it so the column
+    // still orders deals by size (valuations, where known, rank alongside).
+    if (r.offer_size_usd != null) return { html: `<span class="sm">Raise</span> ${money(r, r.offer_size_usd, r.offer_size_local)}`, key: r.offer_size_usd };
     if (r.offer_size_raw) return { html: `<span class="sm">Raise</span> ${esc(r.offer_size_raw)}`, key: null };
     return { html: NA, key: null };
   };
@@ -301,7 +307,7 @@ footer p { margin: 0 0 8px; }
   const COLS = [
     { k: "save", label: '<span aria-label="Saved">★</span>', cell: (r) => `<button class="star" type="button" data-save="${esc(idOf(r))}" aria-pressed="${saved.has(idOf(r))}" aria-label="Save ${esc(coName(r))}">${saved.has(idOf(r)) ? "★" : "☆"}</button>` },
     { k: "company", label: "Company", sort: (r) => r.company_name.toLowerCase(),
-      cell: (r) => `<div class="co">${esc(coName(r))}${r.ticker ? `<span class="tk">${esc(r.ticker)}</span>` : ""}</div>` },
+      cell: (r) => `<div class="co" title="${esc(coName(r))}">${esc(shortName(r))}${r.ticker ? `<span class="tk">${esc(r.ticker)}</span>` : ""}</div>` },
     { k: "fit", label: "GEM fit", num: true, sort: (r) => r.gem_fit_score,
       cell: (r) => r.gem_fit_score == null ? NA :
         `<div class="score" title="${esc(r.gem_fit_rationale)}"><span class="bar" aria-hidden="true"><i style="width:${r.gem_fit_score}%"></i></span><b>${r.gem_fit_score}</b></div>` },
@@ -310,13 +316,14 @@ footer p { margin: 0 0 8px; }
     { k: "status", label: "Status", sort: (r) => r.listing_status, cell: (r) => `<span class="badge" title="${esc(cap(r.listing_status_raw || ""))}">${esc(STATUS[r.listing_status] || r.listing_status)}</span>` },
     { k: "date", label: "Expected listing", sort: (r) => listing(r).key, cell: (r) => listing(r).html },
     { k: "sector", label: "Sector", sort: (r) => r.sector, cell: (r) => r.sector ? esc(sectorLabel(r.sector)) : NA },
-    { k: "desc", label: "Business description", cell: (r) => r.business_description ? `<div class="desc">${esc(r.business_description)}</div>` : NA },
     { k: "val", label: "Expected valuation", num: true, sort: (r) => value(r).key, cell: (r) => value(r).html },
     { k: "inbox", label: "Company / IR email", sort: (r) => r.company_email || r.ir_contact_email, cell: inbox },
     { k: "ceo", label: "CEO", sort: (r) => r.ceo_name, cell: (r) => r.ceo_name ? esc(r.ceo_name) : NA },
     { k: "ceoe", label: "CEO email", sort: (r) => r.ceo_email && r.ceo_email_tier, cell: (r) => email(r.ceo_email, r.ceo_email_tier, r.ceo_email_check) },
     { k: "cfo", label: "CFO", sort: (r) => r.cfo_name, cell: (r) => r.cfo_name ? esc(r.cfo_name) : NA },
     { k: "cfoe", label: "CFO email", sort: (r) => r.cfo_email && r.cfo_email_tier, cell: (r) => email(r.cfo_email, r.cfo_email_tier, r.cfo_email_check) },
+    // Last: the contact columns matter more to a deal team and should be on screen first.
+    { k: "desc", label: "Business description", cell: (r) => r.business_description ? `<div class="desc">${esc(r.business_description)}</div>` : NA },
   ];
 
   let data = null, rows = [], sortKey = "fit", sortDir = -1;
@@ -352,6 +359,7 @@ footer p { margin: 0 0 8px; }
     return `<div class="dgrid">
       <div>
         <h4>Business</h4>
+        <p><b>${esc(coName(r))}</b>${r.company_name_local ? ` <span class="sm">${esc(r.company_name_local)}</span>` : ""}</p>
         ${longText(r.business_description)}
         ${(r.data_warnings || []).map((w) => `<p class="warn">⚠ ${esc(w)}</p>`).join("")}
         <h4>Where each field came from</h4>
