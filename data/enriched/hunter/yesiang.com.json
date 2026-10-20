@@ -1,0 +1,15 @@
+{
+ "domain": "yesiang.com",
+ "pattern": "{first}{last}",
+ "emails": [
+  {
+   "email": "ir@yesiang.com",
+   "source_url": "https://yesiang.com/cn/company/page/%E5%85%AC%E5%8F%B8%E6%A6%82%E6%B3%81",
+   "hunter_confidence": 78,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 8,
+ "dropped": 7,
+ "searched_at": "2026-10-20T16:43:19.445706+00:00"
+}

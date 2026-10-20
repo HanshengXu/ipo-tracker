@@ -1,0 +1,15 @@
+{
+ "domain": "finnomena.com",
+ "pattern": "{first}",
+ "emails": [
+  {
+   "email": "connect@finnomena.com",
+   "source_url": "https://parsers.vc/startup/finnomena.com",
+   "hunter_confidence": 97,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 10,
+ "dropped": 9,
+ "searched_at": "2026-10-20T16:43:10.402310+00:00"
+}

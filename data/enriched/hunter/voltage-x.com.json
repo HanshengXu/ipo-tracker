@@ -1,0 +1,15 @@
+{
+ "domain": "voltage-x.com",
+ "pattern": "{first}",
+ "emails": [
+  {
+   "email": "info@voltage-x.com",
+   "source_url": "https://hongkongbrand.com.hk/best-in-hong-kong/top-10-best-social-media-management-company-in-hong-kong",
+   "hunter_confidence": 87,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 4,
+ "dropped": 3,
+ "searched_at": "2026-10-20T16:43:07.940763+00:00"
+}
