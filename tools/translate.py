@@ -17,8 +17,10 @@ What this is and isn't:
   - Display only. No field the pipeline reasons with (scores, email tiers,
     name matching) reads a translation.
 
-Runs locally like tools/extract.py. The key is read from ANTHROPIC_API_KEY in
-the environment or .env, and never printed.
+Runs inside every refresh (run.py calls translate_new), translating only
+strings not already cached, so a new company's names get English the run it
+appears. Can also be run by hand. The key is read from ANTHROPIC_API_KEY in
+the environment (a GitHub secret in CI) or .env, and never printed.
 """
 
 from __future__ import annotations
@@ -42,6 +44,7 @@ DATA = ROOT / "docs" / "data" / "ipos.json"
 CACHE = ROOT / "data" / "enriched" / "translations.json"
 MODEL = "claude-opus-5-5"
 BATCH = 60
+MAX_PER_RUN = 300      # cost cap for one refresh run (~$1 at most; usually a handful of strings)
 # Thai, CJK ideographs and CJK punctuation.
 FOREIGN = re.compile(r"[฀-๿　-〿㐀-鿿＀-￯]")
 LATIN = re.compile(r"[A-Za-z]")
@@ -117,23 +120,19 @@ def _ok(kind: str, english: str) -> bool:
     return kind != "name" or bool(re.fullmatch(r"[A-Za-z][A-Za-z .,'\-]*", english))
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
-
+def translate_new(records: list[dict], limit: int = MAX_PER_RUN) -> str:
+    """Translate strings these records show that aren't cached yet; called by
+    run.py on every refresh. Returns a line for the run log. Without a key
+    (or the anthropic package) it changes nothing."""
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
-    wanted = _strings(json.loads(DATA.read_text())["records"])
-    todo = [(s, k) for s, k in wanted.items() if s not in cache]
-    print(f"{len(wanted)} strings shown, {len(todo)} not yet translated")
-    if args.dry_run or not todo:
-        for s, k in todo[:20]:
-            print(f"  {k:<8} {s[:70]}")
-        return
-
+    todo = [(s, k) for s, k in _strings(records).items() if s not in cache][:limit]
+    if not todo:
+        return "nothing new"
     _key_from_env()
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return f"skipped: no ANTHROPIC_API_KEY ({len(todo)} strings waiting)"
     client = anthropic.Anthropic()
-    rejected = 0
+    done = rejected = 0
     for start in range(0, len(todo), BATCH):
         chunk = todo[start:start + BATCH]
         payload = [{"id": i, "kind": k, "text": s} for i, (s, k) in enumerate(chunk)]
@@ -145,9 +144,11 @@ def main() -> None:
                 output_format=Batch,
             )
         except anthropic.AuthenticationError:
-            sys.exit("ANTHROPIC_API_KEY was rejected (revoked or expired?): nothing translated")
+            return "failed: ANTHROPIC_API_KEY rejected (revoked or expired?)"
+        except anthropic.APIError as exc:
+            return f"failed: {type(exc).__name__} after {done} translated"
         if resp.stop_reason in ("refusal", "max_tokens") or resp.parsed_output is None:
-            print(f"  batch {start // BATCH}: no usable output (stop_reason={resp.stop_reason})")
+            print(f"[translate] batch {start // BATCH}: no usable output (stop_reason={resp.stop_reason})")
             continue
         now = datetime.now(timezone.utc).isoformat()
         for item in resp.parsed_output.items:
@@ -156,14 +157,29 @@ def main() -> None:
             original, kind = chunk[item.id]
             if not _ok(kind, item.english):
                 rejected += 1
-                print(f"  rejected {kind}: {original[:40]} -> {item.english[:40]}")
+                print(f"[translate] rejected {kind}: {original[:40]} -> {item.english[:40]}")
                 continue
             cache[original] = {"en": item.english.strip(), "kind": kind, "model": resp.model,
                                "translated_at": now}
+            done += 1
         CACHE.write_text(json.dumps(cache, indent=1, ensure_ascii=False, sort_keys=True))
-        print(f"  batch {start // BATCH}: {len(resp.parsed_output.items)} returned "
-              f"(in {resp.usage.input_tokens:,} / out {resp.usage.output_tokens:,} tokens)")
-    print(f"{len(cache)} cached, {rejected} rejected")
+    return f"{done} translated, {rejected} rejected"
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+    records = json.loads(DATA.read_text())["records"]
+    cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+    wanted = _strings(records)
+    todo = [(s, k) for s, k in wanted.items() if s not in cache]
+    print(f"{len(wanted)} strings shown, {len(todo)} not yet translated")
+    if args.dry_run:
+        for s, k in todo[:20]:
+            print(f"  {k:<8} {s[:70]}")
+        return
+    print(translate_new(records, limit=len(todo)))
 
 
 if __name__ == "__main__":

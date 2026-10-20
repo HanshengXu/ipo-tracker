@@ -473,12 +473,6 @@
   "model": "claude-opus-5-5 (written in a Claude Code session)",
   "translated_at": "2026-10-20T17:08:20.687923+00:00"
  },
- "ไพศาล แซ่ลี้": {
-  "en": "Paisan Saelee",
-  "kind": "name",
-  "model": "claude-opus-5-5 (written in a Claude Code session)",
-  "translated_at": "2026-10-20T17:08:20.687923+00:00"
- },
  "ไพศาล แซ่ลี้ — กรรมการ / ประธานเจ้าหน้าที่บริหาร / ประธานกรรมการบริหาร": {
   "en": "Paisan Saelee — Director / Chief Executive Officer / Chairman of the Executive Committee",
   "kind": "text",
@@ -816,10 +810,10 @@
   "translated_at": "2026-10-20T17:08:20.687923+00:00"
  },
  "總經理 (President): 莊士杰": {
-  "en": "President: Shih-Chieh Chuang",
+  "en": "General Manager (President): Shih-Chieh Chuang",
   "kind": "text",
-  "model": "claude-opus-5-5 (written in a Claude Code session)",
-  "translated_at": "2026-10-20T17:08:20.687923+00:00"
+  "model": "claude-opus-5-5",
+  "translated_at": "2026-10-20T17:24:49.083491+00:00"
  },
  "總經理 (President): 葉肇元": {
   "en": "President: Chao-Yuan Yeh",
@@ -908,8 +902,8 @@
  "莊士杰": {
   "en": "Shih-Chieh Chuang",
   "kind": "name",
-  "model": "claude-opus-5-5 (written in a Claude Code session)",
-  "translated_at": "2026-10-20T17:08:20.687923+00:00"
+  "model": "claude-opus-5-5",
+  "translated_at": "2026-10-20T17:24:49.083491+00:00"
  },
  "莊姿櫻": {
   "en": "Tzu-Ying Chuang",

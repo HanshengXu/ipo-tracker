@@ -105,7 +105,8 @@ filings themselves, read by rules, inside the refresh job:
 
 Thai and Taiwanese names are shown in the script they were filed in, with a
 romanisation in parentheses; Thai and Chinese quotes get an English translation
-underneath (`tools/translate.py`, cached in `data/enriched/translations.json`).
+underneath (`tools/translate.py`, run inside every refresh for strings not yet
+cached in `data/enriched/translations.json`, so a new company gets English the run it appears).
 Both are labelled as Claude's and are display-only: no email is built from a
 romanised name, because Thai and Chinese names have no single Latin spelling and
 the address would be a guess stacked on a guess. Bursa

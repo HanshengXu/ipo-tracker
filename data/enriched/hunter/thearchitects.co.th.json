@@ -1,0 +1,21 @@
+{
+ "domain": "thearchitects.co.th",
+ "pattern": "{last}",
+ "emails": [
+  {
+   "email": "contact@thearchitects.co.th",
+   "source_url": "https://thearchitects.co.th/en/contact",
+   "hunter_confidence": 81,
+   "hunter_type": "generic"
+  },
+  {
+   "email": "ir@thearchitects.co.th",
+   "source_url": "https://thearchitects.co.th/en/index",
+   "hunter_confidence": 77,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 6,
+ "dropped": 4,
+ "searched_at": "2026-10-20T17:24:42.264067+00:00"
+}

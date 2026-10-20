@@ -1,4 +1,4 @@
-# Daily refresh: run the pipeline, commit the new data, and GitHub Pages
+# Six-hourly refresh: run the pipeline, commit the new data, and GitHub Pages
 # redeploys the dashboard from /docs on that push.
 #
 # Each run also reads new Thai SEC filings for officers and IR contacts
@@ -6,8 +6,10 @@
 # searches and mailbox checks (core/hunter.py, one secret: HUNTER_API_KEY,
 # within the free plan). Both caches are committed under data/enriched/.
 # Without the secret the Hunter step is skipped and everything else runs.
-# The cron never calls the model: model extractions and website contacts are
-# produced locally (tools/) and committed under data/enriched/.
+# A second secret, ANTHROPIC_API_KEY, gives English to Thai/Chinese names and
+# quotes that appear for the first time (tools/translate.py; only uncached
+# strings, capped per run, cache committed). Model extraction of documents
+# and website contact collection stay local (tools/) and are committed.
 #
 # If an exchange blocks GitHub's IP range, run.py keeps that exchange's rows
 # from the previous run and marks them "stale" on the dashboard rather than
@@ -45,12 +47,13 @@ jobs:
         run: python run.py
         env:
           HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Commit if the data changed
         run: |
           git config user.name  "ipo-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/data/ipos.json data/enriched/hunter data/enriched/filings
+          git add docs/data/ipos.json data/enriched/hunter data/enriched/filings data/enriched/translations.json
           if git diff --cached --quiet; then
             echo "No data changes."
           else

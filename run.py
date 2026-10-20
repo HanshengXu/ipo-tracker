@@ -128,6 +128,13 @@ def main() -> None:
         print(f"[run] {step}: {result}")
 
     all_records = [r.to_dict() for r in records] + carried
+    try:
+        # English for new Thai/Chinese names and quotes (cached; skipped without a key).
+        from tools import translate
+        steps["translate"] = translate.translate_new(all_records)
+    except Exception as exc:                          # noqa: BLE001
+        steps["translate"] = f"failed: {type(exc).__name__}"
+    print(f"[run] translate: {steps['translate']}")
     payload = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": started.isoformat(),
