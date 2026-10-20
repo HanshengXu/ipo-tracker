@@ -1,0 +1,15 @@
+{
+ "domain": "sia.co.th",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "info@sia.co.th",
+   "source_url": "https://home.sia.co.th/privacypolicy",
+   "hunter_confidence": 83,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 4,
+ "dropped": 3,
+ "searched_at": "2026-10-20T16:08:53.062726+00:00"
+}

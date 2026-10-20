@@ -1,0 +1,15 @@
+{
+ "domain": "suparich.co.th",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "info@suparich.co.th",
+   "source_url": "https://suparich.co.th/en/category/bank",
+   "hunter_confidence": 87,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 3,
+ "dropped": 2,
+ "searched_at": "2026-10-20T16:08:50.793023+00:00"
+}

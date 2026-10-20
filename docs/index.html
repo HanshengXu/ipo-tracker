@@ -263,12 +263,13 @@ footer p { margin: 0 0 8px; }
     `<span class="email"><span>${esc(addr)}</span><span class="tier ${esc(tier)}" title="${tier === "VERIFIED" ? "Published by the company" : "Company naming pattern applied to a confirmed name"}">${esc(TIER_LABEL[tier] || tier)}</span>` +
     `<button class="copy" type="button" data-copy="${esc(addr)}" aria-label="Copy ${esc(addr)}">Copy</button></span>`;
   // Company inbox, labelled by who published it. Never shown as a person's address.
-  const inboxSource = (r) => {
-    const ev = r.company_email_evidence || "";
-    if (ev.includes("mops.twse")) return ["Exchange", "Filed with the exchange (MOPS company profile)"];
-    if (/\.pdf#page=/i.test(ev)) return ["Offer doc", "Stated in the company's offer document"];
-    return ["Website", "Published on the company's own website"];
+  const INBOX_SOURCE = {
+    exchange: ["Exchange", "Filed with the exchange (MOPS company profile)"],
+    "offer-document": ["Offer doc", "Stated in the company's offer document"],
+    website: ["Website", "Published on the company's own website"],
+    hunter: ["Hunter", "Found via Hunter.io; we re-checked that the linked page shows it"],
   };
+  const inboxSource = (r) => INBOX_SOURCE[r.company_email_method] || INBOX_SOURCE.website;
   const inbox = (r) => {
     if (!r.company_email) return NA;
     const [tag, title] = inboxSource(r);

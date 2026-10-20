@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 EXTRACTED = ROOT / "data" / "enriched"
 CONTACTS = EXTRACTED / "contacts"
 FILINGS = CONTACTS / "offer_documents"
+HUNTER = EXTRACTED / "hunter"
 
 MODEL_FIELDS = ("sector", "business_description", "ceo_name", "cfo_name",
                 "offer_size_local", "valuation_local")
@@ -84,8 +85,39 @@ def _pattern_for(local: str, parts: list[str]) -> str | None:
     return None
 
 
-def _tier_contacts(rec, contacts: dict | None, filing: dict | None = None) -> None:
-    emails = (filing or {}).get("emails", []) + (contacts or {}).get("emails", [])
+# ---- which addresses belong to the company (shared by tools/contacts.py and core/hunter.py)
+LEGAL = re.compile(r"\b(public company limited|holdings?|group|berhad|bhd|limited|ltd|plc|pcl|inc|corp(oration)?|co)\b\.?", re.I)
+
+
+def _name_key(company_name: str) -> str:
+    """'RICHEST SUPPLY PUBLIC COMPANY LIMITED' -> 'richestsupply'."""
+    return re.sub(r"[^a-z0-9]", "", LEGAL.sub(" ", company_name.lower()))
+
+
+def company_domain(email_domain: str, site_domain: str | None, company_name: str) -> bool:
+    """The site's own domain (or a subdomain), or a sibling domain whose first
+    label spells the company's name ('richestsupply' for Richest Supply,
+    'tek4' for TEK 4 Group), or at least half of it. Labels under four
+    characters never match: too many companies share them."""
+    if site_domain and (email_domain == site_domain or email_domain.endswith("." + site_domain)):
+        return True
+    label, key = email_domain.split(".")[0].replace("-", ""), _name_key(company_name)
+    return len(label) >= 4 and bool(key) and (key == label or key.startswith(label) and len(label) >= len(key) / 2)
+
+
+def keep_email(email: str, officers: list[str]) -> bool:
+    """Only generic inboxes and named officers' own addresses are kept: other
+    staff addresses have no use here, and this repo is public."""
+    local = email.split("@")[0]
+    return local in GENERIC or any(_pattern_for(local, _name_parts(n)) for n in officers)
+
+
+def _tier_contacts(rec, contacts: dict | None, filing: dict | None = None, hunter: dict | None = None) -> None:
+    # Company-published sources first, so on a tie in inbox preference the
+    # offer document or the company's own site is cited over a Hunter find.
+    emails = ([{**e, "method": "offer-document"} for e in (filing or {}).get("emails", [])]
+              + [{**e, "method": "website"} for e in (contacts or {}).get("emails", [])]
+              + [{**e, "method": "hunter"} for e in (hunter or {}).get("emails", [])])
     if not emails:
         return
 
@@ -96,6 +128,7 @@ def _tier_contacts(rec, contacts: dict | None, filing: dict | None = None) -> No
         best = min(generic, key=lambda e: rank.get(e["email"].split("@")[0], 99))
         rec.company_email = best["email"]
         rec.company_email_evidence = best["source_url"]
+        rec.company_email_method = best["method"]
 
     people = {"ceo": rec.ceo_name, "cfo": rec.cfo_name}
     personal = [e for e in emails if e["email"].split("@")[0] not in GENERIC]
@@ -153,6 +186,7 @@ def apply(records) -> dict:
     """Merge enrichment in place. Returns counts for the run log."""
     extracted = _load_extracted()
     contacts = {p.stem: json.loads(p.read_text()) for p in CONTACTS.glob("*.json")}
+    hunter = {p.stem: json.loads(p.read_text()) for p in HUNTER.glob("*.json")}
     filings = {}
     for p in FILINGS.glob("*.json"):
         doc = json.loads(p.read_text())
@@ -177,6 +211,7 @@ def apply(records) -> dict:
                                           "source_url": got["source_url"], "quote": got["quote"],
                                           "extracted_at": entry["extracted_at"]}
                 filled += 1
-        _tier_contacts(rec, contacts.get(domain_of(rec.company_url) or ""), filing)
+        domain = domain_of(rec.company_url) or ""
+        _tier_contacts(rec, contacts.get(domain), filing, hunter.get(domain))
     return {"fields_filled": filled, "cache_entries": len(extracted), "contact_sites": len(contacts),
-            "offer_documents": len(filings)}
+            "offer_documents": len(filings), "hunter_domains": len(hunter)}

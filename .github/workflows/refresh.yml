@@ -1,9 +1,11 @@
 # Daily refresh: run the pipeline, commit the new data, and GitHub Pages
 # redeploys the dashboard from /docs on that push.
 #
-# No secrets. The cron never calls the model: model extractions and website
-# contacts are produced locally (tools/) and committed under data/enriched/,
-# so this job only re-fetches exchange data and re-applies the cached work.
+# One secret, HUNTER_API_KEY, for the daily Hunter.io domain search
+# (core/hunter.py: a few searches a day within the free plan, results cached
+# under data/enriched/hunter/ and committed). Without it that step is skipped.
+# The cron never calls the model: model extractions and website contacts are
+# produced locally (tools/) and committed under data/enriched/.
 #
 # If an exchange blocks GitHub's IP range, run.py keeps that exchange's rows
 # from the previous run and marks them "stale" on the dashboard rather than
@@ -39,12 +41,14 @@ jobs:
 
       - name: Run pipeline
         run: python run.py
+        env:
+          HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
 
       - name: Commit if the data changed
         run: |
           git config user.name  "ipo-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/data/ipos.json
+          git add docs/data/ipos.json data/enriched/hunter
           if git diff --cached --quiet; then
             echo "No data changes."
           else

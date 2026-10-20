@@ -1,0 +1,21 @@
+{
+ "domain": "elixiron.com",
+ "pattern": "{first}.{last}",
+ "emails": [
+  {
+   "email": "media@elixiron.com",
+   "source_url": "https://newswire.com/news/elixiron-immunotherapeutics-announces-orphan-drug-designation-granted-21813128",
+   "hunter_confidence": 97,
+   "hunter_type": "generic"
+  },
+  {
+   "email": "ir@elixiron.com",
+   "source_url": "https://irplatform.tdcc.com.tw/ir/zh/contact/detail/402897979acb5660019acb83da7d0000",
+   "hunter_confidence": 96,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 8,
+ "dropped": 6,
+ "searched_at": "2026-10-20T16:06:56.464244+00:00"
+}

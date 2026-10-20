@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from adapters import london, malaysia, singapore, taiwan, thailand
-from core import enrich, fx, score
+from core import enrich, fx, hunter, score
 from core.schema import SCHEMA_VERSION
 
 # Published inside docs/ because GitHub Pages serves only that folder --
@@ -82,6 +82,17 @@ def main() -> None:
         steps["enrich"] = enrich.apply(records)
     except Exception as exc:                          # noqa: BLE001
         steps["enrich"] = f"failed: {exc}"
+    try:
+        # Needs the websites enrichment just filled in (SGX's come from offer
+        # documents) and the GEM score to spend its small budget on the best
+        # rows first -- so it scores once here, then enrichment re-applies
+        # to pick up anything Hunter found.
+        score.score_all(records)
+        steps["hunter"] = hunter.refresh(records)
+        if "kept" in steps["hunter"] and not steps["hunter"].startswith("0 searched"):
+            enrich.apply(records)
+    except Exception as exc:                          # noqa: BLE001
+        steps["hunter"] = f"failed: {type(exc).__name__}"   # never str(exc): it could carry a request
     try:
         fx.convert(records, fx.Rates.load())
         steps["fx"] = "ECB reference rates, dated per record"

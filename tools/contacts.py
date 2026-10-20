@@ -47,7 +47,7 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from core.enrich import FILINGS, GENERIC, _name_parts, _pattern_for  # noqa: E402
+from core.enrich import FILINGS, company_domain, keep_email  # noqa: E402
 from core.http import DEFAULT_UA  # noqa: E402
 
 DATA = ROOT / "docs" / "data" / "ipos.json"
@@ -60,7 +60,6 @@ LINK = re.compile(r'href="([^"#]+)"', re.I)
 # link on tek4investors.co.uk, whose hostname contains "investor".
 # ติดต่อ = "contact", นักลงทุน = "investor" (Thai sites link only in Thai).
 CONTACT_LINK = re.compile(r"contact|investor|ติดต่อ|นักลงทุน", re.I)
-LEGAL = re.compile(r"\b(public company limited|holdings?|group|berhad|bhd|limited|ltd|plc|pcl|inc|corp(oration)?|co)\b\.?", re.I)
 # "Our internet address is www.x.com" / "Our email address is ir@x.com".
 # Disclaimers ("The information on our website ...") don't match.
 OFFER_CONTACT = re.compile(r"\b(?:our|its) (?:e-?mail|internet|website|web)(?: site)?(?: address)? (?:is|are)\b", re.I)
@@ -102,27 +101,6 @@ def _pages(base: str, session: requests.Session) -> list[tuple[str, str]]:
     return out
 
 
-def _name_key(company_name: str) -> str:
-    """'RICHEST SUPPLY PUBLIC COMPANY LIMITED' -> 'richestsupply'."""
-    return re.sub(r"[^a-z0-9]", "", LEGAL.sub(" ", company_name.lower()))
-
-
-def _company_domain(email_domain: str, site_domain: str | None, company_name: str) -> bool:
-    """The site's own domain (or a subdomain), or a sibling domain whose first
-    label spells the company's name ('richestsupply' for Richest Supply,
-    'tek4' for TEK 4 Group), or at least half of it. Labels under four
-    characters never match: too many companies share them."""
-    if site_domain and (email_domain == site_domain or email_domain.endswith("." + site_domain)):
-        return True
-    label, key = email_domain.split(".")[0].replace("-", ""), _name_key(company_name)
-    return len(label) >= 4 and bool(key) and (key == label or key.startswith(label) and len(label) >= len(key) / 2)
-
-
-def _keep(email: str, officers: list[str]) -> bool:
-    local = email.split("@")[0]
-    return local in GENERIC or any(_pattern_for(local, _name_parts(n)) for n in officers)
-
-
 def collect(company_url: str, session: requests.Session, officers: list[str], company_name: str) -> dict:
     domain = domain_of(company_url)
     base = company_url if company_url.startswith("http") else f"https://{company_url}"
@@ -136,7 +114,7 @@ def collect(company_url: str, session: requests.Session, officers: list[str], co
             email = email.lower().rstrip(".")
             # The company's own domain(s) only. Agency, CDN and placeholder
             # addresses (name@example.com) are not the company's.
-            if _company_domain(email.split("@")[1], domain, company_name) and _keep(email, officers):
+            if company_domain(email.split("@")[1], domain, company_name) and keep_email(email, officers):
                 found.setdefault(email, url)
     return {
         "domain": domain,
@@ -169,7 +147,7 @@ def from_offer_document(url: str, company_name: str) -> dict:
         # sponsor's or registrar's address nearby can't pass as the company's
         # (Leong Guan's site is leongguan.com, its inbox @leong-guan.com).
         emails = sorted({e.lower().rstrip(".") for e in EMAIL.findall(para)
-                         if _company_domain(e.lower().rstrip(".").split("@")[1], site_domain, company_name)})
+                         if company_domain(e.lower().rstrip(".").split("@")[1], site_domain, company_name)})
         quote = " ".join(sn for sn in re.split(r"(?<=\.) (?=[A-Z])", para)
                          if any(e in sn.lower() for e in emails) or site.group(0) in sn)
         return {"company_url": f"https://{site.group(1).lower()}", "page": i + 1, "quote": quote[:500],

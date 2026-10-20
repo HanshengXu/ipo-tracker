@@ -1,0 +1,15 @@
+{
+ "domain": "quick-transformation.com",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "sales@quick-transformation.com",
+   "source_url": "https://quick-transformation.com/blog-2023-what-is-ethernet-switch",
+   "hunter_confidence": 99,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 1,
+ "dropped": 0,
+ "searched_at": "2026-10-20T16:06:50.042253+00:00"
+}

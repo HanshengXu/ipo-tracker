@@ -1,0 +1,15 @@
+{
+ "domain": "arkitektura.co.th",
+ "pattern": "{first}",
+ "emails": [
+  {
+   "email": "info@arkitektura.co.th",
+   "source_url": "https://emco-bath.com/de/store/arkitektura-co-ltd",
+   "hunter_confidence": 99,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 2,
+ "dropped": 1,
+ "searched_at": "2026-10-20T16:08:43.433179+00:00"
+}

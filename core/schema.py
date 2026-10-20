@@ -102,6 +102,7 @@ class IPORecord:
     # real contact, but it is not the CEO's email and must not be shown as one.
     company_email: Optional[str] = None
     company_email_evidence: Optional[str] = None
+    company_email_method: Optional[str] = None   # exchange | offer-document | website | hunter
 
     # --- deal participants (a real GEM signal: who is already banking it) --
     financial_advisors: list[str] = field(default_factory=list)

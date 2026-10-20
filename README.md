@@ -101,6 +101,12 @@ column shows the address the company itself published, tagged with where:
 | EXCHANGE | filed with the exchange (Taiwan's MOPS company profile) |
 | OFFER DOC | the "our email address is…" sentence in an SGX offer document, linked to the page |
 | WEBSITE | the company's own contact or IR page |
+| HUNTER | found by [Hunter.io](https://hunter.io) domain search, then re-checked: we fetch the page Hunter cites and keep the address only if it's there |
+
+Hunter runs inside the daily refresh (`core/hunter.py`), on upcoming IPOs only,
+companies with no email first. The free plan allows 50 searches a month, so
+each run does at most five, keeps five in reserve, and caches results for 90
+days. Hunter's pattern-guessed addresses (no source page) are discarded.
 
 An address counts only if its domain is the company's website domain, or a domain
 that spells the company's own name (Richest Supply publishes `info@richestsupply.com`

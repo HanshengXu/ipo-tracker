@@ -121,6 +121,7 @@ def _apply_mops(rec: IPORecord, p: dict) -> None:
         # never the CEO's personal address.
         rec.company_email = p["email"].strip().lower()
         rec.company_email_evidence = src
+        rec.company_email_method = "exchange"
 
 
 def _to_record(row: list, *, today: date, fetched_at: datetime) -> IPORecord:

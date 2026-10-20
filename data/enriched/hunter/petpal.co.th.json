@@ -1,0 +1,15 @@
+{
+ "domain": "petpal.co.th",
+ "pattern": "{first}{last}",
+ "emails": [
+  {
+   "email": "info@petpal.co.th",
+   "source_url": "https://petpal.co.th",
+   "hunter_confidence": 77,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 3,
+ "dropped": 2,
+ "searched_at": "2026-10-20T16:06:59.808784+00:00"
+}

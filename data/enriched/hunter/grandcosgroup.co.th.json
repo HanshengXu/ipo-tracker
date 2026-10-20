@@ -1,0 +1,15 @@
+{
+ "domain": "grandcosgroup.co.th",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "hr@grandcosgroup.co.th",
+   "source_url": "https://jobfinfin.com/company_profile/aca47a342f3dca6511af0ff310a5513fc5f",
+   "hunter_confidence": 77,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 1,
+ "dropped": 0,
+ "searched_at": "2026-10-20T16:08:40.238906+00:00"
+}
