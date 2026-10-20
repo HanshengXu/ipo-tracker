@@ -1,41 +1,41 @@
 {
  "schema_version": "6",
- "generated_at": "2026-10-20T16:07:44.245742+00:00",
+ "generated_at": "2026-10-20T16:09:26.677430+00:00",
  "sources": [
   {
    "name": "Thailand (SET, mai)",
    "tier": "automated",
    "rows": 13,
    "status": "fresh",
-   "as_of": "2026-10-20T16:07:44.245742+00:00"
+   "as_of": "2026-10-20T16:09:26.677430+00:00"
   },
   {
    "name": "Singapore (SGX Catalist)",
    "tier": "automated",
    "rows": 6,
    "status": "fresh",
-   "as_of": "2026-10-20T16:07:44.245742+00:00"
+   "as_of": "2026-10-20T16:09:26.677430+00:00"
   },
   {
    "name": "Malaysia (Bursa)",
    "tier": "semi-automated",
    "rows": 70,
    "status": "fresh",
-   "as_of": "2026-10-20T16:07:44.245742+00:00"
+   "as_of": "2026-10-20T16:09:26.677430+00:00"
   },
   {
    "name": "London (LSE AIM)",
    "tier": "automated",
    "rows": 4,
    "status": "fresh",
-   "as_of": "2026-10-20T16:07:44.245742+00:00"
+   "as_of": "2026-10-20T16:09:26.677430+00:00"
   },
   {
    "name": "Taiwan (TWSE, TIB)",
    "tier": "automated",
    "rows": 38,
    "status": "fresh",
-   "as_of": "2026-10-20T16:07:44.245742+00:00"
+   "as_of": "2026-10-20T16:09:26.677430+00:00"
   }
  ],
  "steps": {
@@ -44,9 +44,9 @@
    "cache_entries": 39,
    "contact_sites": 43,
    "offer_documents": 6,
-   "hunter_domains": 5
+   "hunter_domains": 10
   },
-  "hunter": "5 searched, 4 addresses kept, 28 domains still due",
+  "hunter": "5 searched, 0 addresses kept, 23 domains still due",
   "fx": "ECB reference rates, dated per record"
  },
  "records": [
@@ -102,7 +102,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -165,7 +165,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -228,7 +228,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -291,7 +291,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -354,7 +354,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -417,7 +417,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -480,7 +480,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -544,7 +544,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -607,7 +607,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -670,7 +670,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -733,7 +733,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -796,7 +796,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -859,7 +859,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:07:44.247439+00:00",
+   "fetched_at": "2026-10-20T16:09:26.680543+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -922,7 +922,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/metasurface-technologies-holdings-limited/2026-09-28",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1011,7 +1011,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/kin-global-limited/2026-03-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1072,7 +1072,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/assembly-place-holdings-ltd/2025-12-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1168,7 +1168,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/toku-ltd/2025-12-10",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1229,7 +1229,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/leong-guan-holdings-limited/2025-09-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1290,7 +1290,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/infinity-development-holdings-company-limited/2025-09-29",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:07:48.991489+00:00",
+   "fetched_at": "2026-10-20T16:09:30.629638+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -5065,7 +5065,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:06.844002+00:00",
+   "fetched_at": "2026-10-20T16:09:46.098523+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5131,7 +5131,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:06.844002+00:00",
+   "fetched_at": "2026-10-20T16:09:46.098523+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5196,7 +5196,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:06.844002+00:00",
+   "fetched_at": "2026-10-20T16:09:46.098523+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5261,7 +5261,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:06.844002+00:00",
+   "fetched_at": "2026-10-20T16:09:46.098523+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5322,7 +5322,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5395,7 +5395,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5470,7 +5470,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5545,7 +5545,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5620,7 +5620,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -5675,7 +5675,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5748,7 +5748,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5821,7 +5821,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5894,7 +5894,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5967,7 +5967,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6040,7 +6040,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6099,7 +6099,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6172,7 +6172,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6247,7 +6247,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6320,7 +6320,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -6373,7 +6373,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6446,7 +6446,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6519,7 +6519,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6592,7 +6592,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6651,7 +6651,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6724,7 +6724,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6797,7 +6797,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6870,7 +6870,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6929,7 +6929,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6988,7 +6988,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7047,7 +7047,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7122,7 +7122,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7181,7 +7181,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7242,7 +7242,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7303,7 +7303,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7362,7 +7362,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7421,7 +7421,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7480,7 +7480,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7555,7 +7555,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7616,7 +7616,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7675,7 +7675,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7734,7 +7734,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7793,7 +7793,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:08:08.892328+00:00",
+   "fetched_at": "2026-10-20T16:09:48.153579+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {

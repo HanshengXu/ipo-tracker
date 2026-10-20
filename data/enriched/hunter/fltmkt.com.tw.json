@@ -1,0 +1,8 @@
+{
+ "domain": "fltmkt.com.tw",
+ "pattern": "{first}.{last}",
+ "emails": [],
+ "returned": 6,
+ "dropped": 6,
+ "searched_at": "2026-10-20T16:10:21.134550+00:00"
+}
