@@ -27,6 +27,7 @@ the row.
 from __future__ import annotations
 
 import json
+import re
 import time
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -103,6 +104,10 @@ def _mops_profile(session: requests.Session, code: str) -> dict:
             if isinstance(v, dict) and not v.get("isHidden") and v.get("value") not in ("", "-", None)}
 
 
+# 財務長 = CFO; 財務主管/財會主管 = head of finance; 財務副總/協理 = finance VP.
+CFO_TITLE = re.compile(r"財務長|財務主管|財會主管|財務副總|財務協理|財務處長")
+
+
 def _apply_mops(rec: IPORecord, p: dict) -> None:
     src = f"{MOPS_PAGE} (company {rec.ticker})"
     rec.company_name = (p.get("companyEnglishName") or rec.company_name).strip()
@@ -114,8 +119,22 @@ def _apply_mops(rec: IPORecord, p: dict) -> None:
         rec.company_url = site if site.startswith("http") else f"https://{site}"
     if p.get("president"):
         rec.ceo_name = p["president"]
-        rec.field_sources["ceo_name"] = {"method": "exchange-filing", "source_url": src,
-                                         "quote": f"總經理 (President): {p['president']}"}
+        quote = f"總經理 (President): {p['president']}"
+        # MOPS gives an English name only for the legal representative. When
+        # that is the president, use it: "CHEN, HUNG-KAI" -> "Hung-Kai Chen (陳泓愷)".
+        en = p.get("lawsuitAgentEnglishName") or ""
+        if p.get("lawsuitAgentName") == p["president"] and "," in en:
+            surname, given = (x.strip().title() for x in en.split(",", 1))
+            rec.ceo_name = f"{given} {surname} ({p['president']})"
+            quote += f"; 訴訟及非訟代理人 (legal representative): {p['lawsuitAgentName']}, {en}"
+        rec.field_sources["ceo_name"] = {"method": "exchange-filing", "source_url": src, "quote": quote}
+    # The company spokesperson (發言人) is usually the CFO in Taiwan; take the
+    # name only when the filed title says so.
+    if p.get("spokesperson") and CFO_TITLE.search(p.get("spokespersonTitle") or ""):
+        rec.cfo_name = p["spokesperson"]
+        rec.field_sources["cfo_name"] = {"method": "exchange-filing", "source_url": src,
+                                         "quote": f"發言人 (Spokesperson): {p['spokesperson']}; "
+                                                  f"職稱 (Title): {p['spokespersonTitle']}"}
     if p.get("email"):
         # A company IR inbox from the official filing -- a company contact,
         # never the CEO's personal address.

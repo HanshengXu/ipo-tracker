@@ -91,18 +91,25 @@ class IPORecord:
     ceo_email: Optional[str] = None
     ceo_email_tier: str = "UNAVAILABLE"
     ceo_email_evidence: Optional[str] = None
+    ceo_email_check: Optional[str] = None      # GUESSED only: mailbox check result (Hunter verifier)
 
     cfo_name: Optional[str] = None
     cfo_email: Optional[str] = None
     cfo_email_tier: str = "UNAVAILABLE"
     cfo_email_evidence: Optional[str] = None
+    cfo_email_check: Optional[str] = None
 
     # A generic company inbox (ir@, info@) found on the company's own site.
     # Deliberately separate from the CEO/CFO fields: an info@ address is a
     # real contact, but it is not the CEO's email and must not be shown as one.
     company_email: Optional[str] = None
     company_email_evidence: Optional[str] = None
-    company_email_method: Optional[str] = None   # exchange | offer-document | website | hunter
+    company_email_method: Optional[str] = None   # exchange | filing | offer-document | website | hunter
+    # The company's designated investor-relations contact, as named in a
+    # regulatory filing (Thai SEC section 2.3). A person, with their address.
+    ir_contact_name: Optional[str] = None
+    ir_contact_email: Optional[str] = None
+    ir_contact_evidence: Optional[str] = None
 
     # --- deal participants (a real GEM signal: who is already banking it) --
     financial_advisors: list[str] = field(default_factory=list)

@@ -1,9 +1,11 @@
 # Daily refresh: run the pipeline, commit the new data, and GitHub Pages
 # redeploys the dashboard from /docs on that push.
 #
-# One secret, HUNTER_API_KEY, for the daily Hunter.io domain search
-# (core/hunter.py: a few searches a day within the free plan, results cached
-# under data/enriched/hunter/ and committed). Without it that step is skipped.
+# Each run also reads new Thai SEC filings for officers and IR contacts
+# (core/filings.py, rule-based, cached weekly) and spends a few Hunter.io
+# searches and mailbox checks (core/hunter.py, one secret: HUNTER_API_KEY,
+# within the free plan). Both caches are committed under data/enriched/.
+# Without the secret the Hunter step is skipped and everything else runs.
 # The cron never calls the model: model extractions and website contacts are
 # produced locally (tools/) and committed under data/enriched/.
 #
@@ -15,7 +17,7 @@ name: refresh-data
 
 on:
   schedule:
-    - cron: "17 22 * * *"   # 22:17 UTC = 06:17 in Singapore/KL/Taipei, before Asian markets open
+    - cron: "17 */6 * * *"  # every 6 hours; 18:17 UTC = 02:17 Singapore/KL/Taipei, so one run lands before Asian markets open
   workflow_dispatch: {}      # "Run workflow" button for manual refreshes
 
 permissions:
@@ -48,10 +50,10 @@ jobs:
         run: |
           git config user.name  "ipo-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/data/ipos.json data/enriched/hunter
+          git add docs/data/ipos.json data/enriched/hunter data/enriched/filings
           if git diff --cached --quiet; then
             echo "No data changes."
           else
-            git commit -m "data: daily refresh $(date -u +%Y-%m-%d)"
+            git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git push
           fi

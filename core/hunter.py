@@ -38,15 +38,19 @@ from urllib.parse import unquote
 
 import requests
 
-from core.enrich import company_domain, domain_of, keep_email
+import hashlib
+
+from core.enrich import HUNTER_CHECKS, _name_parts, company_domain, domain_of, keep_email
 from core.http import DEFAULT_UA
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "data" / "enriched" / "hunter"
 API = "https://api.hunter.io/v2"
 UPCOMING = {"ITF", "FILED", "APPROVED", "EFFECTIVE", "PRICED", "UNKNOWN"}
-PER_RUN = 5            # searches per daily run
+PER_RUN = 3            # searches per run (the job runs every six hours)
 RESERVE = 5            # searches left untouched for manual use
+VERIFY_PER_RUN = 5     # mailbox checks of GUESSED addresses per run (100 a month free)
+VERIFY_RESERVE = 10
 REFRESH_DAYS = 90
 MAX_SOURCES = 3        # source pages we fetch per address before giving up
 
@@ -104,18 +108,65 @@ def _search(session: requests.Session, domain: str, company_name: str, officers:
 
 def _candidates(records) -> list:
     """One upcoming record per domain. Breadth first: companies with no
-    email of any kind come first, then those missing a personal address;
-    best GEM fit first within each."""
+    email of any kind come first; then companies with a named officer (in
+    Latin letters) but no address for them, since Hunter's pattern for the
+    domain turns that name into a labelled guess; best GEM fit first within each."""
+    def named_without_email(r):
+        return any(len(_name_parts(getattr(r, f"{x}_name") or "")) >= 2 and not getattr(r, f"{x}_email")
+                   for x in ("ceo", "cfo"))
     seen, out = set(), []
     upcoming = [r for r in records if r.listing_status in UPCOMING]
-    for rec in sorted(upcoming, key=lambda r: (bool(r.company_email),
-                                               bool(r.ceo_email or r.cfo_email),
+    for rec in sorted(upcoming, key=lambda r: (bool(r.company_email), not named_without_email(r),
                                                -(r.gem_fit_score or 0))):
         d = domain_of(rec.company_url)
         if d and d not in seen:
             seen.add(d)
             out.append((d, rec))
     return out
+
+
+def _session(key: str) -> requests.Session:
+    session = requests.Session()
+    session.headers.update({"X-API-KEY": key})             # header, so the key never sits in a logged URL
+    return session
+
+
+def verify_guesses(records) -> str:
+    """Hunter's email verifier on GUESSED addresses: does the mailbox exist?
+    Cached per address; 'invalid' makes core/enrich drop the guess."""
+    key = _key()
+    if not key:
+        return "skipped: no HUNTER_API_KEY"
+    HUNTER_CHECKS.mkdir(parents=True, exist_ok=True)
+    due = []
+    for rec in records:
+        for role in ("ceo", "cfo"):
+            email = getattr(rec, f"{role}_email")
+            if getattr(rec, f"{role}_email_tier") == "GUESSED" and email:
+                path = HUNTER_CHECKS / f"{hashlib.sha1(email.encode()).hexdigest()[:16]}.json"
+                if not path.exists():
+                    due.append((email, path))
+    if not due:
+        return "no guesses to check"
+    session = _session(key)
+    r = session.get(f"{API}/account", timeout=30)
+    r.raise_for_status()
+    left = int(r.json()["data"]["requests"]["verifications"]["remaining"])
+    budget = min(VERIFY_PER_RUN, left - VERIFY_RESERVE)
+    done = 0
+    for email, path in due[:max(budget, 0)]:
+        try:
+            v = session.get(f"{API}/email-verifier", params={"email": email}, timeout=60)
+            v.raise_for_status()
+            data = v.json()["data"]
+        except (requests.RequestException, KeyError, ValueError) as exc:
+            print(f"[hunter] verify: {type(exc).__name__}")
+            continue
+        path.write_text(json.dumps({"email": email, "status": data.get("status"), "score": data.get("score"),
+                                    "checked_at": datetime.now(timezone.utc).isoformat()}, indent=1))
+        done += 1
+        print(f"[hunter] verify {email}: {data.get('status')}")
+    return f"{done} guesses checked, {len(due) - done} still due"
 
 
 def refresh(records) -> str:
@@ -134,8 +185,7 @@ def refresh(records) -> str:
     if not due:
         return "nothing due"
 
-    session = requests.Session()
-    session.headers.update({"X-API-KEY": key})             # header, so the key never sits in a logged URL
+    session = _session(key)
     budget = min(PER_RUN, _remaining(session) - RESERVE)
     searched, found = 0, 0
     for domain, rec in due:

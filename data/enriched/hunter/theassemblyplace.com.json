@@ -1,0 +1,21 @@
+{
+ "domain": "theassemblyplace.com",
+ "pattern": "{first}.{last}",
+ "emails": [
+  {
+   "email": "info@theassemblyplace.com",
+   "source_url": "https://theassemblyplace.com/ir-policies/investor-relation-policy",
+   "hunter_confidence": 85,
+   "hunter_type": "generic"
+  },
+  {
+   "email": "ir@theassemblyplace.com",
+   "source_url": "https://theassemblyplace.com/ir-policies/investor-relation-policy",
+   "hunter_confidence": 77,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 10,
+ "dropped": 8,
+ "searched_at": "2026-10-20T16:39:43.370303+00:00"
+}

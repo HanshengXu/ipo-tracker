@@ -1,0 +1,8 @@
+{
+ "domain": "metatechnologies.com.sg",
+ "pattern": "{first}.{last}",
+ "emails": [],
+ "returned": 1,
+ "dropped": 1,
+ "searched_at": "2026-10-20T16:39:35.529723+00:00"
+}

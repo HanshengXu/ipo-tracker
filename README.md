@@ -3,7 +3,7 @@
 A live dashboard of upcoming IPOs on emerging-market **growth boards**, built as a
 deal-sourcing tool for committed equity facilities.
 
-**Live:** https://hanshengxu.github.io/ipo-tracker/ · refreshed daily by GitHub Actions
+**Live:** https://hanshengxu.github.io/ipo-tracker/ · refreshed every 6 hours by GitHub Actions
 
 Every row traces to an exchange or regulator source. Nothing is invented: a field
 that couldn't be sourced shows **N/A**, and the expanded row says where each
@@ -61,7 +61,7 @@ run.py  ── ingest ─► enrich ─► fx ─► score ─► docs/data/ipos
 - **Failures stay local.** A failing exchange or malformed row never takes down the
   run. If an exchange returns nothing, its previous rows are kept and labelled
   *stale* on the dashboard rather than silently vanishing.
-- **No server.** The dashboard is one static HTML file reading one JSON file. A daily
+- **No server.** The dashboard is one static HTML file reading one JSON file. A six-hourly
   GitHub Actions job (`.github/workflows/refresh.yml`) re-runs the pipeline and commits
   the JSON, and GitHub Pages redeploys. No framework and no build step: for ~130 rows,
   React would add a toolchain and failure modes without adding value.
@@ -91,45 +91,66 @@ An unknown input scores **half** its points and is labelled "unknown" in the
 breakdown. Zero would punish markets that disclose little; full marks would
 reward it.
 
-### Contact emails: breadth first, never guessed
+### Contacts: breadth first, every address with its evidence
 
-**Company inbox, for as many companies as possible.** Each row's *Company email*
-column shows the address the company itself published, tagged with where:
+**Officers from regulatory filings.** Names come from the exchanges and from the
+filings themselves, read by rules, inside the refresh job:
+
+| Exchange | Filing | What it gives |
+|---|---|---|
+| Thailand | SEC Thailand filing, section 2.3 (governance: board and executives), `core/filings.py` | CEO (or managing director), CFO, and the **named head of investor relations with their email** |
+| Taiwan | MOPS company profile, `adapters/taiwan.py` | President (CEO); spokesperson when the filed title is CFO (財務長); the CEO's English name when they are the legal representative |
+| Singapore | Catalist offer document | CEO / CFO (model-read, quote-verified, `tools/extract.py`); company inbox and website |
+| London | LSEG pre-IPO profile | directors with titles |
+
+Thai and Taiwanese names are shown in the script they were filed in. They are not
+romanised into Latin letters: Thai and Chinese names have no single spelling, so
+an email built from a romanisation would be a guess stacked on a guess. Bursa
+prospectuses sit behind Cloudflare and are not read yet.
+
+**Company inbox, for as many companies as possible.** The *Company / IR email*
+column shows the address the company published, tagged with where:
 
 | Tag | Source |
 |---|---|
-| EXCHANGE | filed with the exchange (Taiwan's MOPS company profile) |
-| OFFER DOC | the "our email address is…" sentence in an SGX offer document, linked to the page |
-| WEBSITE | the company's own contact or IR page |
-| HUNTER | found by [Hunter.io](https://hunter.io) domain search, then re-checked: we fetch the page Hunter cites and keep the address only if it's there |
+| Exchange | filed with the exchange (Taiwan's MOPS company profile) |
+| Filing | the company's regulatory filing (Thai SEC section 2.3) |
+| Offer doc | the "our email address is…" sentence in an SGX offer document, linked to the page |
+| Website | the company's own contact or IR page |
+| Hunter | found by [Hunter.io](https://hunter.io) domain search, then re-checked: we fetch the page Hunter cites and keep the address only if it's there |
 
-Hunter runs inside the daily refresh (`core/hunter.py`), on upcoming IPOs only,
-companies with no email first. The free plan allows 50 searches a month, so
-each run does at most five, keeps five in reserve, and caches results for 90
-days. Hunter's pattern-guessed addresses (no source page) are discarded.
+Under it, the **investor-relations contact** the filing names, with their address:
+the person a company designates to answer investors.
 
 An address counts only if its domain is the company's website domain, or a domain
 that spells the company's own name (Richest Supply publishes `info@richestsupply.com`
-on `enrichlighting.com`). Free-mail, agency and staff addresses are never used, and
-inboxes like `careers@` or `whistleblowing@` are never offered as the contact.
-Coverage today: **36 of 43 upcoming IPOs**. The other seven are real gaps: three Thai
-sites publish no inbox, the two Bursa prospectuses sit behind Cloudflare, and two
-Taiwanese applicants have no public MOPS profile yet.
+on `enrichlighting.com`). Free-mail, agency and other staff addresses are never used,
+and inboxes like `careers@` or `whistleblowing@` are never offered as the contact.
 
-**Named officers, tiered:**
+**Officer emails, tiered:**
 
-- **VERIFIED:** the person's own address appears on the company's site or in a
-  filing. The evidence is that URL.
-- **INFERRED:** another named officer's published address reveals the company's
-  naming pattern, which is then applied to a confirmed name. The evidence is the
-  pattern and the address it was learned from.
-- **N/A:** everything else. A generic inbox (`ir@`, `info@`) is shown as the
-  *company* contact, never as the CEO's address.
+- **Verified:** the person's own address is published by the company, on its site
+  or in a filing. The evidence is that page. (Finnomena's and Supa Rich's CFOs are
+  also their IR heads, so their filed addresses are their own.)
+- **Inferred:** another named officer's published address reveals the company's
+  naming pattern, which is then applied to a confirmed name.
+- **Guessed:** not published. Hunter.io's usual pattern for the domain (learned
+  from the addresses Hunter has seen there) applied to a confirmed name, then
+  checked with Hunter's mailbox verifier. A guess the verifier rejects is dropped;
+  one it confirms is labelled "mailbox exists"; one it can't test ("accepts any
+  address") says so. Guesses are dashed red on the dashboard and never mixed with
+  the tiers above.
+- **N/A:** no published address and no pattern to guess from.
 
 In deal sourcing **a wrong email is worse than a missing one**: it burns the
-contact and damages sending reputation. So most personal emails show N/A today.
-Small issuers rarely publish them, and a CEO named only in Chinese characters
-can't be matched against `amos.liao@`.
+contact and damages sending reputation. That is why a guess is shown only with its
+label, its pattern and its mailbox check, so the user decides whether to send.
+
+Hunter runs inside the refresh job (`core/hunter.py`), on upcoming IPOs only,
+companies with no email first, then companies with a named officer but no address.
+The free plan allows 50 searches and 100 mailbox checks a month: each run uses at
+most three searches and five checks, keeps a reserve, and caches results (90 days
+for searches). Without the `HUNTER_API_KEY` secret the step is skipped.
 
 ### Other details
 

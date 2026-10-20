@@ -89,6 +89,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .tier { font-size: 11px; font-weight: 600; padding: 0 5px; border-radius: 4px; border: 1px solid currentColor; }
 .tier.VERIFIED { color: var(--good); }
 .tier.INFERRED { color: var(--warn-ink); }
+.tier.GUESSED { color: var(--bad); border-style: dashed; }
+.ir { margin-top: 4px; font-size: 12.5px; }
 .tier.SRC { color: var(--muted); font-weight: 500; }
 .fx { text-decoration: underline dotted var(--muted); text-underline-offset: 3px; cursor: help; }
 .email { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
@@ -163,9 +165,11 @@ footer p { margin: 0 0 8px; }
   <footer>
     <p><b>GEM fit</b> is a transparent rule, not a model output: growth board (35), small deal (30), emerging-market exchange (20),
       capital-hungry sector (15). Unknown inputs score half, and are labelled. Open any row to see the points.</p>
-    <p><b>Emails</b> are tiered. <span class="tier VERIFIED">Verified</span> = the person's address is published on the company's own site or filing.
-      <span class="tier INFERRED">Inferred</span> = the company's naming pattern applied to a confirmed name. Otherwise N/A — never a guess:
-      in deal sourcing a wrong address burns the contact.</p>
+    <p><b>Emails</b> carry their evidence. <span class="tier VERIFIED">Verified</span> = the person's own address, published by the company
+      on its site or in a regulatory filing. <span class="tier INFERRED">Inferred</span> = the naming pattern of another officer's published
+      address, applied to a confirmed name. <span class="tier GUESSED">Guessed</span> = not published: Hunter.io's usual pattern for the
+      domain applied to a confirmed name, with Hunter's mailbox check shown; guesses the check rejects are dropped. Company inboxes and the
+      investor-relations contact named in the filing are shown separately. Otherwise N/A.</p>
     <p>Sector, description and missing officers are extracted by a model from the linked documents, and kept only if the supporting quote is
       found verbatim in the source. Those quotes are shown in each row.</p>
   </footer>
@@ -231,7 +235,7 @@ footer p { margin: 0 0 8px; }
   // data keeps its canonical values so filters and CSV stay stable.
   const sectorLabel = (s) => s && s.split(" ").map((w, i) => i === 0 || KEEP.has(w) ? w : w.toLowerCase()).join(" ")
     .replace(/^FinTech$/, "Fintech");
-  const TIER_LABEL = { VERIFIED: "Verified", INFERRED: "Inferred" };
+  const TIER_LABEL = { VERIFIED: "Verified", INFERRED: "Inferred", GUESSED: "Guessed" };
 
   // ---- money: USD on screen, the published local figure on hover ------------
   const localAmt = (r, v) => `${r.currency || ""} ${Number(v).toLocaleString("en-US", { maximumFractionDigits: 2 })}`.trim();
@@ -259,22 +263,39 @@ footer p { margin: 0 0 8px; }
     if (r.offer_size_raw) return { html: `<span class="sm">Raise</span> ${esc(r.offer_size_raw)}`, key: null };
     return { html: NA, key: null };
   };
-  const email = (addr, tier) => !addr ? NA :
-    `<span class="email"><span>${esc(addr)}</span><span class="tier ${esc(tier)}" title="${tier === "VERIFIED" ? "Published by the company" : "Company naming pattern applied to a confirmed name"}">${esc(TIER_LABEL[tier] || tier)}</span>` +
+  // Hunter's mailbox check, in words. "accept_all": the server accepts any
+  // address, so the check can't tell.
+  const CHECK = { valid: "mailbox exists", accept_all: "server accepts any address, can't confirm",
+                  unknown: "mailbox check inconclusive", webmail: "webmail address" };
+  const TIER_TITLE = { VERIFIED: "Published by the company (site or regulatory filing)",
+                       INFERRED: "Naming pattern of another officer's published address, applied to a confirmed name",
+                       GUESSED: "Not published. Hunter.io's usual pattern for this domain, applied to a confirmed name" };
+  const email = (addr, tier, check) => !addr ? NA :
+    `<span class="email"><span>${esc(addr)}</span><span class="tier ${esc(tier)}" title="${esc(TIER_TITLE[tier] || "")}${tier === "GUESSED" ? esc(`. Check: ${CHECK[check] || "not run yet"}`) : ""}">${esc(TIER_LABEL[tier] || tier)}${tier === "GUESSED" && check === "valid" ? " · mailbox exists" : ""}</span>` +
     `<button class="copy" type="button" data-copy="${esc(addr)}" aria-label="Copy ${esc(addr)}">Copy</button></span>`;
   // Company inbox, labelled by who published it. Never shown as a person's address.
   const INBOX_SOURCE = {
     exchange: ["Exchange", "Filed with the exchange (MOPS company profile)"],
+    filing: ["Filing", "Stated in the company's regulatory filing"],
     "offer-document": ["Offer doc", "Stated in the company's offer document"],
     website: ["Website", "Published on the company's own website"],
     hunter: ["Hunter", "Found via Hunter.io; we re-checked that the linked page shows it"],
   };
   const inboxSource = (r) => INBOX_SOURCE[r.company_email_method] || INBOX_SOURCE.website;
+  // The company inbox, plus the investor-relations person the filing names (with their address).
   const inbox = (r) => {
-    if (!r.company_email) return NA;
-    const [tag, title] = inboxSource(r);
-    return `<span class="email"><span>${esc(r.company_email)}</span><span class="tier SRC" title="${esc(title)}">${tag}</span>` +
-      `<button class="copy" type="button" data-copy="${esc(r.company_email)}" aria-label="Copy ${esc(r.company_email)}">Copy</button></span>`;
+    const parts = [];
+    if (r.company_email) {
+      const [tag, title] = inboxSource(r);
+      parts.push(`<span class="email"><span>${esc(r.company_email)}</span><span class="tier SRC" title="${esc(title)}">${tag}</span>` +
+        `<button class="copy" type="button" data-copy="${esc(r.company_email)}" aria-label="Copy ${esc(r.company_email)}">Copy</button></span>`);
+    }
+    if (r.ir_contact_email) {
+      parts.push(`<div class="ir"><span class="sm">IR contact${r.ir_contact_name ? ` ${esc(r.ir_contact_name)}` : ""}:</span> ` +
+        `<span class="email"><span>${esc(r.ir_contact_email)}</span><span class="tier SRC" title="Named as the investor-relations contact in the regulatory filing">Filing</span>` +
+        `<button class="copy" type="button" data-copy="${esc(r.ir_contact_email)}" aria-label="Copy ${esc(r.ir_contact_email)}">Copy</button></span></div>`);
+    }
+    return parts.length ? parts.join("") : NA;
   };
 
   const COLS = [
@@ -291,11 +312,11 @@ footer p { margin: 0 0 8px; }
     { k: "sector", label: "Sector", sort: (r) => r.sector, cell: (r) => r.sector ? esc(sectorLabel(r.sector)) : NA },
     { k: "desc", label: "Business description", cell: (r) => r.business_description ? `<div class="desc">${esc(r.business_description)}</div>` : NA },
     { k: "val", label: "Expected valuation", num: true, sort: (r) => value(r).key, cell: (r) => value(r).html },
-    { k: "inbox", label: "Company email", sort: (r) => r.company_email, cell: inbox },
+    { k: "inbox", label: "Company / IR email", sort: (r) => r.company_email || r.ir_contact_email, cell: inbox },
     { k: "ceo", label: "CEO", sort: (r) => r.ceo_name, cell: (r) => r.ceo_name ? esc(r.ceo_name) : NA },
-    { k: "ceoe", label: "CEO email", cell: (r) => email(r.ceo_email, r.ceo_email_tier) },
+    { k: "ceoe", label: "CEO email", sort: (r) => r.ceo_email && r.ceo_email_tier, cell: (r) => email(r.ceo_email, r.ceo_email_tier, r.ceo_email_check) },
     { k: "cfo", label: "CFO", sort: (r) => r.cfo_name, cell: (r) => r.cfo_name ? esc(r.cfo_name) : NA },
-    { k: "cfoe", label: "CFO email", cell: (r) => email(r.cfo_email, r.cfo_email_tier) },
+    { k: "cfoe", label: "CFO email", sort: (r) => r.cfo_email && r.cfo_email_tier, cell: (r) => email(r.cfo_email, r.cfo_email_tier, r.cfo_email_check) },
   ];
 
   let data = null, rows = [], sortKey = "fit", sortDir = -1;
@@ -303,7 +324,7 @@ footer p { margin: 0 0 8px; }
 
   // ---- detail panel: description, provenance, the score's arithmetic --------
   const PROV_LABEL = { sector: "Sector", business_description: "Description", ceo_name: "CEO", cfo_name: "CFO",
-                       offer_size_local: "Offer size", valuation_local: "Valuation", company_url: "Website" };
+                       offer_size_local: "Offer size", valuation_local: "Valuation", company_url: "Website", ir_contact: "IR contact" };
   const METHOD = { "model-extracted": "model-extracted from", "exchange-filing": "from the exchange filing,",
                    "offer-document": "from the offer document," };
   // Exchange descriptions run to 2,500 characters; show the opening, keep the rest one click away.
@@ -313,6 +334,12 @@ footer p { margin: 0 0 8px; }
     const cut = t.slice(0, 420).replace(/\s+\S*$/, "");
     return `<p>${esc(cut)}…</p><details><summary class="sm">Full description</summary><p>${esc(t)}</p></details>`;
   }
+  // Why an officer's address is shown: a link to where it's published, or the pattern behind a guess.
+  const emailWhy = (r, role) => {
+    const ev = r[`${role}_email_evidence`] || "", tier = r[`${role}_email_tier`];
+    const why = /^https?:/.test(ev) ? `<a href="${esc(ev)}" target="_blank" rel="noopener">Published here</a>` : esc(cap(ev));
+    return `${TIER_LABEL[tier] || tier}: ${why}${tier === "GUESSED" ? esc(`. Mailbox check: ${CHECK[r[`${role}_email_check`]] || "not run yet"}`) : ""}`;
+  };
   function detail(r) {
     const src = r.field_sources || {};
     const why = (r.gem_fit_rationale || "").split("; ").filter(Boolean).map((l) => `<li>${esc(cap(r.sector ? l.replace(r.sector, sectorLabel(r.sector)) : l))}</li>`).join("");
@@ -352,8 +379,9 @@ footer p { margin: 0 0 8px; }
         <dl class="kv">
           ${kv("Website", link(r.company_url))}
           ${kv("Company inbox", r.company_email ? `${email(r.company_email, "")} <span class="sm">${link(r.company_email_evidence, "Found here")}</span>` : null)}
-          ${kv("CEO email", r.ceo_email ? esc(r.ceo_email_evidence || "") : `<span class="sm">Not published, so not guessed</span>`)}
-          ${kv("CFO email", r.cfo_email ? esc(r.cfo_email_evidence || "") : `<span class="sm">Not published, so not guessed</span>`)}
+          ${kv("IR contact", r.ir_contact_name ? `${esc(r.ir_contact_name)}${r.ir_contact_email ? ` · ${email(r.ir_contact_email, "")}` : ""} <span class="sm">${link(r.ir_contact_evidence, "Filing")}</span>` : null)}
+          ${kv("CEO email", r.ceo_email ? emailWhy(r, "ceo") : `<span class="sm">Not published, and no pattern to guess from</span>`)}
+          ${kv("CFO email", r.cfo_email ? emailWhy(r, "cfo") : `<span class="sm">Not published, and no pattern to guess from</span>`)}
         </dl>
       </div>
     </div>`;
@@ -371,9 +399,9 @@ footer p { margin: 0 0 8px; }
       if (board === "growth" && !isGrowth(r)) return false;
       if (board === "main" && isGrowth(r)) return false;
       if (onlySaved && !saved.has(idOf(r))) return false;
-      if (hasEmail && !(r.company_email || r.ceo_email || r.cfo_email)) return false;
+      if (hasEmail && !(r.company_email || r.ceo_email || r.cfo_email || r.ir_contact_email)) return false;
       if (q) {
-        const hay = [r.company_name, r.ticker, r.ceo_name, r.cfo_name, r.sector, r.business_description,
+        const hay = [r.company_name, coName(r), r.ticker, r.ceo_name, r.cfo_name, r.ir_contact_name, r.sector, r.business_description,
                      ...(r.financial_advisors || []), ...(r.underwriters || [])].join(" ").toLowerCase();
         if (!hay.includes(q)) return false;
       }
@@ -423,21 +451,24 @@ footer p { margin: 0 0 8px; }
   function renderMeta() {
     const up = data.records.filter((r) => UPCOMING.has(r.listing_status));
     const growth = up.filter(isGrowth).length;
-    const named = up.filter((r) => r.ceo_name).length;
-    const reachable = up.filter((r) => r.company_email || r.ceo_email || r.cfo_email).length;
+    const named = up.filter((r) => r.ceo_name).length, cfos = up.filter((r) => r.cfo_name).length;
+    const reachable = up.filter((r) => r.company_email || r.ceo_email || r.cfo_email || r.ir_contact_email).length;
+    const people = up.filter((r) => r.ir_contact_email || ["VERIFIED", "INFERRED"].includes(r.ceo_email_tier) || ["VERIFIED", "INFERRED"].includes(r.cfo_email_tier)).length;
     const exch = new Set(data.records.map((r) => r.exchange_mic)).size;
     const tile = (k, v, n) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="n">${n}</div></div>`;
     $("tiles").innerHTML =
       tile("Upcoming IPOs", up.length, `${data.records.length - up.length} more listed in the last year`) +
       tile("On growth boards", growth, `${Math.round((100 * growth) / Math.max(up.length, 1))}% of upcoming`) +
       tile("Exchanges covered", exch, "TH · SG · MY · UK · TW") +
-      tile("CEO named from a source", named, `of ${up.length} upcoming; the rest are N/A, not guessed`) +
-      tile("Company email found", reachable, `of ${up.length} upcoming, each with the page it came from`);
+      tile("CEO / CFO named", `${named} / ${cfos}`, `of ${up.length} upcoming, from exchange data and filings`) +
+      tile("Reachable by email", reachable, `of ${up.length} upcoming; ${people} with a named person's published address`);
 
     // Exact time in UTC: "refreshed daily" should be checkable at a glance, in one timezone for every viewer.
     const g = new Date(data.generated_at);
     const gen = isNaN(g) ? data.generated_at : `${g.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}, ${g.toISOString().slice(11, 16)} UTC`;
-    $("fresh").innerHTML = `<span>Pipeline run <b>${esc(gen)}</b></span>` +
+    const hrs = (Date.now() - g) / 36e5;
+    const ago = isNaN(hrs) ? "" : hrs < 1 ? "under an hour ago" : hrs < 48 ? `${Math.round(hrs)} h ago` : `${Math.round(hrs / 24)} days ago`;
+    $("fresh").innerHTML = `<span>Updated <b>${esc(ago)}</b> (${esc(gen)}) · refreshes every 6 hours</span>` +
       data.sources.map((s) => `<span>${esc(s.name)}: <b>${s.rows}</b> rows · ${esc(s.tier)}` +
         (s.status === "stale" ? ` · <b class="warn">stale — last fetched ${esc(fdate(s.as_of))}</b>` : "") + `</span>`).join("");
 
@@ -452,7 +483,8 @@ footer p { margin: 0 0 8px; }
     const cols = ["company_name", "ticker", "exchange_mic", "board", "listing_status", "listing_status_raw", "filed_date",
       "expected_listing_date", "expected_listing_date_raw", "sector", "business_description", "currency", "offer_price_local",
       "offer_price_usd", "offer_size_local", "offer_size_usd", "valuation_local", "valuation_usd", "fx_rate", "fx_date", "fx_source", "ceo_name", "ceo_email", "ceo_email_tier",
-      "ceo_email_evidence", "cfo_name", "cfo_email", "cfo_email_tier", "cfo_email_evidence", "company_email", "company_url",
+      "ceo_email_evidence", "ceo_email_check", "cfo_name", "cfo_email", "cfo_email_tier", "cfo_email_evidence", "cfo_email_check",
+      "company_email", "company_email_method", "company_email_evidence", "ir_contact_name", "ir_contact_email", "ir_contact_evidence", "company_url",
       "filing_url", "gem_fit_score", "gem_fit_rationale", "source_url", "source_as_of", "fetched_at"];
     const cell = (v) => { const s = v == null ? "" : Array.isArray(v) ? v.join("; ") : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
     const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => cell(r[c])).join(","))].join("\n");

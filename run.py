@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from adapters import london, malaysia, singapore, taiwan, thailand
-from core import enrich, fx, hunter, score
+from core import enrich, filings, fx, hunter, score
 from core.schema import SCHEMA_VERSION
 
 # Published inside docs/ because GitHub Pages serves only that folder --
@@ -79,6 +79,11 @@ def main() -> None:
 
     steps = {}
     try:
+        # Officers and IR contacts from regulator filings (cached weekly).
+        steps["filings"] = filings.refresh(records)
+    except Exception as exc:                          # noqa: BLE001
+        steps["filings"] = f"failed: {type(exc).__name__}"
+    try:
         steps["enrich"] = enrich.apply(records)
     except Exception as exc:                          # noqa: BLE001
         steps["enrich"] = f"failed: {exc}"
@@ -89,8 +94,9 @@ def main() -> None:
         # to pick up anything Hunter found.
         score.score_all(records)
         steps["hunter"] = hunter.refresh(records)
-        if "kept" in steps["hunter"] and not steps["hunter"].startswith("0 searched"):
-            enrich.apply(records)
+        enrich.apply(records)                         # picks up new patterns -> GUESSED addresses
+        steps["hunter_verify"] = hunter.verify_guesses(records)
+        enrich.apply(records)                         # drops guesses whose mailbox doesn't exist
     except Exception as exc:                          # noqa: BLE001
         steps["hunter"] = f"failed: {type(exc).__name__}"   # never str(exc): it could carry a request
     try:
