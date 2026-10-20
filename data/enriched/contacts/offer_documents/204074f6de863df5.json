@@ -1,0 +1,14 @@
+{
+ "record_id": "XSES|KIN",
+ "filing_url": "https://api2.sgx.com/sites/default/files/2026-04/Final%20Offer%20Document.pdf",
+ "company_url": "https://www.kin.net",
+ "page": 49,
+ "quote": "Our internet address is https://www.kin.net/ and our email address is info@kin.net.",
+ "emails": [
+  {
+   "email": "info@kin.net",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-04/Final%20Offer%20Document.pdf#page=49"
+  }
+ ],
+ "collected_at": "2026-10-19T19:01:50.452181+00:00"
+}

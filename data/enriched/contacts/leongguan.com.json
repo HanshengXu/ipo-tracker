@@ -1,0 +1,19 @@
+{
+ "domain": "leongguan.com",
+ "company_url": "https://leongguan.com",
+ "pages_read": [
+  "https://leongguan.com/",
+  "https://leongguan.com/pages/contact-us"
+ ],
+ "emails": [
+  {
+   "email": "enquiry@leong-guan.com",
+   "source_url": "https://leongguan.com/pages/contact-us"
+  },
+  {
+   "email": "enquiry@leongguan.com",
+   "source_url": "https://leongguan.com/"
+  }
+ ],
+ "collected_at": "2026-10-19T19:06:22.220440+00:00"
+}

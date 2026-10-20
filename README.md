@@ -16,7 +16,7 @@ field that *is* shown came from.
 - **Default view:** upcoming IPOs, sorted by **GEM fit** (highest first).
   Tick *Include recent listings* to add IPOs that listed in the last 12 months.
 - **Search:** company, CEO, sector, sponsor or adviser.
-- **Filters:** exchange, sector, growth vs main board, saved only.
+- **Filters:** exchange, sector, growth vs main board, has email, saved only.
 - **Sort:** click any column header (numbers and dates sort properly; N/A always last).
 - **Click a row** for the full description, the deal terms, the GEM-fit arithmetic,
   contacts, and the source and supporting quote for every model-extracted field.
@@ -91,7 +91,26 @@ An unknown input scores **half** its points and is labelled "unknown" in the
 breakdown. Zero would punish markets that disclose little; full marks would
 reward it.
 
-### Contact emails are tiered, never guessed
+### Contact emails: breadth first, never guessed
+
+**Company inbox, for as many companies as possible.** Each row's *Company email*
+column shows the address the company itself published, tagged with where:
+
+| Tag | Source |
+|---|---|
+| EXCHANGE | filed with the exchange (Taiwan's MOPS company profile) |
+| OFFER DOC | the "our email address is…" sentence in an SGX offer document, linked to the page |
+| WEBSITE | the company's own contact or IR page |
+
+An address counts only if its domain is the company's website domain, or a domain
+that spells the company's own name (Richest Supply publishes `info@richestsupply.com`
+on `enrichlighting.com`). Free-mail, agency and staff addresses are never used, and
+inboxes like `careers@` or `whistleblowing@` are never offered as the contact.
+Coverage today: **36 of 43 upcoming IPOs**. The other seven are real gaps: three Thai
+sites publish no inbox, the two Bursa prospectuses sit behind Cloudflare, and two
+Taiwanese applicants have no public MOPS profile yet.
+
+**Named officers, tiered:**
 
 - **VERIFIED:** the person's own address appears on the company's site or in a
   filing. The evidence is that URL.
@@ -111,8 +130,9 @@ can't be matched against `amos.liao@`.
 - **Two timestamps.** `source_as_of` is when the exchange last updated its data;
   `fetched_at` is when we pulled it. Showing only one would overstate freshness.
 - **FX at the date of the number.** A May offer size is converted at May's ECB
-  rate, not today's. TWD isn't published by the ECB, so Taiwan has no USD values
-  rather than values from an unvetted source.
+  rate, not today's. The ECB doesn't publish TWD, so Taiwan uses the Federal
+  Reserve's H.10 rate for the same date. The dashboard shows USD; hovering over a
+  figure shows the amount as published, the rate and its source.
 - **Field names lie; arithmetic doesn't.** SET's `issuedSize` is offer proceeds,
   not a share count. TWSE's "Amount of Capital" is paid-in capital, not valuation.
   Bursa lists one ACE IPO at RM20.00, 80× the board median. That value is

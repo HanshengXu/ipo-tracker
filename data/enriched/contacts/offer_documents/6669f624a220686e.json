@@ -1,0 +1,14 @@
+{
+ "record_id": "XSES|TKU",
+ "filing_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document.pdf",
+ "company_url": "https://toku.co",
+ "page": 56,
+ "quote": "Our email address is hello@toku.co and our Company\u2019s website is https://toku.co/.",
+ "emails": [
+  {
+   "email": "hello@toku.co",
+   "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document.pdf#page=56"
+  }
+ ],
+ "collected_at": "2026-10-19T19:01:52.563735+00:00"
+}

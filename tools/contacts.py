@@ -1,7 +1,8 @@
 """Collect email addresses published on each company's own website -- run
 LOCALLY, results committed to data/enriched/contacts/<domain>.json.
 
-    python -m tools.contacts
+    python -m tools.contacts             # sites/documents not collected in REFRESH_DAYS
+    python -m tools.contacts --refresh   # everything (after changing the collector)
 
 Only addresses at the company's own domain are kept, along with the page they
 appeared on -- and of those, only generic inboxes (ir@, info@) and addresses
@@ -11,13 +12,27 @@ public, so republishing them would be wrong. This step only COLLECTS. Deciding w
 the CEO (VERIFIED), implies a naming pattern (INFERRED), or is a generic inbox
 is done by rules in core/enrich.py -- never by guessing.
 
+Two sources, both published by the company itself:
+  1. its website: homepage plus contact/IR pages;
+  2. its offer document (SGX Catalist PDFs), whose summary has a standard
+     "OUR CONTACT DETAILS" paragraph giving the website and inbox. This also
+     supplies the website for companies the exchange lists without one.
+
+An address counts as the company's if its domain is the website's domain, or
+a sibling domain that spells the company's own name (Richest Supply publishes
+info@richestsupply.com on enrichlighting.com). Free-mail and agency addresses
+never count.
+
 Politeness: at most a handful of pages per site, one second apart, and a
 cache refreshed only when older than REFRESH_DAYS.
 """
 
 from __future__ import annotations
 
+import hashlib
+import io
 import json
+import logging
 import re
 import sys
 import time
@@ -27,20 +42,30 @@ from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
 
 import requests
+from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from core.enrich import GENERIC, _name_parts, _pattern_for  # noqa: E402
+from core.enrich import FILINGS, GENERIC, _name_parts, _pattern_for  # noqa: E402
 from core.http import DEFAULT_UA  # noqa: E402
 
 DATA = ROOT / "docs" / "data" / "ipos.json"
 OUT = ROOT / "data" / "enriched" / "contacts"
-UPCOMING = {"ITF", "FILED", "APPROVED", "EFFECTIVE", "PRICED", "UNKNOWN"}
 REFRESH_DAYS = 14
 CANDIDATE_PATHS = ["", "/contact", "/contact-us", "/contactus", "/en/contact", "/investor-relations", "/ir"]
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 LINK = re.compile(r'href="([^"#]+)"', re.I)
+# Matched against a link's PATH, decoded: matching the whole URL followed every
+# link on tek4investors.co.uk, whose hostname contains "investor".
+# ติดต่อ = "contact", นักลงทุน = "investor" (Thai sites link only in Thai).
+CONTACT_LINK = re.compile(r"contact|investor|ติดต่อ|นักลงทุน", re.I)
+LEGAL = re.compile(r"\b(public company limited|holdings?|group|berhad|bhd|limited|ltd|plc|pcl|inc|corp(oration)?|co)\b\.?", re.I)
+# "Our internet address is www.x.com" / "Our email address is ir@x.com".
+# Disclaimers ("The information on our website ...") don't match.
+OFFER_CONTACT = re.compile(r"\b(?:our|its) (?:e-?mail|internet|website|web)(?: site)?(?: address)? (?:is|are)\b", re.I)
+WEBSITE = re.compile(r"(?:internet address|website|web address)[^.]{0,20}? is (?:https?://)?((?:www\.)?[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,})", re.I)
+logging.getLogger("pypdf").setLevel(logging.ERROR)
 
 
 def domain_of(url: str | None) -> str | None:
@@ -68,11 +93,29 @@ def _pages(base: str, session: requests.Session) -> list[tuple[str, str]]:
             continue
         out.append((r.url, r.text))
         if len(out) == 1:   # homepage: follow its own contact/IR links first
+            site = urlparse(r.url).hostname
             for href in LINK.findall(r.text):
-                if re.search(r"contact|investor", href, re.I):
-                    queue.insert(0, urljoin(r.url, href))
+                link = urljoin(r.url, unescape(href))
+                if urlparse(link).hostname == site and CONTACT_LINK.search(unquote(urlparse(link).path)):
+                    queue.insert(0, link)
         time.sleep(1.0)
     return out
+
+
+def _name_key(company_name: str) -> str:
+    """'RICHEST SUPPLY PUBLIC COMPANY LIMITED' -> 'richestsupply'."""
+    return re.sub(r"[^a-z0-9]", "", LEGAL.sub(" ", company_name.lower()))
+
+
+def _company_domain(email_domain: str, site_domain: str | None, company_name: str) -> bool:
+    """The site's own domain (or a subdomain), or a sibling domain whose first
+    label spells the company's name ('richestsupply' for Richest Supply,
+    'tek4' for TEK 4 Group), or at least half of it. Labels under four
+    characters never match: too many companies share them."""
+    if site_domain and (email_domain == site_domain or email_domain.endswith("." + site_domain)):
+        return True
+    label, key = email_domain.split(".")[0].replace("-", ""), _name_key(company_name)
+    return len(label) >= 4 and bool(key) and (key == label or key.startswith(label) and len(label) >= len(key) / 2)
 
 
 def _keep(email: str, officers: list[str]) -> bool:
@@ -80,7 +123,7 @@ def _keep(email: str, officers: list[str]) -> bool:
     return local in GENERIC or any(_pattern_for(local, _name_parts(n)) for n in officers)
 
 
-def collect(company_url: str, session: requests.Session, officers: list[str]) -> dict:
+def collect(company_url: str, session: requests.Session, officers: list[str], company_name: str) -> dict:
     domain = domain_of(company_url)
     base = company_url if company_url.startswith("http") else f"https://{company_url}"
     found: dict[str, str] = {}
@@ -91,10 +134,9 @@ def collect(company_url: str, session: requests.Session, officers: list[str]) ->
         text = unquote(unescape(html))
         for email in EMAIL.findall(text):
             email = email.lower().rstrip(".")
-            # Own domain only (or a subdomain of it). Agency, CDN and
-            # placeholder addresses (name@example.com) are not the company's.
-            own = domain and (email.endswith("@" + domain) or email.endswith("." + domain))
-            if own and _keep(email, officers):
+            # The company's own domain(s) only. Agency, CDN and placeholder
+            # addresses (name@example.com) are not the company's.
+            if _company_domain(email.split("@")[1], domain, company_name) and _keep(email, officers):
                 found.setdefault(email, url)
     return {
         "domain": domain,
@@ -105,16 +147,78 @@ def collect(company_url: str, session: requests.Session, officers: list[str]) ->
     }
 
 
+def from_offer_document(url: str, company_name: str) -> dict:
+    """Website and inbox from the offer document's contact-details paragraph
+    ("Our email address is ... Our internet address is ..."). Stops at the
+    first page that has it, usually ~40 of ~500."""
+    r = requests.get(url, headers={"User-Agent": DEFAULT_UA}, timeout=120)
+    r.raise_for_status()
+    if "pdf" not in r.headers.get("content-type", "").lower():
+        raise RuntimeError(f"{url} is {r.headers.get('content-type')}, not a PDF")
+    for i, page in enumerate(PdfReader(io.BytesIO(r.content)).pages[:150]):
+        text = re.sub(r"\s+", " ", page.extract_text() or "")
+        m = OFFER_CONTACT.search(text)
+        if not m:
+            continue
+        para = text[max(0, m.start() - 400): m.end() + 400]
+        site = WEBSITE.search(para)
+        if not site:
+            continue
+        site_domain = site.group(1).lower().removeprefix("www.")
+        # The stated website's domain or the company's own name, so a
+        # sponsor's or registrar's address nearby can't pass as the company's
+        # (Leong Guan's site is leongguan.com, its inbox @leong-guan.com).
+        emails = sorted({e.lower().rstrip(".") for e in EMAIL.findall(para)
+                         if _company_domain(e.lower().rstrip(".").split("@")[1], site_domain, company_name)})
+        quote = " ".join(sn for sn in re.split(r"(?<=\.) (?=[A-Z])", para)
+                         if any(e in sn.lower() for e in emails) or site.group(0) in sn)
+        return {"company_url": f"https://{site.group(1).lower()}", "page": i + 1, "quote": quote[:500],
+                "emails": [{"email": e, "source_url": f"{url}#page={i + 1}"} for e in emails]}
+    return {"company_url": None, "page": None, "quote": None, "emails": []}
+
+
+def _offer_documents(records: list[dict], fresh_after: datetime) -> None:
+    FILINGS.mkdir(parents=True, exist_ok=True)
+    for rec in records:
+        url = rec.get("filing_url") or ""
+        if not url.lower().endswith(".pdf"):
+            continue
+        rid = f"{rec['exchange_mic']}|{rec.get('ticker') or rec['company_name']}"
+        path = FILINGS / f"{hashlib.sha1(url.encode()).hexdigest()[:16]}.json"
+        if path.exists() and datetime.fromisoformat(json.loads(path.read_text())["collected_at"]) > fresh_after:
+            continue
+        try:
+            found = from_offer_document(url, rec["company_name"])
+        except Exception as exc:                      # noqa: BLE001
+            print(f"  {rec['company_name']}: offer document failed: {exc}")
+            continue
+        path.write_text(json.dumps({"record_id": rid, "filing_url": url, **found,
+                                    "collected_at": datetime.now(timezone.utc).isoformat()}, indent=1))
+        print(f"  {rec['company_name']:<40} offer doc p.{found['page']} site={found['company_url']} "
+              f"emails={[e['email'] for e in found['emails']]}")
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     records = json.loads(DATA.read_text())["records"]
     session = requests.Session()
     session.headers.update({"User-Agent": DEFAULT_UA, "Accept-Language": "en-US,en;q=0.9"})
-    fresh_after = datetime.now(timezone.utc) - timedelta(days=REFRESH_DAYS)
+    fresh_after = datetime.now(timezone.utc) - timedelta(days=0 if "--refresh" in sys.argv else REFRESH_DAYS)
+
+    # Offer documents first: they supply the website for rows that lack one.
+    _offer_documents(records, fresh_after)
+    for rec in records:
+        if not rec.get("company_url"):
+            for path in FILINGS.glob("*.json"):
+                doc = json.loads(path.read_text())
+                if doc["record_id"] == f"{rec['exchange_mic']}|{rec.get('ticker') or rec['company_name']}":
+                    rec["company_url"] = doc.get("company_url")
 
     for rec in records:
         url, domain = rec.get("company_url"), domain_of(rec.get("company_url"))
-        if rec["listing_status"] not in UPCOMING or not domain:
+        # Every row with a website, listed or not: breadth of company
+        # contacts is the priority. A filed inbox (Taiwan's MOPS) is enough.
+        if not domain or (rec.get("company_email") and rec["exchange_mic"] == "XTAI"):
             continue
         path = OUT / f"{domain}.json"
         if path.exists():
@@ -123,7 +227,7 @@ def main() -> None:
                 continue
         try:
             officers = [n for n in (rec.get("ceo_name"), rec.get("cfo_name")) if n]
-            result = collect(url, session, officers)
+            result = collect(url, session, officers, rec["company_name"])
         except Exception as exc:                      # noqa: BLE001
             print(f"  {domain}: failed: {exc}")
             continue

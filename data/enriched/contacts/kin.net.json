@@ -1,0 +1,28 @@
+{
+ "domain": "kin.net",
+ "company_url": "https://www.kin.net",
+ "pages_read": [
+  "https://www.kin.net/",
+  "https://www.kin.net/contact",
+  "https://www.kin.net/investor-relations"
+ ],
+ "emails": [
+  {
+   "email": "info@kin.net",
+   "source_url": "https://www.kin.net/"
+  },
+  {
+   "email": "investor@kin.net",
+   "source_url": "https://www.kin.net/"
+  },
+  {
+   "email": "ir@kin.net",
+   "source_url": "https://www.kin.net/contact"
+  },
+  {
+   "email": "press@kin.net",
+   "source_url": "https://www.kin.net/contact"
+  }
+ ],
+ "collected_at": "2026-10-19T19:05:47.268042+00:00"
+}

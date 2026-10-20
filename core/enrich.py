@@ -25,14 +25,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 EXTRACTED = ROOT / "data" / "enriched"
 CONTACTS = EXTRACTED / "contacts"
+FILINGS = CONTACTS / "offer_documents"
 
 MODEL_FIELDS = ("sector", "business_description", "ceo_name", "cfo_name",
                 "offer_size_local", "valuation_local")
+# Inboxes that can be the company contact, best first. The rest of GENERIC
+# are recognised (so they're never mistaken for a person) but never offered:
+# nobody should open a deal conversation at whistleblowing@ or careers@.
 GENERIC_PREFERENCE = ("ir", "investor", "investors", "investor.relations", "info",
-                      "contact", "enquiry", "enquiries", "hello", "admin")
-GENERIC = set(GENERIC_PREFERENCE) | {"sales", "support", "hr", "careers", "jobs",
-                                     "connect", "complain", "feedback", "whistleblowing",
-                                     "marketing", "media", "press", "noreply", "no-reply"}
+                      "contact", "enquiry", "enquiries", "hello", "admin", "connect",
+                      "sales", "marketing", "media", "press", "support")
+GENERIC = set(GENERIC_PREFERENCE) | {"hr", "careers", "jobs", "complain", "feedback",
+                                     "whistleblowing", "noreply", "no-reply"}
 HONORIFICS = {"mr", "mrs", "ms", "dr", "dato", "datuk", "sri", "tan", "khun", "prof"}
 
 
@@ -80,14 +84,14 @@ def _pattern_for(local: str, parts: list[str]) -> str | None:
     return None
 
 
-def _tier_contacts(rec, contacts: dict | None) -> None:
-    if not contacts:
+def _tier_contacts(rec, contacts: dict | None, filing: dict | None = None) -> None:
+    emails = (filing or {}).get("emails", []) + (contacts or {}).get("emails", [])
+    if not emails:
         return
-    emails = contacts.get("emails") or []
-    domain = contacts.get("domain")
 
-    generic = [e for e in emails if e["email"].split("@")[0] in GENERIC]
-    if generic:
+    generic = [e for e in emails if e["email"].split("@")[0] in GENERIC_PREFERENCE]
+    # An inbox the exchange itself published (Taiwan's MOPS) is kept.
+    if generic and not rec.company_email:
         rank = {g: i for i, g in enumerate(GENERIC_PREFERENCE)}
         best = min(generic, key=lambda e: rank.get(e["email"].split("@")[0], 99))
         rec.company_email = best["email"]
@@ -118,9 +122,10 @@ def _tier_contacts(rec, contacts: dict | None) -> None:
     # same domain. Known limit: first/last are taken by position, so a
     # surname-first name (Chua Chwee Lee) learned against a given-name-first
     # colleague would render in the wrong order -- hence INFERRED, not VERIFIED.
-    if not learned or not domain:
+    if not learned:
         return
     pattern, example, page = learned
+    domain = example.split("@")[1]                    # the domain the pattern was seen on
     for role, name in people.items():
         if not name or getattr(rec, f"{role}_email_tier") == "VERIFIED":
             continue
@@ -148,8 +153,19 @@ def apply(records) -> dict:
     """Merge enrichment in place. Returns counts for the run log."""
     extracted = _load_extracted()
     contacts = {p.stem: json.loads(p.read_text()) for p in CONTACTS.glob("*.json")}
+    filings = {}
+    for p in FILINGS.glob("*.json"):
+        doc = json.loads(p.read_text())
+        filings[doc["record_id"]] = doc
     filled = 0
     for rec in records:
+        filing = filings.get(record_id(rec))
+        if filing and filing.get("company_url") and not rec.company_url:
+            # The website as stated in the company's own offer document.
+            rec.company_url = filing["company_url"]
+            rec.field_sources["company_url"] = {"method": "offer-document",
+                                                "source_url": f"{filing['filing_url']}#page={filing['page']}",
+                                                "quote": filing["quote"]}
         entry = extracted.get(record_id(rec))
         if entry:
             for fld in MODEL_FIELDS:
@@ -161,5 +177,6 @@ def apply(records) -> dict:
                                           "source_url": got["source_url"], "quote": got["quote"],
                                           "extracted_at": entry["extracted_at"]}
                 filled += 1
-        _tier_contacts(rec, contacts.get(domain_of(rec.company_url) or ""))
-    return {"fields_filled": filled, "cache_entries": len(extracted), "contact_sites": len(contacts)}
+        _tier_contacts(rec, contacts.get(domain_of(rec.company_url) or ""), filing)
+    return {"fields_filled": filled, "cache_entries": len(extracted), "contact_sites": len(contacts),
+            "offer_documents": len(filings)}

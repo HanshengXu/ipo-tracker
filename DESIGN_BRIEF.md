@@ -12,8 +12,8 @@ every day; Bursa's Cloudflare protection makes it a browser snapshot.
 
 **C-suite contacts.** Names come from exchange profiles and offer documents. A
 model reads the documents, but a field is kept only if its quote is found
-verbatim in the source. Emails are tiered as verified, inferred or N/A, and are
-never guessed, because a wrong address burns the contact.
+verbatim in the source. Every company gets the inbox it publishes (website, filing or
+offer document); personal emails are verified, inferred or N/A, never guessed.
 
 **Search and filters.** Company/CEO search, filters by exchange, sector and
 growth board, saved companies, and sorting by any column, including valuation

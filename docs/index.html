@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pre-IPO Pipeline · Emerging-market growth boards</title>
+<title>Pre-IPO pipeline · Emerging-market growth boards</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%232a78d6%22/%3E%3Cpath d=%22M3 11l3-3 2 2 5-5%22 stroke=%22white%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E">
 <meta name="description" content="Upcoming IPOs on emerging-market growth boards, sourced from exchange data with per-field provenance.">
 <style>
@@ -86,9 +86,11 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; padding: 1px 7px; border-radius: 999px;
   border: 1px solid var(--rule); color: var(--ink-2); white-space: nowrap; background: var(--surface); }
 .badge.growth { border-color: var(--accent); color: var(--accent-ink); }
-.tier { font-size: 10.5px; font-weight: 600; letter-spacing: .03em; padding: 0 5px; border-radius: 4px; border: 1px solid currentColor; }
+.tier { font-size: 11px; font-weight: 600; padding: 0 5px; border-radius: 4px; border: 1px solid currentColor; }
 .tier.VERIFIED { color: var(--good); }
 .tier.INFERRED { color: var(--warn-ink); }
+.tier.SRC { color: var(--muted); font-weight: 500; }
+.fx { text-decoration: underline dotted var(--muted); text-underline-offset: 3px; cursor: help; }
 .email { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .copy { border: 1px solid var(--rule); background: transparent; border-radius: 5px; font-size: 11px; padding: 0 6px; cursor: pointer; color: var(--ink-2); }
 .copy:hover { color: var(--ink); border-color: var(--muted); }
@@ -105,7 +107,7 @@ tr.detail td { padding: 4px 18px 18px; background: var(--surface-2); border-bott
 /* The table is wider than the screen; the detail panel is pinned to the
    visible width of the scroll container so nothing hides off to the right. */
 .dgrid { position: sticky; left: 18px; width: var(--panel-w, 100%); display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 18px 28px; }
-.dgrid h4 { margin: 10px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.dgrid h4 { margin: 10px 0 6px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
 .dgrid p { margin: 0 0 6px; }
 .kv { display: grid; grid-template-columns: max-content 1fr; gap: 3px 12px; font-size: 13px; }
 .kv dt { color: var(--muted); }
@@ -128,7 +130,7 @@ footer p { margin: 0 0 8px; }
 <body>
 <div class="wrap">
   <header>
-    <h1>Pre-IPO Pipeline</h1>
+    <h1>Pre-IPO pipeline</h1>
     <p class="sub">Upcoming IPOs on emerging-market growth boards, ranked by fit for committed equity facilities.
       Every row comes from an exchange source; fields we could not source show <span class="na">N/A</span> rather than a guess.</p>
     <div class="fresh" id="fresh"></div>
@@ -144,6 +146,7 @@ footer p { margin: 0 0 8px; }
       <option value="">All boards</option><option value="growth">Growth boards</option><option value="main">Main boards</option>
     </select>
     <label class="chk"><input type="checkbox" id="recent"> Include recent listings</label>
+    <label class="chk"><input type="checkbox" id="contact"> Has email</label>
     <label class="chk"><input type="checkbox" id="saved"> Saved only</label>
     <span class="sp"></span>
     <button class="btn" id="csv" type="button">Export CSV</button>
@@ -153,15 +156,15 @@ footer p { margin: 0 0 8px; }
   <div class="tablewrap">
     <table>
       <thead><tr id="head"></tr></thead>
-      <tbody id="body"><tr><td class="empty" colspan="14">Loading…</td></tr></tbody>
+      <tbody id="body"><tr><td class="empty" colspan="15">Loading…</td></tr></tbody>
     </table>
   </div>
 
   <footer>
     <p><b>GEM fit</b> is a transparent rule, not a model output: growth board (35), small deal (30), emerging-market exchange (20),
       capital-hungry sector (15). Unknown inputs score half, and are labelled. Open any row to see the points.</p>
-    <p><b>Emails</b> are tiered. <span class="tier VERIFIED">VERIFIED</span> = the person's address is published on the company's own site or filing.
-      <span class="tier INFERRED">INFERRED</span> = the company's naming pattern applied to a confirmed name. Otherwise N/A — never a guess:
+    <p><b>Emails</b> are tiered. <span class="tier VERIFIED">Verified</span> = the person's address is published on the company's own site or filing.
+      <span class="tier INFERRED">Inferred</span> = the company's naming pattern applied to a confirmed name. Otherwise N/A — never a guess:
       in deal sourcing a wrong address burns the contact.</p>
     <p>Sector, description and missing officers are extracted by a model from the linked documents, and kept only if the supporting quote is
       found verbatim in the source. Those quotes are shown in each row.</p>
@@ -196,6 +199,50 @@ footer p { margin: 0 0 8px; }
     return isNaN(d) ? s : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
   };
   const idOf = (r) => `${r.exchange_mic}|${r.ticker || r.company_name}`;
+
+  // ---- casing: sentence case for our text, proper case for names -----------
+  // Exchanges publish many names in capitals ("SUPA RICH PUBLIC COMPANY
+  // LIMITED"). Prefer the company's own casing where its description uses the
+  // name; otherwise title-case it. Exchange capitals hide acronyms, so: words
+  // of three letters or fewer stay capitals (NWE, EGH, TMY) unless they're
+  // ordinary words (Bus, Cap, Sun); longer words with no vowel stay too (SRKK).
+  const cap = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+  const KEEP = new Set(["AI", "IT", "IoT", "ERP", "EV", "USD", "IPO", "UK", "US", "GEM", "CEO", "CFO", "SGX", "LSE", "SET", "TWSE", "MOPS"]);
+  const WORDS = new Set(["the", "and", "of", "co", "bio", "bus", "cap", "sun", "sum", "one", "new", "top", "air", "oil", "gas",
+                         "eco", "pet", "art", "med", "tech", "big", "fun", "joy", "red", "sky", "net", "web", "max", "pro", "hub",
+                         // common Malaysian and Chinese name syllables
+                         "li", "lee", "kee", "tan", "lim", "ong", "goh", "yap", "hoe", "cos", "wah", "hup", "sin", "soon"]);
+  const titleWord = (w) => {
+    const bare = w.replace(/[^A-Za-z]/g, "");
+    if (KEEP.has(w) || /\d/.test(w) || (bare.length <= 3 && !WORDS.has(bare.toLowerCase())) || !/[AEIOU]/i.test(bare)) return w;
+    return w.toLowerCase().replace(/(^|[-'’(&./])([a-z])/g, (m, a, b) => a + b.toUpperCase());
+  };
+  const properName = (name, ...texts) => {
+    if (!name || /[a-z]/.test(name)) return name;                       // already mixed case: trust it
+    for (const t of texts) {
+      if (!t) continue;
+      const i = t.toLowerCase().indexOf(name.toLowerCase());
+      if (i >= 0 && /[a-z]/.test(t.slice(i, i + name.length))) return t.slice(i, i + name.length);
+    }
+    return name.split(/(\s+)/).map((w) => /\s/.test(w) ? w : titleWord(w)).join("");
+  };
+  const coName = (r) => properName(r.company_name, r.business_description, r.business_description_local);
+  // Our sector labels are sentence case on screen ("Metals & mining"), the
+  // data keeps its canonical values so filters and CSV stay stable.
+  const sectorLabel = (s) => s && s.split(" ").map((w, i) => i === 0 || KEEP.has(w) ? w : w.toLowerCase()).join(" ")
+    .replace(/^FinTech$/, "Fintech");
+  const TIER_LABEL = { VERIFIED: "Verified", INFERRED: "Inferred" };
+
+  // ---- money: USD on screen, the published local figure on hover ------------
+  const localAmt = (r, v) => `${r.currency || ""} ${Number(v).toLocaleString("en-US", { maximumFractionDigits: 2 })}`.trim();
+  const fxNote = (r) => r.fx_rate ? ` at ${r.fx_rate.toPrecision(4)} USD per ${r.currency} (${r.fx_source || "ECB"}, ${fdate(r.fx_date)})` : "";
+  const price = (v) => v == null ? null : `$${v < 1 ? v.toFixed(3) : v.toFixed(2)}`;
+  // `fmt` formats the USD figure; falls back to the local figure if there is no rate.
+  const money = (r, usdV, localV, fmt = usd) => {
+    if (usdV != null) return `<span class="fx" title="${esc(`Published as ${localAmt(r, localV)}${fxNote(r)}`)}">${esc(fmt(usdV))}</span>`;
+    if (localV != null) return `${esc(localAmt(r, localV))} <span class="sm">(no USD rate)</span>`;
+    return null;
+  };
   const isGrowth = (r) => GROWTH.has(r.board);
 
   // Display value + sort key per column. Nulls always sort last, both directions.
@@ -207,29 +254,43 @@ footer p { margin: 0 0 8px; }
     return { html: NA, key: null };
   };
   const value = (r) => {
-    if (r.valuation_usd != null) return { html: esc(usd(r.valuation_usd)), key: r.valuation_usd };
-    if (r.offer_size_usd != null) return { html: `<span class="sm">raise</span> ${esc(usd(r.offer_size_usd))}`, key: null };
-    if (r.offer_size_raw) return { html: `<span class="sm">raise</span> ${esc(r.offer_size_raw)}`, key: null };
+    if (r.valuation_usd != null) return { html: money(r, r.valuation_usd, r.valuation_local), key: r.valuation_usd };
+    if (r.offer_size_usd != null) return { html: `<span class="sm">Raise</span> ${money(r, r.offer_size_usd, r.offer_size_local)}`, key: null };
+    if (r.offer_size_raw) return { html: `<span class="sm">Raise</span> ${esc(r.offer_size_raw)}`, key: null };
     return { html: NA, key: null };
   };
   const email = (addr, tier) => !addr ? NA :
-    `<span class="email"><span>${esc(addr)}</span><span class="tier ${esc(tier)}" title="${tier === "VERIFIED" ? "Published by the company" : "Company naming pattern applied to a confirmed name"}">${esc(tier)}</span>` +
+    `<span class="email"><span>${esc(addr)}</span><span class="tier ${esc(tier)}" title="${tier === "VERIFIED" ? "Published by the company" : "Company naming pattern applied to a confirmed name"}">${esc(TIER_LABEL[tier] || tier)}</span>` +
     `<button class="copy" type="button" data-copy="${esc(addr)}" aria-label="Copy ${esc(addr)}">Copy</button></span>`;
+  // Company inbox, labelled by who published it. Never shown as a person's address.
+  const inboxSource = (r) => {
+    const ev = r.company_email_evidence || "";
+    if (ev.includes("mops.twse")) return ["Exchange", "Filed with the exchange (MOPS company profile)"];
+    if (/\.pdf#page=/i.test(ev)) return ["Offer doc", "Stated in the company's offer document"];
+    return ["Website", "Published on the company's own website"];
+  };
+  const inbox = (r) => {
+    if (!r.company_email) return NA;
+    const [tag, title] = inboxSource(r);
+    return `<span class="email"><span>${esc(r.company_email)}</span><span class="tier SRC" title="${esc(title)}">${tag}</span>` +
+      `<button class="copy" type="button" data-copy="${esc(r.company_email)}" aria-label="Copy ${esc(r.company_email)}">Copy</button></span>`;
+  };
 
   const COLS = [
-    { k: "save", label: '<span aria-label="Saved">★</span>', cell: (r) => `<button class="star" type="button" data-save="${esc(idOf(r))}" aria-pressed="${saved.has(idOf(r))}" aria-label="Save ${esc(r.company_name)}">${saved.has(idOf(r)) ? "★" : "☆"}</button>` },
+    { k: "save", label: '<span aria-label="Saved">★</span>', cell: (r) => `<button class="star" type="button" data-save="${esc(idOf(r))}" aria-pressed="${saved.has(idOf(r))}" aria-label="Save ${esc(coName(r))}">${saved.has(idOf(r)) ? "★" : "☆"}</button>` },
     { k: "company", label: "Company", sort: (r) => r.company_name.toLowerCase(),
-      cell: (r) => `<div class="co">${esc(r.company_name)}${r.ticker ? `<span class="tk">${esc(r.ticker)}</span>` : ""}</div>` },
+      cell: (r) => `<div class="co">${esc(coName(r))}${r.ticker ? `<span class="tk">${esc(r.ticker)}</span>` : ""}</div>` },
     { k: "fit", label: "GEM fit", num: true, sort: (r) => r.gem_fit_score,
       cell: (r) => r.gem_fit_score == null ? NA :
         `<div class="score" title="${esc(r.gem_fit_rationale)}"><span class="bar" aria-hidden="true"><i style="width:${r.gem_fit_score}%"></i></span><b>${r.gem_fit_score}</b></div>` },
     { k: "exchange", label: "Exchange", sort: (r) => (EXCHANGE[r.exchange_mic] || r.exchange_mic) + r.board,
       cell: (r) => `<div>${esc(EXCHANGE[r.exchange_mic] || r.exchange_mic)}</div><span class="badge ${isGrowth(r) ? "growth" : ""}">${esc(r.board)}${isGrowth(r) ? " · growth" : ""}</span>` },
-    { k: "status", label: "Status", sort: (r) => r.listing_status, cell: (r) => `<span class="badge" title="${esc(r.listing_status_raw || "")}">${esc(STATUS[r.listing_status] || r.listing_status)}</span>` },
+    { k: "status", label: "Status", sort: (r) => r.listing_status, cell: (r) => `<span class="badge" title="${esc(cap(r.listing_status_raw || ""))}">${esc(STATUS[r.listing_status] || r.listing_status)}</span>` },
     { k: "date", label: "Expected listing", sort: (r) => listing(r).key, cell: (r) => listing(r).html },
-    { k: "sector", label: "Sector", sort: (r) => r.sector, cell: (r) => r.sector ? esc(r.sector) : NA },
+    { k: "sector", label: "Sector", sort: (r) => r.sector, cell: (r) => r.sector ? esc(sectorLabel(r.sector)) : NA },
     { k: "desc", label: "Business description", cell: (r) => r.business_description ? `<div class="desc">${esc(r.business_description)}</div>` : NA },
     { k: "val", label: "Expected valuation", num: true, sort: (r) => value(r).key, cell: (r) => value(r).html },
+    { k: "inbox", label: "Company email", sort: (r) => r.company_email, cell: inbox },
     { k: "ceo", label: "CEO", sort: (r) => r.ceo_name, cell: (r) => r.ceo_name ? esc(r.ceo_name) : NA },
     { k: "ceoe", label: "CEO email", cell: (r) => email(r.ceo_email, r.ceo_email_tier) },
     { k: "cfo", label: "CFO", sort: (r) => r.cfo_name, cell: (r) => r.cfo_name ? esc(r.cfo_name) : NA },
@@ -241,7 +302,9 @@ footer p { margin: 0 0 8px; }
 
   // ---- detail panel: description, provenance, the score's arithmetic --------
   const PROV_LABEL = { sector: "Sector", business_description: "Description", ceo_name: "CEO", cfo_name: "CFO",
-                       offer_size_local: "Offer size", valuation_local: "Valuation" };
+                       offer_size_local: "Offer size", valuation_local: "Valuation", company_url: "Website" };
+  const METHOD = { "model-extracted": "model-extracted from", "exchange-filing": "from the exchange filing,",
+                   "offer-document": "from the offer document," };
   // Exchange descriptions run to 2,500 characters; show the opening, keep the rest one click away.
   function longText(t) {
     if (!t) return `<p>${NA}</p>`;
@@ -251,13 +314,13 @@ footer p { margin: 0 0 8px; }
   }
   function detail(r) {
     const src = r.field_sources || {};
-    const why = (r.gem_fit_rationale || "").split("; ").filter(Boolean).map((l) => `<li>${esc(l)}</li>`).join("");
+    const why = (r.gem_fit_rationale || "").split("; ").filter(Boolean).map((l) => `<li>${esc(cap(r.sector ? l.replace(r.sector, sectorLabel(r.sector)) : l))}</li>`).join("");
     const extracted = Object.entries(src).map(([f, s]) =>
-      `<p class="prov"><b>${esc(PROV_LABEL[f] || f)}</b> — model-extracted from <a href="${esc(s.source_url)}" target="_blank" rel="noopener">source</a></p>
+      `<p class="prov"><b>${esc(PROV_LABEL[f] || f)}</b>: ${esc(METHOD[s.method] || "from")} <a href="${esc(s.source_url)}" target="_blank" rel="noopener">source</a></p>
        <div class="quote">“${esc(s.quote)}”</div>`).join("");
     const kv = (k, v) => `<dt>${k}</dt><dd>${v ?? NA}</dd>`;
     const link = (u, t) => u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t || u)}</a>` : null;
-    const local = (v) => v == null ? null : `${esc(r.currency || "")} ${Number(v).toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+    const names = (xs) => (xs || []).length ? esc(xs.map((x) => properName(x)).join(", ")) : null;
     return `<div class="dgrid">
       <div>
         <h4>Business</h4>
@@ -270,16 +333,15 @@ footer p { margin: 0 0 8px; }
       <div>
         <h4>Deal</h4>
         <dl class="kv">
-          ${kv("Status", esc(r.listing_status_raw || STATUS[r.listing_status]))}
+          ${kv("Status", esc(cap(r.listing_status_raw || STATUS[r.listing_status])))}
           ${kv("Filed", fdate(r.filed_date) && esc(fdate(r.filed_date)))}
           ${kv("Offer period", r.offer_open ? esc(`${fdate(r.offer_open)} – ${fdate(r.offer_close) || "?"}`) : null)}
-          ${kv("Offer price", local(r.offer_price_local))}
-          ${kv("Offer size", local(r.offer_size_local) || (r.offer_size_raw && esc(r.offer_size_raw)))}
-          ${kv("Valuation", local(r.valuation_local))}
-          ${kv("USD at", r.fx_rate ? esc(`${r.fx_rate.toPrecision(4)} USD per ${r.currency}, ECB ${r.fx_date}`) : null)}
-          ${kv("Advisers", (r.financial_advisors || []).length ? esc(r.financial_advisors.join(", ")) : null)}
-          ${kv("Underwriters", (r.underwriters || []).length ? esc(r.underwriters.join(", ")) : null)}
-          ${kv("Filing", link(r.filing_url, "offer document / filing"))}
+          ${kv("Offer price", money(r, r.offer_price_usd, r.offer_price_local, price))}
+          ${kv("Offer size", money(r, r.offer_size_usd, r.offer_size_local) || (r.offer_size_raw && esc(r.offer_size_raw)))}
+          ${kv("Valuation", money(r, r.valuation_usd, r.valuation_local))}
+          ${kv("Advisers", names(r.financial_advisors))}
+          ${kv("Underwriters", names(r.underwriters))}
+          ${kv("Filing", link(r.filing_url, "Offer document or filing"))}
         </dl>
       </div>
       <div>
@@ -288,9 +350,9 @@ footer p { margin: 0 0 8px; }
         <h4>Contacts</h4>
         <dl class="kv">
           ${kv("Website", link(r.company_url))}
-          ${kv("Company inbox", r.company_email ? `${email(r.company_email, "")} <span class="sm">${link(r.company_email_evidence, "found here")}</span>` : null)}
-          ${kv("CEO email", r.ceo_email ? esc(r.ceo_email_evidence || "") : `<span class="sm">not published — not guessed</span>`)}
-          ${kv("CFO email", r.cfo_email ? esc(r.cfo_email_evidence || "") : `<span class="sm">not published — not guessed</span>`)}
+          ${kv("Company inbox", r.company_email ? `${email(r.company_email, "")} <span class="sm">${link(r.company_email_evidence, "Found here")}</span>` : null)}
+          ${kv("CEO email", r.ceo_email ? esc(r.ceo_email_evidence || "") : `<span class="sm">Not published, so not guessed</span>`)}
+          ${kv("CFO email", r.cfo_email ? esc(r.cfo_email_evidence || "") : `<span class="sm">Not published, so not guessed</span>`)}
         </dl>
       </div>
     </div>`;
@@ -300,7 +362,7 @@ footer p { margin: 0 0 8px; }
   function filtered() {
     const q = $("q").value.trim().toLowerCase();
     const ex = $("fx").value, sec = $("fs").value, board = $("fb").value;
-    const withRecent = $("recent").checked, onlySaved = $("saved").checked;
+    const withRecent = $("recent").checked, onlySaved = $("saved").checked, hasEmail = $("contact").checked;
     return data.records.filter((r) => {
       if (!withRecent && !UPCOMING.has(r.listing_status)) return false;
       if (ex && r.exchange_mic !== ex) return false;
@@ -308,6 +370,7 @@ footer p { margin: 0 0 8px; }
       if (board === "growth" && !isGrowth(r)) return false;
       if (board === "main" && isGrowth(r)) return false;
       if (onlySaved && !saved.has(idOf(r))) return false;
+      if (hasEmail && !(r.company_email || r.ceo_email || r.cfo_email)) return false;
       if (q) {
         const hay = [r.company_name, r.ticker, r.ceo_name, r.cfo_name, r.sector, r.business_description,
                      ...(r.financial_advisors || []), ...(r.underwriters || [])].join(" ").toLowerCase();
@@ -360,13 +423,15 @@ footer p { margin: 0 0 8px; }
     const up = data.records.filter((r) => UPCOMING.has(r.listing_status));
     const growth = up.filter(isGrowth).length;
     const named = up.filter((r) => r.ceo_name).length;
+    const reachable = up.filter((r) => r.company_email || r.ceo_email || r.cfo_email).length;
     const exch = new Set(data.records.map((r) => r.exchange_mic)).size;
     const tile = (k, v, n) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="n">${n}</div></div>`;
     $("tiles").innerHTML =
       tile("Upcoming IPOs", up.length, `${data.records.length - up.length} more listed in the last year`) +
       tile("On growth boards", growth, `${Math.round((100 * growth) / Math.max(up.length, 1))}% of upcoming`) +
       tile("Exchanges covered", exch, "TH · SG · MY · UK · TW") +
-      tile("CEO named from a source", named, `of ${up.length} upcoming; the rest are N/A, not guessed`);
+      tile("CEO named from a source", named, `of ${up.length} upcoming; the rest are N/A, not guessed`) +
+      tile("Company email found", reachable, `of ${up.length} upcoming, each with the page it came from`);
 
     // Exact time in UTC: "refreshed daily" should be checkable at a glance, in one timezone for every viewer.
     const g = new Date(data.generated_at);
@@ -378,14 +443,14 @@ footer p { margin: 0 0 8px; }
     const exOpts = [...new Set(data.records.map((r) => r.exchange_mic))].sort();
     $("fx").insertAdjacentHTML("beforeend", exOpts.map((x) => `<option value="${x}">${esc(EXCHANGE[x] || x)}</option>`).join(""));
     const secs = [...new Set(data.records.map((r) => r.sector).filter(Boolean))].sort();
-    $("fs").insertAdjacentHTML("beforeend", secs.map((s) => `<option>${esc(s)}</option>`).join("") + '<option value="__na">Not yet classified</option>');
+    $("fs").insertAdjacentHTML("beforeend", secs.map((s) => `<option value="${esc(s)}">${esc(sectorLabel(s))}</option>`).join("") + '<option value="__na">Not yet classified</option>');
   }
 
   // ---- CSV: exactly the rows on screen, with the provenance columns ----------
   function exportCsv() {
     const cols = ["company_name", "ticker", "exchange_mic", "board", "listing_status", "listing_status_raw", "filed_date",
       "expected_listing_date", "expected_listing_date_raw", "sector", "business_description", "currency", "offer_price_local",
-      "offer_size_local", "offer_size_usd", "valuation_local", "valuation_usd", "fx_date", "ceo_name", "ceo_email", "ceo_email_tier",
+      "offer_price_usd", "offer_size_local", "offer_size_usd", "valuation_local", "valuation_usd", "fx_rate", "fx_date", "fx_source", "ceo_name", "ceo_email", "ceo_email_tier",
       "ceo_email_evidence", "cfo_name", "cfo_email", "cfo_email_tier", "cfo_email_evidence", "company_email", "company_url",
       "filing_url", "gem_fit_score", "gem_fit_rationale", "source_url", "source_as_of", "fetched_at"];
     const cell = (v) => { const s = v == null ? "" : Array.isArray(v) ? v.join("; ") : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
@@ -426,7 +491,7 @@ footer p { margin: 0 0 8px; }
     const tr = e.target.closest("tr.row"); if (!tr) return;
     const id = tr.dataset.id; open.has(id) ? open.delete(id) : open.add(id); render();
   });
-  ["q", "fx", "fs", "fb", "recent", "saved"].forEach((id) => $(id).addEventListener("input", render));
+  ["q", "fx", "fs", "fb", "recent", "contact", "saved"].forEach((id) => $(id).addEventListener("input", render));
   $("csv").addEventListener("click", exportCsv);
 
   fetch("data/ipos.json", { cache: "no-cache" })

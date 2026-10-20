@@ -2,9 +2,19 @@
  "domain": "tek4investors.co.uk",
  "company_url": "https://www.tek4investors.co.uk",
  "pages_read": [
-  "https://tek4investors.co.uk/",
-  "https://tek4investors.co.uk/"
+  "https://www.tek4investors.co.uk/",
+  "https://www.tek4investors.co.uk/contact",
+  "https://www.tek4investors.co.uk/contact"
  ],
- "emails": [],
- "collected_at": "2026-10-19T03:02:37.890760+00:00"
+ "emails": [
+  {
+   "email": "investor@tek4.co.uk",
+   "source_url": "https://www.tek4investors.co.uk/contact"
+  },
+  {
+   "email": "sales@tek4.co.uk",
+   "source_url": "https://www.tek4investors.co.uk/contact"
+  }
+ ],
+ "collected_at": "2026-10-19T19:06:48.545770+00:00"
 }

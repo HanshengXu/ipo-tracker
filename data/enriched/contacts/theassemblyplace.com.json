@@ -1,0 +1,19 @@
+{
+ "domain": "theassemblyplace.com",
+ "company_url": "https://www.theassemblyplace.com",
+ "pages_read": [
+  "https://www.theassemblyplace.com/",
+  "https://www.theassemblyplace.com/contact-us/",
+  "https://www.theassemblyplace.com/contact-us/",
+  "https://www.theassemblyplace.com/contact-us/",
+  "https://www.theassemblyplace.com/contact-us/",
+  "https://www.theassemblyplace.com/ir-email-subscription-page/"
+ ],
+ "emails": [
+  {
+   "email": "info@theassemblyplace.com",
+   "source_url": "https://www.theassemblyplace.com/"
+  }
+ ],
+ "collected_at": "2026-10-19T19:06:09.438591+00:00"
+}

@@ -1,48 +1,49 @@
 {
- "schema_version": "5",
- "generated_at": "2026-10-20T01:05:21.875836+00:00",
+ "schema_version": "6",
+ "generated_at": "2026-10-20T02:18:43.915343+00:00",
  "sources": [
   {
    "name": "Thailand (SET, mai)",
    "tier": "automated",
    "rows": 13,
    "status": "fresh",
-   "as_of": "2026-10-20T01:05:21.875836+00:00"
+   "as_of": "2026-10-20T02:18:43.915343+00:00"
   },
   {
    "name": "Singapore (SGX Catalist)",
    "tier": "automated",
    "rows": 6,
    "status": "fresh",
-   "as_of": "2026-10-20T01:05:21.875836+00:00"
+   "as_of": "2026-10-20T02:18:43.915343+00:00"
   },
   {
    "name": "Malaysia (Bursa)",
    "tier": "semi-automated",
    "rows": 70,
    "status": "fresh",
-   "as_of": "2026-10-20T01:05:21.875836+00:00"
+   "as_of": "2026-10-20T02:18:43.915343+00:00"
   },
   {
    "name": "London (LSE AIM)",
    "tier": "automated",
    "rows": 4,
    "status": "fresh",
-   "as_of": "2026-10-20T01:05:21.875836+00:00"
+   "as_of": "2026-10-20T02:18:43.915343+00:00"
   },
   {
    "name": "Taiwan (TWSE, TIB)",
    "tier": "automated",
    "rows": 38,
    "status": "fresh",
-   "as_of": "2026-10-20T01:05:21.875836+00:00"
+   "as_of": "2026-10-20T02:18:43.915343+00:00"
   }
  ],
  "steps": {
   "enrich": {
    "fields_filled": 66,
    "cache_entries": 39,
-   "contact_sites": 37
+   "contact_sites": 43,
+   "offer_documents": 6
   },
   "fx": "ECB reference rates, dated per record"
  },
@@ -54,7 +55,7 @@
    "company_name_local": "บริษัท ควิก ทรานส์ฟอร์เมชั่น จำกัด (มหาชน)",
    "ticker": "QUICK",
    "filed_date": null,
-   "expected_listing_date": null,
+   "expected_listing_date": "2026-10-21",
    "expected_listing_date_raw": null,
    "offer_open": "2026-10-09",
    "offer_close": "2026-10-14",
@@ -71,8 +72,10 @@
    "valuation_local": 576300000.0,
    "valuation_usd": 17164654.002713703,
    "offer_size_usd": 5384989.491047435,
+   "offer_price_usd": 0.16828092159523236,
    "fx_rate": 0.029784233910660596,
    "fx_date": "2026-10-14",
+   "fx_source": "ECB",
    "company_url": "http://www.quick-transformation.com",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=731496",
    "ceo_name": null,
@@ -96,7 +99,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -107,7 +110,7 @@
      "extracted_at": "2026-10-19T02:07:23.849610+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "THAI EASTERN BIO POWER PUBLIC COMPANY LIMITED",
@@ -133,8 +136,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.thaieasternbiopower.co.th/",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=691772",
    "ceo_name": null,
@@ -156,7 +161,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -167,7 +172,7 @@
      "extracted_at": "2026-10-19T02:07:27.441750+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Petpal Products Public Company Limited",
@@ -193,8 +198,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://petpal.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=698844",
    "ceo_name": null,
@@ -216,7 +223,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -227,7 +234,7 @@
      "extracted_at": "2026-10-19T02:07:31.199523+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GRAND COS GROUP PUBLIC COMPANY LIMITED",
@@ -253,8 +260,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.grandcosgroup.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=746220",
    "ceo_name": null,
@@ -276,7 +285,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -287,7 +296,7 @@
      "extracted_at": "2026-10-19T02:07:34.593546+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ARKITEKTURA PUBLIC COMPANY LIMITED",
@@ -313,8 +322,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://arkitektura.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=768317",
    "ceo_name": null,
@@ -336,7 +347,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -347,7 +358,7 @@
      "extracted_at": "2026-10-19T02:07:38.098669+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SUPA RICH PUBLIC COMPANY LIMITED",
@@ -373,8 +384,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.suparich.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=787323",
    "ceo_name": null,
@@ -396,7 +409,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -407,7 +420,7 @@
      "extracted_at": "2026-10-19T02:07:41.366476+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SIAM INTER AUCTION PUBLIC COMPANY LIMITED",
@@ -433,8 +446,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.sia.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=813379",
    "ceo_name": null,
@@ -456,7 +471,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -467,7 +482,7 @@
      "extracted_at": "2026-10-19T02:07:44.746996+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "RICHEST SUPPLY PUBLIC COMPANY LIMITED",
@@ -493,8 +508,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.enrichlighting.com",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=819871",
    "ceo_name": null,
@@ -505,8 +522,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "info@richestsupply.com",
+   "company_email_evidence": "https://enrichlighting.com/",
    "financial_advisors": [
     "Bank of Ayudhya Public Company Limited",
     "Krungsri Securities Public Company Limited"
@@ -517,7 +534,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -528,7 +545,7 @@
      "extracted_at": "2026-10-19T02:07:49.208738+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SUEN CORP PUBLIC COMPANY LIMITED",
@@ -554,8 +571,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.suen.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=754859",
    "ceo_name": null,
@@ -577,7 +596,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -588,7 +607,7 @@
      "extracted_at": "2026-10-19T02:07:52.985602+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Finnomena Public Company Limited",
@@ -614,8 +633,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.finnomena.com",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=786915",
    "ceo_name": null,
@@ -626,7 +647,7 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": "complain@finnomena.com",
+   "company_email": "connect@finnomena.com",
    "company_email_evidence": "https://www.finnomena.com/contact-us/",
    "financial_advisors": [
     "Kasikorn Securities Public Company Limited"
@@ -637,7 +658,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -648,7 +669,7 @@
      "extracted_at": "2026-10-19T02:07:57.072384+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Texca Wall Public Company Limited",
@@ -674,8 +695,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.texcawall.co.th",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=791757",
    "ceo_name": null,
@@ -697,7 +720,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -708,7 +731,7 @@
      "extracted_at": "2026-10-19T02:08:00.618227+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EVEANDBOY Public Company Limited",
@@ -734,8 +757,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.eveandboy.com",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=810840",
    "ceo_name": null,
@@ -757,7 +782,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -768,7 +793,7 @@
      "extracted_at": "2026-10-19T02:08:04.185956+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "The Architects & Turnkey Public Company Limited",
@@ -794,8 +819,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.thearchitects.co.th/",
    "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=813400",
    "ceo_name": null,
@@ -817,7 +844,7 @@
    "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T01:05:21.879098+00:00",
+   "fetched_at": "2026-10-20T02:18:43.917451+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -828,7 +855,7 @@
      "extracted_at": "2026-10-19T02:08:07.749060+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Metasurface Technologies Holdings Limited",
@@ -854,9 +881,11 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
-   "company_url": null,
+   "fx_source": null,
+   "company_url": "https://www.metatechnologies.com.sg",
    "filing_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf",
    "ceo_name": "Dato’ Sri Chua Chwee Lee",
    "ceo_email": null,
@@ -866,8 +895,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "info@metatechnologies.com.sg",
+   "company_email_evidence": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf#page=45",
    "financial_advisors": [
     "UOB Kay Hian Private Limited"
    ],
@@ -877,9 +906,14 @@
    "source_url": "https://www.sgx.com/regco/catalodge/metasurface-technologies-holdings-limited/2026-09-28",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
    "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2026-09/Preliminary%20Offer%20Document.pdf#page=45",
+     "quote": "Our Internet address is www.metatechnologies.com.sg and our email address is info@metatechnologies.com.sg."
+    },
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
@@ -909,7 +943,7 @@
      "extracted_at": "2026-10-19T02:08:23.872103+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Kin Global Limited",
@@ -935,9 +969,11 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
-   "company_url": null,
+   "fx_source": null,
+   "company_url": "https://www.kin.net",
    "filing_url": "https://api2.sgx.com/sites/default/files/2026-04/Final%20Offer%20Document.pdf",
    "ceo_name": null,
    "ceo_email": null,
@@ -947,8 +983,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "ir@kin.net",
+   "company_email_evidence": "https://www.kin.net/contact",
    "financial_advisors": [
     "SAC Capital Private Limited"
    ],
@@ -958,10 +994,16 @@
    "source_url": "https://www.sgx.com/regco/catalodge/kin-global-limited/2026-03-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
-   "field_sources": {},
-   "schema_version": "5"
+   "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2026-04/Final%20Offer%20Document.pdf#page=49",
+     "quote": "Our internet address is https://www.kin.net/ and our email address is info@kin.net."
+    }
+   },
+   "schema_version": "6"
   },
   {
    "company_name": "The Assembly Place Holdings Ltd.",
@@ -987,9 +1029,11 @@
    "valuation_local": 88090000.0,
    "valuation_usd": 68610409.40708843,
    "offer_size_usd": 14284423.981450811,
+   "offer_price_usd": null,
    "fx_rate": 0.7788671745611129,
    "fx_date": "2025-12-30",
-   "company_url": null,
+   "fx_source": "ECB",
+   "company_url": "https://www.theassemblyplace.com",
    "filing_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf",
    "ceo_name": "Eugene Lim",
    "ceo_email": null,
@@ -999,8 +1043,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "info@theassemblyplace.com",
+   "company_email_evidence": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf#page=42",
    "financial_advisors": [
     "SAC Capital Private Limited"
    ],
@@ -1010,9 +1054,14 @@
    "source_url": "https://www.sgx.com/regco/catalodge/assembly-place-holdings-ltd/2025-12-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
    "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document_0.pdf#page=42",
+     "quote": "Our internet address is www.theassemblyplace.com and our email address is info@theassemblyplace.com."
+    },
     "sector": {
      "method": "model-extracted",
      "model": "claude-opus-5-5",
@@ -1049,7 +1098,7 @@
      "extracted_at": "2026-10-19T02:08:37.798623+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Toku Ltd",
@@ -1075,9 +1124,11 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
-   "company_url": null,
+   "fx_source": null,
+   "company_url": "https://toku.co",
    "filing_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document.pdf",
    "ceo_name": null,
    "ceo_email": null,
@@ -1087,8 +1138,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "hello@toku.co",
+   "company_email_evidence": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document.pdf#page=56",
    "financial_advisors": [
     "PrimePartners Corporate Finance Pte Ltd"
    ],
@@ -1098,10 +1149,16 @@
    "source_url": "https://www.sgx.com/regco/catalodge/toku-ltd/2025-12-10",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
-   "field_sources": {},
-   "schema_version": "5"
+   "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2026-01/Final%20Offer%20Document.pdf#page=56",
+     "quote": "Our email address is hello@toku.co and our Company’s website is https://toku.co/."
+    }
+   },
+   "schema_version": "6"
   },
   {
    "company_name": "Leong Guan Holdings Limited",
@@ -1127,9 +1184,11 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
-   "company_url": null,
+   "fx_source": null,
+   "company_url": "https://leongguan.com",
    "filing_url": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document_0.pdf",
    "ceo_name": null,
    "ceo_email": null,
@@ -1139,8 +1198,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "enquiry@leong-guan.com",
+   "company_email_evidence": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document_0.pdf#page=36",
    "financial_advisors": [
     "ZICO Capital Pte. Ltd."
    ],
@@ -1150,10 +1209,16 @@
    "source_url": "https://www.sgx.com/regco/catalodge/leong-guan-holdings-limited/2025-09-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
-   "field_sources": {},
-   "schema_version": "5"
+   "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document_0.pdf#page=36",
+     "quote": "Our email address is enquiry@leong-guan.com. Our internet address is https://leongguan.com."
+    }
+   },
+   "schema_version": "6"
   },
   {
    "company_name": "Infinity Development Holdings Company Limited",
@@ -1179,9 +1244,11 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
-   "company_url": null,
+   "fx_source": null,
+   "company_url": "https://www.infinitydevelopment.com.hk",
    "filing_url": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document.pdf",
    "ceo_name": null,
    "ceo_email": null,
@@ -1191,8 +1258,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "ir@infinitydevelopment.com.hk",
+   "company_email_evidence": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document.pdf#page=45",
    "financial_advisors": [
     "Xandar Capital Pte. Ltd."
    ],
@@ -1202,10 +1269,16 @@
    "source_url": "https://www.sgx.com/regco/catalodge/infinity-development-holdings-company-limited/2025-09-29",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:28.487192+00:00",
+   "fetched_at": "2026-10-20T02:18:48.970620+00:00",
    "data_warnings": [],
-   "field_sources": {},
-   "schema_version": "5"
+   "field_sources": {
+    "company_url": {
+     "method": "offer-document",
+     "source_url": "https://api2.sgx.com/sites/default/files/2025-11/Final%20Offer%20Document.pdf#page=45",
+     "quote": "Our email address is ir@infinitydevelopment.com.hk. Our internet address is www.infinitydevelopment.com.hk."
+    }
+   },
+   "schema_version": "6"
   },
   {
    "company_name": "REDPLANET BERHAD",
@@ -1231,8 +1304,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 5560804.811047019,
+   "offer_price_usd": 0.04643724873273903,
    "fx_rate": 0.24440657227757384,
    "fx_date": "2026-10-08",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3709195",
    "ceo_name": null,
@@ -1255,7 +1330,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "NWE RESOURCES GROUP BERHAD",
@@ -1281,8 +1356,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 12165895.72265548,
+   "offer_price_usd": 0.04895908425628591,
    "fx_rate": 0.24479542128142953,
    "fx_date": "2026-10-09",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3709827",
    "ceo_name": null,
@@ -1305,7 +1382,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EGH INTERNATIONAL BERHAD",
@@ -1331,8 +1408,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 25054914.72123343,
+   "offer_price_usd": 0.03914830425192724,
    "fx_rate": 0.24467690157454522,
    "fx_date": "2026-10-05",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3708227",
    "ceo_name": null,
@@ -1355,7 +1434,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ECOSYS (MALAYSIA) BERHAD",
@@ -1381,8 +1460,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 16632335.489857573,
+   "offer_price_usd": 0.06615990504963315,
    "fx_rate": 0.24503668536901163,
    "fx_date": "2026-09-29",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3707846",
    "ceo_name": null,
@@ -1405,7 +1486,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SLGC BERHAD",
@@ -1431,8 +1512,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 21031045.824411143,
+   "offer_price_usd": 0.06872890792291222,
    "fx_rate": 0.2454603854389722,
    "fx_date": "2026-09-22",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3704440",
    "ceo_name": null,
@@ -1455,7 +1538,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GB BOND HOLDINGS BERHAD",
@@ -1481,8 +1564,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11617454.611551866,
+   "offer_price_usd": 0.061266385817847435,
    "fx_rate": 0.24506554327138974,
    "fx_date": "2026-09-18",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3703807",
    "ceo_name": null,
@@ -1505,7 +1590,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EVOCOM BERHAD",
@@ -1531,8 +1616,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 10997485.265451767,
+   "offer_price_usd": 0.044160825793296804,
    "fx_rate": 0.24533792107387115,
    "fx_date": "2026-09-14",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3701932",
    "ceo_name": null,
@@ -1555,7 +1642,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "PIONEER HEAT HOLDINGS BERHAD",
@@ -1581,8 +1668,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11155393.197989007,
+   "offer_price_usd": 0.0618582506071322,
    "fx_rate": 0.2474330024285288,
    "fx_date": "2026-09-03",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3693807",
    "ceo_name": null,
@@ -1605,7 +1694,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BUTTERFIELD FB BERHAD",
@@ -1631,8 +1720,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 46036139.114840195,
+   "offer_price_usd": 0.11864984307948503,
    "fx_rate": 0.2471871730822605,
    "fx_date": "2026-09-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3695501",
    "ceo_name": null,
@@ -1655,7 +1746,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "UNITED ASIAPAC ENERGY BERHAD",
@@ -1681,8 +1772,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 20603016.768518325,
+   "offer_price_usd": 0.08551098517688355,
    "fx_rate": 0.24431710050538158,
    "fx_date": "2026-08-05",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3689063",
    "ceo_name": null,
@@ -1705,7 +1798,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GTA HOLDINGS BERHAD",
@@ -1731,8 +1824,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 50461361.75939129,
+   "offer_price_usd": 0.08692455038842183,
    "fx_rate": 0.24835585825263382,
    "fx_date": "2026-08-26",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3695902",
    "ceo_name": null,
@@ -1755,7 +1850,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ESYS HOLDINGS BERHAD",
@@ -1781,8 +1876,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.02688846872784307,
+   "fx_rate": 0.24444062479857334,
+   "fx_date": "2026-07-24",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3678050",
    "ceo_name": null,
@@ -1805,7 +1902,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "STRATUS GLOBAL HOLDINGS BERHAD",
@@ -1831,8 +1928,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 129238607.05073087,
+   "offer_price_usd": 0.19656061908856406,
    "fx_rate": 0.24570077386070507,
    "fx_date": "2026-07-10",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3682069",
    "ceo_name": null,
@@ -1855,7 +1954,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ENEST GROUP BERHAD",
@@ -1881,8 +1980,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 7163561.207104153,
+   "offer_price_usd": 0.03186269028984261,
    "fx_rate": 0.24509761761417387,
    "fx_date": "2026-07-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3679775",
    "ceo_name": null,
@@ -1905,7 +2006,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SRKK AI BERHAD",
@@ -1931,8 +2032,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 9540482.09674311,
+   "offer_price_usd": 0.07771653711911951,
    "fx_rate": 0.24286417849724848,
    "fx_date": "2026-06-25",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3677154",
    "ceo_name": null,
@@ -1955,7 +2058,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "RNG TECH BERHAD",
@@ -1981,8 +2084,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11263924.730953649,
+   "offer_price_usd": 0.031416089504528504,
    "fx_rate": 0.24166222695791154,
    "fx_date": "2026-06-24",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3676699",
    "ceo_name": null,
@@ -2005,7 +2110,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ECKEM HOLDINGS BERHAD",
@@ -2031,8 +2136,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 9064535.508758616,
+   "offer_price_usd": 0.029006513628027572,
    "fx_rate": 0.24172094690022977,
    "fx_date": "2026-06-19",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3669255",
    "ceo_name": null,
@@ -2055,7 +2162,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "LIFTECH GROUP BERHAD",
@@ -2081,8 +2188,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11907493.26435417,
+   "offer_price_usd": 0.07128869476719531,
    "fx_rate": 0.2458230854041218,
    "fx_date": "2026-06-16",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3673954",
    "ceo_name": null,
@@ -2105,7 +2214,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "RT PASTRY HOLDINGS BERHAD",
@@ -2131,8 +2240,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 7081064.472412474,
+   "offer_price_usd": 0.044439103245841674,
    "fx_rate": 0.24688390692134263,
    "fx_date": "2026-06-15",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3673515",
    "ceo_name": null,
@@ -2155,7 +2266,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "HSS HOLDINGS BERHAD",
@@ -2181,8 +2292,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 9751283.033320569,
+   "offer_price_usd": 0.04432401378782076,
    "fx_rate": 0.24624452104344868,
    "fx_date": "2026-06-09",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3671464",
    "ceo_name": null,
@@ -2205,7 +2318,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SUM TECHNOLOGY BERHAD",
@@ -2231,8 +2344,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 14443158.998950997,
+   "offer_price_usd": 0.06977371497077776,
    "fx_rate": 0.24919183918134913,
    "fx_date": "2026-06-04",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3667377",
    "ceo_name": null,
@@ -2255,7 +2370,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ELSA BERHAD",
@@ -2281,8 +2396,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 15656509.153302295,
+   "offer_price_usd": 0.05757932402138301,
    "fx_rate": 0.2503448870494913,
    "fx_date": "2026-06-03",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3667913",
    "ceo_name": null,
@@ -2305,7 +2422,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "PENTECH HOLDINGS BERHAD",
@@ -2331,8 +2448,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 867574848.3798304,
+   "offer_price_usd": 5.044186449488825,
    "fx_rate": 0.2522093224744412,
    "fx_date": "2026-05-29",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3667391",
    "ceo_name": null,
@@ -2357,7 +2476,7 @@
     "Issue price RM20.00 is over 10x the ACE median (RM0.25); possible source error, unverified. Offer size derived from it is unreliable."
    ],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MM COMPUTER SYSTEMS BERHAD",
@@ -2383,8 +2502,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 9258888.349812035,
+   "offer_price_usd": 0.055660922662378584,
    "fx_rate": 0.25300419391990264,
    "fx_date": "2026-05-25",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3664515",
    "ceo_name": null,
@@ -2407,7 +2528,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BUS CAP BERHAD",
@@ -2433,8 +2554,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 12944453.7617866,
+   "offer_price_usd": 0.058213399503722084,
    "fx_rate": 0.2531017369727047,
    "fx_date": "2026-05-15",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3663387",
    "ceo_name": null,
@@ -2457,7 +2580,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EI POWER BERHAD",
@@ -2483,8 +2606,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 40662288.26409045,
+   "offer_price_usd": 0.12229259628297878,
    "fx_rate": 0.2547762422562058,
    "fx_date": "2026-05-06",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3656876",
    "ceo_name": null,
@@ -2507,7 +2632,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SKYECHIP BERHAD",
@@ -2533,8 +2658,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 89681237.27418445,
+   "offer_price_usd": 0.2242030931854611,
    "fx_rate": 0.2547762422562058,
    "fx_date": "2026-05-06",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3660369",
    "ceo_name": null,
@@ -2557,7 +2684,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GOLD LI HOLDINGS BERHAD",
@@ -2583,8 +2710,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 8858001.122964628,
+   "offer_price_usd": 0.03280741156653566,
    "fx_rate": 0.2523647043579666,
    "fx_date": "2026-05-05",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3658953",
    "ceo_name": null,
@@ -2607,7 +2736,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "NOESIS EXED BERHAD",
@@ -2633,8 +2762,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 638274.449596949,
+   "offer_price_usd": 0.3212251885238797,
    "fx_rate": 0.25494062581260296,
    "fx_date": "2026-05-11",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3663127",
    "ceo_name": null,
@@ -2657,7 +2788,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "INSPACE CREATION BERHAD",
@@ -2683,8 +2814,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 10666214.134770889,
+   "offer_price_usd": 0.06325067385444744,
    "fx_rate": 0.25300269541778975,
    "fx_date": "2026-04-22",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3654315",
    "ceo_name": null,
@@ -2707,7 +2840,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MANFORCE GROUP BERHAD",
@@ -2733,8 +2866,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 14426087.378632424,
+   "offer_price_usd": 0.09617904540663785,
    "fx_rate": 0.2531027510700996,
    "fx_date": "2026-04-21",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3655000",
    "ceo_name": null,
@@ -2757,7 +2892,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MILOLO BERHAD",
@@ -2783,8 +2918,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.025297297297297294,
+   "fx_rate": 0.25297297297297294,
+   "fx_date": "2026-05-04",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3659556",
    "ceo_name": null,
@@ -2807,7 +2944,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "AMS ADVANCED MATERIAL BERHAD",
@@ -2833,8 +2970,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 21008997.806994874,
+   "offer_price_usd": 0.07314015592023086,
    "fx_rate": 0.25220743420769265,
    "fx_date": "2026-04-10",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3649261",
    "ceo_name": null,
@@ -2857,7 +2996,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MTT SHIPPING AND LOGISTICS BERHAD",
@@ -2883,8 +3022,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 161552775.03276122,
+   "offer_price_usd": 0.2550162194676578,
    "fx_rate": 0.247588562589959,
    "fx_date": "2026-04-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3648741",
    "ceo_name": null,
@@ -2907,7 +3048,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EMPIRE PREMIUM FOOD BERHAD",
@@ -2933,8 +3074,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 62756778.00451078,
+   "offer_price_usd": 0.17288368596283962,
    "fx_rate": 0.24697669423262805,
    "fx_date": "2026-03-31",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3648258",
    "ceo_name": null,
@@ -2957,7 +3100,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GOLDEN DESTINATIONS GROUP BERHAD",
@@ -2983,8 +3126,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 57378649.380223,
+   "offer_price_usd": 0.11141485316548155,
    "fx_rate": 0.247588562589959,
    "fx_date": "2026-04-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3648652",
    "ceo_name": null,
@@ -3007,7 +3152,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "5E RESOURCES HOLDINGS BERHAD",
@@ -3033,8 +3178,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 51820286.15007842,
+   "offer_price_usd": 0.06437302627338934,
    "fx_rate": 0.247588562589959,
    "fx_date": "2026-04-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3649854",
    "ceo_name": null,
@@ -3057,7 +3204,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BIMOFFICE GROUP BERHAD",
@@ -3083,8 +3230,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 744779.281421592,
+   "offer_price_usd": 0.0372389640710796,
    "fx_rate": 0.248259760473864,
    "fx_date": "2026-03-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3645633",
    "ceo_name": null,
@@ -3107,7 +3256,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SUNWAY HEALTHCARE HOLDINGS BERHAD",
@@ -3133,8 +3282,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 1321279574.1090152,
+   "offer_price_usd": 0.3677384850469329,
    "fx_rate": 0.2536127483082296,
    "fx_date": "2026-03-05",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3639899",
    "ceo_name": null,
@@ -3157,7 +3308,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ADNEX GROUP BERHAD",
@@ -3183,8 +3334,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11158960.925562102,
+   "offer_price_usd": 0.050722549661645924,
    "fx_rate": 0.2536127483082296,
    "fx_date": "2026-03-05",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3638709",
    "ceo_name": null,
@@ -3207,7 +3360,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "OGX GROUP BERHAD",
@@ -3233,8 +3386,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 35093618.02864731,
+   "offer_price_usd": 0.08912664896164396,
    "fx_rate": 0.2546475684618399,
    "fx_date": "2026-03-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3634957",
    "ceo_name": null,
@@ -3257,7 +3412,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "WHITMAN HOLDINGS BERHAD",
@@ -3283,8 +3438,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 600439.4611294424,
+   "offer_price_usd": 0.02470944284483302,
    "fx_rate": 0.2470944284483302,
    "fx_date": "2025-12-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3635429",
    "ceo_name": null,
@@ -3307,7 +3464,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "TEAMSTAR BERHAD",
@@ -3333,8 +3490,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 23261129.4771731,
+   "offer_price_usd": 0.06608275419651449,
    "fx_rate": 0.2541644392173634,
    "fx_date": "2026-02-09",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3629603",
    "ceo_name": null,
@@ -3357,7 +3516,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "HOCK SOON CAPITAL BERHAD",
@@ -3383,8 +3542,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 41804162.06104923,
+   "offer_price_usd": 0.15201513476745174,
    "fx_rate": 0.2533585579457529,
    "fx_date": "2026-01-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3628151",
    "ceo_name": null,
@@ -3407,7 +3568,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "KEE MING GROUP BERHAD",
@@ -3433,8 +3594,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 13592137.74417273,
+   "offer_price_usd": 0.09614244204543045,
    "fx_rate": 0.25300642643534327,
    "fx_date": "2026-01-27",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3627664",
    "ceo_name": null,
@@ -3457,7 +3620,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BENTLEY MUSIC GROUP BERHAD",
@@ -3483,8 +3646,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 766275.3010367254,
+   "offer_price_usd": 0.030651012041469014,
    "fx_rate": 0.25542510034557514,
    "fx_date": "2026-02-11",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3632644",
    "ceo_name": null,
@@ -3507,7 +3672,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "AMBEST GROUP BERHAD",
@@ -3533,8 +3698,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 16676665.592059216,
+   "offer_price_usd": 0.06325160660883582,
    "fx_rate": 0.25300642643534327,
    "fx_date": "2026-01-27",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3627729",
    "ceo_name": null,
@@ -3557,7 +3724,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ASSOCIATED AIR-PAK INDUSTRIES BERHAD",
@@ -3583,8 +3750,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 1026102.1596802992,
+   "offer_price_usd": 0.04560454043023552,
    "fx_rate": 0.2533585579457529,
    "fx_date": "2026-01-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3627801",
    "ceo_name": null,
@@ -3607,7 +3776,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ISF GROUP BERHAD",
@@ -3633,8 +3802,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 39587001.63984479,
+   "offer_price_usd": 0.08152216780103047,
    "fx_rate": 0.24703687212433473,
    "fx_date": "2026-01-14",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3624567",
    "ceo_name": null,
@@ -3657,7 +3828,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ONE GASMASTER HOLDINGS BERHAD",
@@ -3683,8 +3854,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 10314227.978615072,
+   "offer_price_usd": 0.06161426510522743,
    "fx_rate": 0.24645706042090973,
    "fx_date": "2026-01-16",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3625252",
    "ceo_name": null,
@@ -3707,7 +3880,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GUAN HUAT SENG HOLDINGS BERHAD",
@@ -3733,8 +3906,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 14987012.904858299,
+   "offer_price_usd": 0.06137187921727395,
    "fx_rate": 0.2454875168690958,
    "fx_date": "2026-01-09",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3623579",
    "ceo_name": null,
@@ -3757,7 +3932,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SBS NEXUS BERHAD",
@@ -3783,8 +3958,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 18565051.461593624,
+   "offer_price_usd": 0.06160627662715654,
    "fx_rate": 0.24642510650862617,
    "fx_date": "2026-01-07",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3620712",
    "ceo_name": null,
@@ -3807,7 +3984,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SEMICO CAPITAL BERHAD",
@@ -3833,8 +4010,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11614784.064650547,
+   "offer_price_usd": 0.061667403245154365,
    "fx_rate": 0.24666961298061746,
    "fx_date": "2026-01-02",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3618350",
    "ceo_name": null,
@@ -3857,7 +4036,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "WASCO GREENERGY BERHAD",
@@ -3883,8 +4062,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 65215436.43819566,
+   "offer_price_usd": 0.241986777136162,
    "fx_rate": 0.241986777136162,
    "fx_date": "2025-11-28",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3609786",
    "ceo_name": null,
@@ -3907,7 +4088,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "LAC MED BERHAD",
@@ -3933,8 +4114,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 33413247.16696679,
+   "offer_price_usd": 0.1813989279283052,
    "fx_rate": 0.24186523723774025,
    "fx_date": "2025-11-25",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3608210",
    "ceo_name": null,
@@ -3957,7 +4140,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ORKIM BERHAD",
@@ -3983,8 +4166,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 88975732.00785264,
+   "offer_price_usd": 0.22243933001963162,
    "fx_rate": 0.2417818804561213,
    "fx_date": "2025-11-26",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3609345",
    "ceo_name": null,
@@ -4007,7 +4192,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BMS HOLDINGS BERHAD",
@@ -4033,8 +4218,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 47785507.58284966,
+   "offer_price_usd": 0.053012544467328226,
    "fx_rate": 0.2409661112151283,
    "fx_date": "2025-11-19",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3607839",
    "ceo_name": null,
@@ -4057,7 +4244,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "GEOHAN CORPORATION BERHAD",
@@ -4083,8 +4270,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 30622144.112478033,
+   "offer_price_usd": 0.13256339442631182,
    "fx_rate": 0.2410243535023851,
    "fx_date": "2025-11-21",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3608586",
    "ceo_name": null,
@@ -4107,7 +4296,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "PSP ENERGY BERHAD",
@@ -4133,8 +4322,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 18344756.896811444,
+   "offer_price_usd": 0.038563896560381616,
    "fx_rate": 0.2410243535023851,
    "fx_date": "2025-11-21",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3607187",
    "ceo_name": null,
@@ -4157,7 +4348,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "CROESUS IT HOLDINGS BERHAD",
@@ -4183,8 +4374,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.029105119837029958,
+   "fx_rate": 0.24254266530858298,
+   "fx_date": "2025-12-03",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3613350",
    "ceo_name": null,
@@ -4207,7 +4400,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "FOODIE MEDIA BERHAD",
@@ -4233,8 +4426,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 18072458.341134623,
+   "offer_price_usd": 0.07228983336453848,
    "fx_rate": 0.2409661112151283,
    "fx_date": "2025-11-19",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3607836",
    "ceo_name": null,
@@ -4257,7 +4452,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "POLYMER LINK HOLDINGS BERHAD",
@@ -4283,8 +4478,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 12684891.956626104,
+   "offer_price_usd": 0.060400968502786534,
    "fx_rate": 0.24160387401114614,
    "fx_date": "2025-11-11",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3605372",
    "ceo_name": null,
@@ -4307,7 +4504,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "AQUAWALK GROUP BERHAD",
@@ -4333,8 +4530,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 102261136.21326043,
+   "offer_price_usd": 0.07423331054910003,
    "fx_rate": 0.23946229209387104,
    "fx_date": "2025-11-07",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3603615",
    "ceo_name": null,
@@ -4357,7 +4556,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "PMW INTERNATIONAL BERHAD",
@@ -4383,8 +4582,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 38065989.102709204,
+   "offer_price_usd": 0.08128060029434322,
    "fx_rate": 0.23906058910100947,
    "fx_date": "2025-11-06",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3602628",
    "ceo_name": null,
@@ -4407,7 +4608,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "FARMIERA BERHAD",
@@ -4433,8 +4634,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 12053571.42857143,
+   "offer_price_usd": 0.05952380952380953,
    "fx_rate": 0.2380952380952381,
    "fx_date": "2025-10-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3600414",
    "ceo_name": null,
@@ -4457,7 +4660,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "LPC GROUP BERHAD",
@@ -4483,8 +4686,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.02380952380952381,
+   "fx_rate": 0.2380952380952381,
+   "fx_date": "2025-10-30",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3600851",
    "ceo_name": null,
@@ -4507,7 +4712,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "POWERTECHNIC GROUP BERHAD",
@@ -4533,8 +4738,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 11782551.719904235,
+   "offer_price_usd": 0.08274263848247355,
    "fx_rate": 0.23640753852135302,
    "fx_date": "2025-10-14",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3596451",
    "ceo_name": null,
@@ -4557,7 +4764,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "INSIGHTS ANALYTICS BERHAD",
@@ -4583,8 +4790,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 22012086.280924145,
+   "offer_price_usd": 0.08515313841750152,
    "fx_rate": 0.23653649560417092,
    "fx_date": "2025-10-13",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3596831",
    "ceo_name": null,
@@ -4607,7 +4816,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "THMY HOLDINGS BERHAD",
@@ -4633,8 +4842,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 29226765.08257068,
+   "offer_price_usd": 0.0735293757149861,
    "fx_rate": 0.2371915345644713,
    "fx_date": "2025-10-09",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3594067",
    "ceo_name": null,
@@ -4657,7 +4868,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "VERDANT SOLAR HOLDINGS BERHAD",
@@ -4683,8 +4894,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": 21456686.8221942,
+   "offer_price_usd": 0.07355611601513241,
    "fx_rate": 0.23727779359720133,
    "fx_date": "2025-10-07",
+   "fx_source": "ECB",
    "company_url": null,
    "filing_url": "https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3594073",
    "ceo_name": null,
@@ -4707,7 +4920,7 @@
    "fetched_at": "2026-10-19T01:28:06.497000+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Axies Ventures Limited",
@@ -4733,8 +4946,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://axiesventures.com",
    "filing_url": null,
    "ceo_name": null,
@@ -4758,7 +4973,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:54.190787+00:00",
+   "fetched_at": "2026-10-20T02:19:13.875022+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -4769,7 +4984,7 @@
      "extracted_at": "2026-10-19T02:08:41.388159+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Liberty Minerals plc",
@@ -4795,8 +5010,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.liberty-minerals.com",
    "filing_url": null,
    "ceo_name": "Charles (Charlie) Robert Stephenson",
@@ -4821,7 +5038,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:54.190787+00:00",
+   "fetched_at": "2026-10-20T02:19:13.875022+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -4832,7 +5049,7 @@
      "extracted_at": "2026-10-19T02:08:45.076914+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "TEK 4 Group Plc",
@@ -4854,12 +5071,14 @@
    "currency": null,
    "offer_price_local": null,
    "offer_size_local": null,
-   "offer_size_raw": null,
+   "offer_size_raw": "£24.75m",
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.tek4investors.co.uk",
    "filing_url": null,
    "ceo_name": "Jason Elliot Duffin",
@@ -4870,8 +5089,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": null,
-   "company_email_evidence": null,
+   "company_email": "investor@tek4.co.uk",
+   "company_email_evidence": "https://www.tek4investors.co.uk/contact",
    "financial_advisors": [
     "Panmure Liberum Limited"
    ],
@@ -4883,7 +5102,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:54.190787+00:00",
+   "fetched_at": "2026-10-20T02:19:13.875022+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -4894,7 +5113,7 @@
      "extracted_at": "2026-10-19T02:08:49.207859+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Voltage X Limited",
@@ -4920,8 +5139,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://voltage-x.com",
    "filing_url": null,
    "ceo_name": "Terence Cheung",
@@ -4945,7 +5166,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:54.190787+00:00",
+   "fetched_at": "2026-10-20T02:19:13.875022+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -4956,7 +5177,7 @@
      "extracted_at": "2026-10-19T02:08:53.560330+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "YE SIANG ENTERPRISE CO., LTD.",
@@ -4982,8 +5203,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.yesiang.com/",
    "filing_url": null,
    "ceo_name": "莊士杰",
@@ -5003,7 +5226,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5026,7 +5249,7 @@
      "extracted_at": "2026-10-19T02:26:09.436761+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Flight International Co.,Ltd.",
@@ -5052,8 +5275,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.fltmkt.com.tw/",
    "filing_url": null,
    "ceo_name": "張憲銘",
@@ -5073,7 +5298,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5096,7 +5321,7 @@
      "extracted_at": "2026-10-19T02:26:13.347529+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "BIONET Therapeutics Corp.",
@@ -5122,8 +5347,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.bionettx.com/",
    "filing_url": null,
    "ceo_name": "李黛苹",
@@ -5145,7 +5372,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5168,7 +5395,7 @@
      "extracted_at": "2026-10-19T02:26:16.739374+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Elixiron Immunotherapeutics (Cayman) Limited",
@@ -5194,8 +5421,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://elixiron.com",
    "filing_url": null,
    "ceo_name": "陳泓愷",
@@ -5206,8 +5435,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": "ir@elixiron.com",
-   "company_email_evidence": "https://elixiron.com/contact.php",
+   "company_email": "info@elixiron.com",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7871)",
    "financial_advisors": [],
    "underwriters": [
     "Yuanta Securities Co., Ltd."
@@ -5217,7 +5446,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5240,7 +5469,7 @@
      "extracted_at": "2026-10-19T02:26:19.755603+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MaiCoin-KY",
@@ -5266,8 +5495,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": null,
    "filing_url": null,
    "ceo_name": null,
@@ -5289,10 +5520,10 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Nexora Technology Co., Limited",
@@ -5318,8 +5549,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.nexora-tech.com.tw/",
    "filing_url": null,
    "ceo_name": "蕭豐格",
@@ -5330,8 +5563,8 @@
    "cfo_email": null,
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
-   "company_email": "sales@nexora-tech.com.tw",
-   "company_email_evidence": "https://www.nexora-tech.com.tw/contact",
+   "company_email": "service@nexora-tech.com.tw",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6842)",
    "financial_advisors": [],
    "underwriters": [
     "Mega Securities Co., Ltd."
@@ -5341,7 +5574,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5364,7 +5597,7 @@
      "extracted_at": "2026-10-19T02:26:24.436173+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SUPER QIN ENTERPRISE CO.,LTD.",
@@ -5390,8 +5623,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.qinchicken.com/",
    "filing_url": null,
    "ceo_name": "陳建利",
@@ -5411,7 +5646,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5434,7 +5669,7 @@
      "extracted_at": "2026-10-19T02:26:27.457652+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Steminent Biotherapeutics Inc.",
@@ -5460,8 +5695,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.steminent.com",
    "filing_url": null,
    "ceo_name": "柯景懷",
@@ -5481,7 +5718,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5504,7 +5741,7 @@
      "extracted_at": "2026-10-19T02:26:29.972941+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "DADA Broadband Co., Ltd.",
@@ -5530,8 +5767,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.dadabroadband.com/",
    "filing_url": null,
    "ceo_name": "劉登榮",
@@ -5543,7 +5782,7 @@
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
    "company_email": "ir@dadabroadband.com",
-   "company_email_evidence": "https://www.dadabroadband.com/investor/CSR",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7901)",
    "financial_advisors": [],
    "underwriters": [],
    "gem_fit_score": 50,
@@ -5551,7 +5790,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5574,7 +5813,7 @@
      "extracted_at": "2026-10-19T02:26:34.119898+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "FEASTOGETHER GROUP CO., LTD.",
@@ -5600,8 +5839,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.feastogether.com",
    "filing_url": null,
    "ceo_name": "陳毅航",
@@ -5621,7 +5862,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5644,7 +5885,7 @@
      "extracted_at": "2026-10-19T02:26:36.882321+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SHINHSIUNG  NATURAL  GAS  INC.",
@@ -5670,8 +5911,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.shng.com.tw",
    "filing_url": null,
    "ceo_name": "王定中",
@@ -5691,7 +5934,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5700,7 +5943,7 @@
      "quote": "總經理 (President): 王定中"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "EmBestor Technology Inc.",
@@ -5726,8 +5969,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.embestor.com",
    "filing_url": null,
    "ceo_name": "林傳生",
@@ -5739,7 +5984,7 @@
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
    "company_email": "ir@embestor.com",
-   "company_email_evidence": "http://www.embestor.com/contact/",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7843)",
    "financial_advisors": [],
    "underwriters": [],
    "gem_fit_score": 50,
@@ -5747,7 +5992,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5770,7 +6015,7 @@
      "extracted_at": "2026-10-19T02:26:39.753454+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Nytex Composites Co., Ltd.",
@@ -5796,8 +6041,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.nytex.com.tw",
    "filing_url": null,
    "ceo_name": "陳宇涵",
@@ -5817,7 +6064,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5840,7 +6087,7 @@
      "extracted_at": "2026-10-19T02:26:44.054156+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ION ELECTRONIC MATERIALS CO., LTD.",
@@ -5866,8 +6113,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.iemtw.com/tw",
    "filing_url": null,
    "ceo_name": "顧大成",
@@ -5889,7 +6138,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5912,7 +6161,7 @@
      "extracted_at": "2026-10-19T02:26:48.695862+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "CAROTA",
@@ -5938,8 +6187,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": null,
    "filing_url": null,
    "ceo_name": null,
@@ -5959,10 +6210,10 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {},
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "SHUZ TUNG MACHINERY INDUSTRIAL CO., LTD.",
@@ -5988,8 +6239,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.wisepioneer.com.tw",
    "filing_url": null,
    "ceo_name": "黃棨杉",
@@ -6009,7 +6262,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6032,7 +6285,7 @@
      "extracted_at": "2026-10-19T02:26:52.141832+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ASRock Industrial Computer Corporation",
@@ -6058,8 +6311,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.asrockind.com/zh-tw/",
    "filing_url": null,
    "ceo_name": "曾瑛俊",
@@ -6079,7 +6334,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6102,7 +6357,7 @@
      "extracted_at": "2026-10-19T02:26:55.621926+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Bellwether Electronic Corp.",
@@ -6128,8 +6383,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.bellwether-corp.com",
    "filing_url": null,
    "ceo_name": "徐瑞瑛",
@@ -6141,7 +6398,7 @@
    "cfo_email_tier": "UNAVAILABLE",
    "cfo_email_evidence": null,
    "company_email": "ir@bellwether-corp.com",
-   "company_email_evidence": "https://www.bellwether-corp.com/en/investor/show.aspx?kind=1017",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7861)",
    "financial_advisors": [],
    "underwriters": [],
    "gem_fit_score": 50,
@@ -6149,7 +6406,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6172,7 +6429,7 @@
      "extracted_at": "2026-10-19T02:26:59.126360+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "TMY TECHNOLOGY INC.",
@@ -6198,8 +6455,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 1.9077901430842605,
+   "fx_rate": 0.03179650238473768,
+   "fx_date": "2026-05-22",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.tmytek.com/",
    "filing_url": null,
    "ceo_name": "張書維",
@@ -6219,7 +6478,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6228,7 +6487,7 @@
      "quote": "總經理 (President): 張書維"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "TEST RITE RETAIL CO., LTD.",
@@ -6254,8 +6513,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.trplus.com.tw",
    "filing_url": null,
    "ceo_name": "張栢青",
@@ -6275,7 +6536,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6298,7 +6559,7 @@
      "extracted_at": "2026-10-19T02:27:01.873148+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "NPIC Cayman",
@@ -6324,8 +6585,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://npic-group.com/",
    "filing_url": null,
    "ceo_name": "康潤生",
@@ -6345,7 +6608,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6368,7 +6631,7 @@
      "extracted_at": "2026-10-19T02:27:05.574532+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Johnson Fine Chemical Co., Ltd.",
@@ -6394,8 +6657,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "https://www.johnson-fine.com/",
    "filing_url": null,
    "ceo_name": "陳南超",
@@ -6415,7 +6680,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6438,7 +6703,7 @@
      "extracted_at": "2026-10-19T02:27:10.007318+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Sunplus Innovation Technology Inc.",
@@ -6464,8 +6729,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.sunplusit.com",
    "filing_url": null,
    "ceo_name": "蔡建忠",
@@ -6485,7 +6752,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6494,7 +6761,7 @@
      "quote": "總經理 (President): 蔡建忠"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "HOTAI LEASING CO., LTD.",
@@ -6520,8 +6787,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 1.3278533038254823,
+   "fx_rate": 0.03161555485298767,
+   "fx_date": "2026-04-14",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.hotaileasing.com.tw",
    "filing_url": null,
    "ceo_name": "謝富來",
@@ -6541,7 +6810,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6550,7 +6819,7 @@
      "quote": "總經理 (President): 謝富來"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Climax Technology Co., Ltd.",
@@ -6576,8 +6845,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 5.707556117609864,
+   "fx_rate": 0.03161555485298767,
+   "fx_date": "2026-04-14",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.climax.com.tw/",
    "filing_url": null,
    "ceo_name": "張再發",
@@ -6597,7 +6868,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6606,7 +6877,7 @@
      "quote": "總經理 (President): 張再發"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "TAHO Pharmaceuticals Ltd.",
@@ -6632,8 +6903,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 3.306199123356293,
+   "fx_rate": 0.031308703819661866,
+   "fx_date": "2026-03-27",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "http://www.tahopharma.com",
    "filing_url": null,
    "ceo_name": "李世仁",
@@ -6653,7 +6926,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6676,7 +6949,7 @@
      "extracted_at": "2026-10-19T02:27:13.140030+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "HENGS TECHNOLOGY CO., LTD.",
@@ -6702,8 +6975,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.7786308381317978,
+   "fx_rate": 0.03198976327575176,
+   "fx_date": "2025-12-30",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.hengs.com",
    "filing_url": null,
    "ceo_name": "周曉艷",
@@ -6725,7 +7000,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6734,7 +7009,7 @@
      "quote": "總經理 (President): 周曉艷"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Techzone Technology Materials Co.,Ltd.",
@@ -6760,8 +7035,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 2.099236641221374,
+   "fx_rate": 0.031806615776081425,
+   "fx_date": "2025-12-23",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "http://www.tech-zone.com.tw",
    "filing_url": null,
    "ceo_name": "張德鈞、林學堅、陳國進",
@@ -6781,7 +7058,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6790,7 +7067,7 @@
      "quote": "總經理 (President): 張德鈞、林學堅、陳國進"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Genomics BioSci & Tech. Co.,Ltd.",
@@ -6816,8 +7093,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.7016539440203562,
+   "fx_rate": 0.031806615776081425,
+   "fx_date": "2025-12-23",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "http://www.genomics.com.tw",
    "filing_url": null,
    "ceo_name": "江俊奇",
@@ -6839,7 +7118,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6848,7 +7127,7 @@
      "quote": "總經理 (President): 江俊奇"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "RAC Electric Vehicles Inc.",
@@ -6874,8 +7153,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.8479643765903307,
+   "fx_rate": 0.031806615776081425,
+   "fx_date": "2025-12-23",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "http://www.racev.com",
    "filing_url": null,
    "ceo_name": "蔡裕慶",
@@ -6897,7 +7178,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6906,7 +7187,7 @@
      "quote": "總經理 (President): 蔡裕慶"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "H2U Corporation",
@@ -6932,8 +7213,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 1.5606734434561629,
+   "fx_rate": 0.03176620076238882,
+   "fx_date": "2025-12-17",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.h2u.io/",
    "filing_url": null,
    "ceo_name": "陳俊嘉",
@@ -6953,7 +7236,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6962,7 +7245,7 @@
      "quote": "總經理 (President): 陳俊嘉"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "ENJOY WARMTH CO., LTD",
@@ -6988,8 +7271,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.952683391552874,
+   "fx_rate": 0.031756113051762465,
+   "fx_date": "2025-12-16",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.sws.com.tw/",
    "filing_url": null,
    "ceo_name": "李奇霖",
@@ -7009,7 +7294,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7018,7 +7303,7 @@
      "quote": "總經理 (President): 李奇霖"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "Apistek Technology (Cayman) Ltd",
@@ -7044,8 +7329,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
+   "offer_price_usd": null,
    "fx_rate": null,
    "fx_date": null,
+   "fx_source": null,
    "company_url": "http://www.apistek.com",
    "filing_url": null,
    "ceo_name": "張國鋒",
@@ -7065,7 +7352,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7088,7 +7375,7 @@
      "extracted_at": "2026-10-19T02:27:17.129319+00:00"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "HanchorBio Inc.",
@@ -7114,8 +7401,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 3.8180082723512565,
+   "fx_rate": 0.03181673560292714,
+   "fx_date": "2025-11-24",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.hanchorbio.com",
    "filing_url": null,
    "ceo_name": "劉世高",
@@ -7137,7 +7426,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7146,7 +7435,7 @@
      "quote": "總經理 (President): 劉世高"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "aetherAI Co., Ltd.",
@@ -7172,8 +7461,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.7360713148678766,
+   "fx_rate": 0.03183699458771092,
+   "fx_date": "2025-11-21",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.aetherai.com/",
    "filing_url": null,
    "ceo_name": "葉肇元",
@@ -7195,7 +7486,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7204,7 +7495,7 @@
      "quote": "總經理 (President): 葉肇元"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "StemCyte International, Ltd.",
@@ -7230,8 +7521,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 0.6229668184775538,
+   "fx_rate": 0.03253090435914119,
+   "fx_date": "2025-10-30",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://stemcytebio.com/",
    "filing_url": null,
    "ceo_name": "路孔明",
@@ -7251,7 +7544,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7260,7 +7553,7 @@
      "quote": "總經理 (President): 路孔明"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "MiTAC Digital Technology Corporation",
@@ -7286,8 +7579,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 1.2577589023195035,
+   "fx_rate": 0.032669062397909183,
+   "fx_date": "2025-10-28",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.mitacmdt.com",
    "filing_url": null,
    "ceo_name": "張樂羣",
@@ -7307,7 +7602,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7316,7 +7611,7 @@
      "quote": "總經理 (President): 張樂羣"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   },
   {
    "company_name": "PRAISE VICTOR INDUSTRIAL CO., LTD.",
@@ -7342,8 +7637,10 @@
    "valuation_local": null,
    "valuation_usd": null,
    "offer_size_usd": null,
-   "fx_rate": null,
-   "fx_date": null,
+   "offer_price_usd": 8.414872798434441,
+   "fx_rate": 0.03261578604044357,
+   "fx_date": "2025-10-27",
+   "fx_source": "Federal Reserve H.10",
    "company_url": "https://www.pvichem.com.tw/",
    "filing_url": null,
    "ceo_name": "施文昌",
@@ -7363,7 +7660,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T01:05:57.312568+00:00",
+   "fetched_at": "2026-10-20T02:19:16.198042+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7372,7 +7669,7 @@
      "quote": "總經理 (President): 施文昌"
     }
    },
-   "schema_version": "5"
+   "schema_version": "6"
   }
  ]
 }

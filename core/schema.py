@@ -22,7 +22,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import date, datetime
 from typing import Optional
 
-SCHEMA_VERSION = "5"
+SCHEMA_VERSION = "6"
 
 # Controlled vocabularies. Keep these small and documented -- the dashboard
 # filters are built from them, so a typo here becomes a silent empty filter.
@@ -76,8 +76,10 @@ class IPORecord:
     valuation_local: Optional[float] = None    # market cap in `currency`
     valuation_usd: Optional[float] = None      # filled by core/fx.py
     offer_size_usd: Optional[float] = None     # filled by core/fx.py
+    offer_price_usd: Optional[float] = None    # filled by core/fx.py
     fx_rate: Optional[float] = None            # USD per 1 unit of `currency`
-    fx_date: Optional[date] = None             # ECB date the rate is from
+    fx_date: Optional[date] = None             # date the rate is from
+    fx_source: Optional[str] = None            # "ECB" or "Federal Reserve H.10"
 
     # --- the contact pipeline ---------------------------------------------
     # company_url -> email domain. filing_url -> where management names live.
