@@ -1,0 +1,8 @@
+{
+ "domain": "apistek.com",
+ "pattern": "{first}.{last}",
+ "emails": [],
+ "returned": 1,
+ "dropped": 1,
+ "searched_at": "2026-10-20T17:10:12.398864+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "domain": "texcawall.co.th",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "sales@texcawall.co.th",
+   "source_url": "https://texcawall.co.th",
+   "hunter_confidence": 81,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 3,
+ "dropped": 2,
+ "searched_at": "2026-10-20T17:10:15.717787+00:00"
+}

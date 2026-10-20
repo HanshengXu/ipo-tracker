@@ -1,0 +1,15 @@
+{
+ "domain": "eveandboy.com",
+ "pattern": "{first}{l}",
+ "emails": [
+  {
+   "email": "info@eveandboy.com",
+   "source_url": "https://ktc.co.th/en/promotion/health-beauty/cosmetics-store/eveandboy-ecoupon",
+   "hunter_confidence": 89,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 5,
+ "dropped": 4,
+ "searched_at": "2026-10-20T17:10:26.779916+00:00"
+}

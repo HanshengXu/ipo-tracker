@@ -103,9 +103,12 @@ filings themselves, read by rules, inside the refresh job:
 | Singapore | Catalist offer document | CEO / CFO (model-read, quote-verified, `tools/extract.py`); company inbox and website |
 | London | LSEG pre-IPO profile | directors with titles |
 
-Thai and Taiwanese names are shown in the script they were filed in. They are not
-romanised into Latin letters: Thai and Chinese names have no single spelling, so
-an email built from a romanisation would be a guess stacked on a guess. Bursa
+Thai and Taiwanese names are shown in the script they were filed in, with a
+romanisation in parentheses; Thai and Chinese quotes get an English translation
+underneath (`tools/translate.py`, cached in `data/enriched/translations.json`).
+Both are labelled as Claude's and are display-only: no email is built from a
+romanised name, because Thai and Chinese names have no single Latin spelling and
+the address would be a guess stacked on a guess. Bursa
 prospectuses sit behind Cloudflare and are not read yet.
 
 **Company inbox, for as many companies as possible.** The *Company / IR email*

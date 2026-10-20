@@ -116,6 +116,8 @@ tr.detail td { padding: 4px 18px 18px; background: var(--surface-2); border-bott
 .kv dd { margin: 0; overflow-wrap: anywhere; }
 .why li { margin-bottom: 2px; }
 .quote { border-left: 2px solid var(--rule); padding: 2px 8px; color: var(--ink-2); font-size: 12.5px; margin: 4px 0 8px; }
+.quote .en { display: block; margin-top: 3px; color: var(--muted); }
+.tr { color: var(--muted); font-weight: 400; }
 .warn { color: var(--bad); font-size: 13px; }
 details summary { cursor: pointer; margin-bottom: 6px; }
 .prov { font-size: 12.5px; }
@@ -170,6 +172,8 @@ footer p { margin: 0 0 8px; }
       address, applied to a confirmed name. <span class="tier GUESSED">Guessed</span> = not published: Hunter.io's usual pattern for the
       domain applied to a confirmed name, with Hunter's mailbox check shown; guesses the check rejects are dropped. Company inboxes and the
       investor-relations contact named in the filing are shown separately. Otherwise N/A.</p>
+    <p>Thai and Chinese text keeps its original script, with English in parentheses: names are romanised (the person's own spelling may
+      differ) and quotes are translated, both by Claude. Translations are for reading only; nothing is matched or scored on them.</p>
     <p>Sector, description and missing officers are extracted by a model from the linked documents, and kept only if the supporting quote is
       found verbatim in the source. Those quotes are shown in each row.</p>
   </footer>
@@ -297,7 +301,7 @@ footer p { margin: 0 0 8px; }
         `<button class="copy" type="button" data-copy="${esc(r.company_email)}" aria-label="Copy ${esc(r.company_email)}">Copy</button></span>`);
     }
     if (r.ir_contact_email) {
-      parts.push(`<div class="ir"><span class="sm">IR contact${r.ir_contact_name ? ` ${esc(r.ir_contact_name)}` : ""}:</span> ` +
+      parts.push(`<div class="ir"><span class="sm">IR contact${r.ir_contact_name ? ` ${withEn(r.ir_contact_name)}` : ""}:</span> ` +
         `<span class="email"><span>${esc(r.ir_contact_email)}</span><span class="tier SRC" title="Named as the investor-relations contact in the regulatory filing">Filing</span>` +
         `<button class="copy" type="button" data-copy="${esc(r.ir_contact_email)}" aria-label="Copy ${esc(r.ir_contact_email)}">Copy</button></span></div>`);
     }
@@ -318,15 +322,27 @@ footer p { margin: 0 0 8px; }
     { k: "sector", label: "Sector", sort: (r) => r.sector, cell: (r) => r.sector ? esc(sectorLabel(r.sector)) : NA },
     { k: "val", label: "Expected valuation", num: true, sort: (r) => value(r).key, cell: (r) => value(r).html },
     { k: "inbox", label: "Company / IR email", sort: (r) => r.company_email || r.ir_contact_email, cell: inbox },
-    { k: "ceo", label: "CEO", sort: (r) => r.ceo_name, cell: (r) => r.ceo_name ? esc(r.ceo_name) : NA },
+    { k: "ceo", label: "CEO", sort: (r) => r.ceo_name, cell: (r) => withEn(r.ceo_name) },
     { k: "ceoe", label: "CEO email", sort: (r) => r.ceo_email && r.ceo_email_tier, cell: (r) => email(r.ceo_email, r.ceo_email_tier, r.ceo_email_check) },
-    { k: "cfo", label: "CFO", sort: (r) => r.cfo_name, cell: (r) => r.cfo_name ? esc(r.cfo_name) : NA },
+    { k: "cfo", label: "CFO", sort: (r) => r.cfo_name, cell: (r) => withEn(r.cfo_name) },
     { k: "cfoe", label: "CFO email", sort: (r) => r.cfo_email && r.cfo_email_tier, cell: (r) => email(r.cfo_email, r.cfo_email_tier, r.cfo_email_check) },
     // Last: the contact columns matter more to a deal team and should be on screen first.
     { k: "desc", label: "Business description", cell: (r) => r.business_description ? `<div class="desc">${esc(r.business_description)}</div>` : NA },
   ];
 
   let data = null, rows = [], sortKey = "fit", sortDir = -1;
+
+  // ---- English beside Thai/Chinese text ---------------------------------------
+  // Names are romanised (labelled so: the person's own spelling may differ);
+  // other text is a machine translation. The original always stays on screen.
+  const TR_TITLE = { name: "Romanised by Claude from the filed name; the person's own spelling may differ",
+                     text: "English translation by Claude; the original is what the source says" };
+  const en = (s) => (s && data && data.translations && data.translations[s]) || null;
+  const withEn = (s) => {
+    if (!s) return NA;
+    const t = en(s);
+    return esc(s) + (t ? ` <span class="tr" title="${esc(TR_TITLE[t.kind] || TR_TITLE.text)}">(${esc(t.en)})</span>` : "");
+  };
   const open = new Set();
 
   // ---- detail panel: description, provenance, the score's arithmetic --------
@@ -352,10 +368,10 @@ footer p { margin: 0 0 8px; }
     const why = (r.gem_fit_rationale || "").split("; ").filter(Boolean).map((l) => `<li>${esc(cap(r.sector ? l.replace(r.sector, sectorLabel(r.sector)) : l))}</li>`).join("");
     const extracted = Object.entries(src).map(([f, s]) =>
       `<p class="prov"><b>${esc(PROV_LABEL[f] || f)}</b>: ${esc(METHOD[s.method] || "from")} <a href="${esc(s.source_url)}" target="_blank" rel="noopener">source</a></p>
-       <div class="quote">“${esc(s.quote)}”</div>`).join("");
+       <div class="quote">“${esc(s.quote)}”${en(s.quote) ? `<span class="en" title="${esc(TR_TITLE.text)}">English: ${esc(en(s.quote).en)}</span>` : ""}</div>`).join("");
     const kv = (k, v) => `<dt>${k}</dt><dd>${v ?? NA}</dd>`;
     const link = (u, t) => u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t || u)}</a>` : null;
-    const names = (xs) => (xs || []).length ? esc(xs.map((x) => properName(x)).join(", ")) : null;
+    const names = (xs) => (xs || []).length ? xs.map((x) => withEn(properName(x))).join(", ") : null;
     return `<div class="dgrid">
       <div>
         <h4>Business</h4>
@@ -387,7 +403,7 @@ footer p { margin: 0 0 8px; }
         <dl class="kv">
           ${kv("Website", link(r.company_url))}
           ${kv("Company inbox", r.company_email ? `${email(r.company_email, "")} <span class="sm">${link(r.company_email_evidence, "Found here")}</span>` : null)}
-          ${kv("IR contact", r.ir_contact_name ? `${esc(r.ir_contact_name)}${r.ir_contact_email ? ` · ${email(r.ir_contact_email, "")}` : ""} <span class="sm">${link(r.ir_contact_evidence, "Filing")}</span>` : null)}
+          ${kv("IR contact", r.ir_contact_name ? `${withEn(r.ir_contact_name)}${r.ir_contact_email ? ` · ${email(r.ir_contact_email, "")}` : ""} <span class="sm">${link(r.ir_contact_evidence, "Filing")}</span>` : null)}
           ${kv("CEO email", r.ceo_email ? emailWhy(r, "ceo") : `<span class="sm">Not published, and no pattern to guess from</span>`)}
           ${kv("CFO email", r.cfo_email ? emailWhy(r, "cfo") : `<span class="sm">Not published, and no pattern to guess from</span>`)}
         </dl>
@@ -409,7 +425,8 @@ footer p { margin: 0 0 8px; }
       if (onlySaved && !saved.has(idOf(r))) return false;
       if (hasEmail && !(r.company_email || r.ceo_email || r.cfo_email || r.ir_contact_email)) return false;
       if (q) {
-        const hay = [r.company_name, coName(r), r.ticker, r.ceo_name, r.cfo_name, r.ir_contact_name, r.sector, r.business_description,
+        const hay = [r.company_name, coName(r), r.company_name_local, r.ticker, r.ceo_name, r.cfo_name, r.ir_contact_name,
+                     ...[r.ceo_name, r.cfo_name, r.ir_contact_name].map((n) => en(n)?.en), r.sector, r.business_description,
                      ...(r.financial_advisors || []), ...(r.underwriters || [])].join(" ").toLowerCase();
         if (!hay.includes(q)) return false;
       }
@@ -491,11 +508,13 @@ footer p { margin: 0 0 8px; }
     const cols = ["company_name", "ticker", "exchange_mic", "board", "listing_status", "listing_status_raw", "filed_date",
       "expected_listing_date", "expected_listing_date_raw", "sector", "business_description", "currency", "offer_price_local",
       "offer_price_usd", "offer_size_local", "offer_size_usd", "valuation_local", "valuation_usd", "fx_rate", "fx_date", "fx_source", "ceo_name", "ceo_email", "ceo_email_tier",
-      "ceo_email_evidence", "ceo_email_check", "cfo_name", "cfo_email", "cfo_email_tier", "cfo_email_evidence", "cfo_email_check",
-      "company_email", "company_email_method", "company_email_evidence", "ir_contact_name", "ir_contact_email", "ir_contact_evidence", "company_url",
+      "ceo_email_evidence", "ceo_email_check", "ceo_name_en", "cfo_name", "cfo_name_en", "cfo_email", "cfo_email_tier", "cfo_email_evidence", "cfo_email_check",
+      "company_email", "company_email_method", "company_email_evidence", "ir_contact_name", "ir_contact_name_en", "ir_contact_email", "ir_contact_evidence", "company_url",
       "filing_url", "gem_fit_score", "gem_fit_rationale", "source_url", "source_as_of", "fetched_at"];
     const cell = (v) => { const s = v == null ? "" : Array.isArray(v) ? v.join("; ") : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
-    const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => cell(r[c])).join(","))].join("\n");
+    // *_en: the romanised name shown beside a Thai/Chinese one on screen.
+    const value = (r, c) => c.endsWith("_name_en") ? en(r[c.slice(0, -3)])?.en : r[c];
+    const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => cell(value(r, c))).join(","))].join("\n");
     const a = Object.assign(document.createElement("a"), {
       href: URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" })),
       download: `ipo-pipeline-${new Date().toISOString().slice(0, 10)}.csv`,

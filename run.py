@@ -46,6 +46,25 @@ def _previous() -> dict:
         return {}
 
 
+TRANSLATIONS = Path(__file__).resolve().parent / "data" / "enriched" / "translations.json"
+
+
+def _translations(records: list[dict]) -> dict:
+    """{original: {en, kind}} for the strings these records actually show."""
+    try:
+        cache = json.loads(TRANSLATIONS.read_text())
+    except (OSError, ValueError):
+        return {}
+    shown = set()
+    for r in records:
+        shown.update(v for f in ("ceo_name", "cfo_name", "ir_contact_name") if (v := r.get(f)))
+        shown.update(s.get("quote") for s in (r.get("field_sources") or {}).values() if s.get("quote"))
+        shown.update(r.get("data_warnings") or [])
+        shown.update(r.get("underwriters") or [])
+        shown.update(r.get("financial_advisors") or [])
+    return {s: {"en": cache[s]["en"], "kind": cache[s]["kind"]} for s in shown if s in cache}
+
+
 def main() -> None:
     started = datetime.now(timezone.utc)
     previous = _previous()
@@ -108,6 +127,7 @@ def main() -> None:
     for step, result in steps.items():
         print(f"[run] {step}: {result}")
 
+    all_records = [r.to_dict() for r in records] + carried
     payload = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": started.isoformat(),
@@ -115,7 +135,9 @@ def main() -> None:
         "steps": steps,
         # Carried-forward rows were enriched, converted and scored on the run
         # that produced them, so they are appended as-is.
-        "records": [r.to_dict() for r in records] + carried,
+        "records": all_records,
+        # English beside Thai/Chinese text on the dashboard (tools/translate.py).
+        "translations": _translations(all_records),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=1, ensure_ascii=False))
