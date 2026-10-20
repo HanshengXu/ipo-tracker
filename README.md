@@ -42,6 +42,24 @@ field that *is* shown came from.
 - **SGX main board:** SGX publishes no pre-IPO feed for the main board, only an
   archive of completed offers. Catalist is the board that matters here.
 
+## Why valuation and listing date are often N/A
+
+These are companies **before** pricing, which is the point for a pre-IPO
+pipeline, and it shapes what can honestly be shown:
+
+- **Expected valuation:** a valuation exists only once an offer price is set.
+  Of 42 upcoming IPOs, 2 publish one (SET's market cap at the offer price, SGX's
+  offer document) and 2 more a raise amount, shown as "Raise" and used for
+  sorting. The rest are at the filing or review stage with no price, so N/A.
+  Taiwan's "amount of capital" is paid-in capital, not a valuation, and is not
+  passed off as one.
+- **Expected listing date:** exchanges give a date only near the end (4 exact,
+  3 as free text such as "Late October 2026"). Otherwise the column shows when the
+  company **filed**, which is the stage it is at, and the status column says
+  how far along it is (filed, approved, cleared to offer, priced).
+
+Inventing either would make the table look complete and make it wrong.
+
 ## How it works
 
 ```
