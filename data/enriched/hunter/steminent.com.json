@@ -1,0 +1,15 @@
+{
+ "domain": "steminent.com",
+ "pattern": "{first}{last}",
+ "emails": [
+  {
+   "email": "ir@steminent.com",
+   "source_url": "https://unlistedstock.com.tw/company/info/%E4%BB%B2%E6%81%A9%E7%94%9F%E9%86%AB%E7%A7%91%E6%8A%80",
+   "hunter_confidence": 79,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 8,
+ "dropped": 7,
+ "searched_at": "2026-10-20T16:45:18.128113+00:00"
+}

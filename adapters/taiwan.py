@@ -109,7 +109,7 @@ CFO_TITLE = re.compile(r"財務長|財務主管|財會主管|財務副總|財務
 
 
 def _apply_mops(rec: IPORecord, p: dict) -> None:
-    src = f"{MOPS_PAGE} (company {rec.ticker})"
+    src = f"{MOPS_PAGE}?companyId={rec.ticker}"     # opens this company's profile directly
     rec.company_name = (p.get("companyEnglishName") or rec.company_name).strip()
     rec.company_name_local = p.get("companyName")
     rec.sector_raw = p.get("industryCategory")

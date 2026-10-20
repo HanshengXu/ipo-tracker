@@ -125,7 +125,9 @@ def fetch(boards=("mai", "set")) -> list[IPORecord]:
                 pass
 
         rows = payload.get("data") or []
-        source_url = f"{API}?type={board}&lang=en"
+        # Link the page a person can open; the JSON API behind it needs an
+        # Incapsula session, so a clicked API link would just show a block page.
+        source_url = f"https://www.set.or.th/en/listing/ipo/upcoming-ipo/{board}"
         for row in rows:
             try:
                 records.append(_to_record(row, board_param=board,

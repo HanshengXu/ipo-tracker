@@ -1,0 +1,15 @@
+{
+ "domain": "dadabroadband.com",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "ir@dadabroadband.com",
+   "source_url": "https://dadabroadband.com/investor/CSR",
+   "hunter_confidence": 75,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 2,
+ "dropped": 1,
+ "searched_at": "2026-10-20T16:45:20.020506+00:00"
+}

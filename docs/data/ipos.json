@@ -1,41 +1,41 @@
 {
  "schema_version": "6",
- "generated_at": "2026-10-20T16:42:10.429300+00:00",
+ "generated_at": "2026-10-20T16:44:13.953491+00:00",
  "sources": [
   {
    "name": "Thailand (SET, mai)",
    "tier": "automated",
    "rows": 13,
    "status": "fresh",
-   "as_of": "2026-10-20T16:42:10.429300+00:00"
+   "as_of": "2026-10-20T16:44:13.953491+00:00"
   },
   {
    "name": "Singapore (SGX Catalist)",
    "tier": "automated",
    "rows": 6,
    "status": "fresh",
-   "as_of": "2026-10-20T16:42:10.429300+00:00"
+   "as_of": "2026-10-20T16:44:13.953491+00:00"
   },
   {
    "name": "Malaysia (Bursa)",
    "tier": "semi-automated",
    "rows": 70,
    "status": "fresh",
-   "as_of": "2026-10-20T16:42:10.429300+00:00"
+   "as_of": "2026-10-20T16:44:13.953491+00:00"
   },
   {
    "name": "London (LSE AIM)",
    "tier": "automated",
    "rows": 4,
    "status": "fresh",
-   "as_of": "2026-10-20T16:42:10.429300+00:00"
+   "as_of": "2026-10-20T16:44:13.953491+00:00"
   },
   {
    "name": "Taiwan (TWSE, TIB)",
    "tier": "automated",
    "rows": 38,
    "status": "fresh",
-   "as_of": "2026-10-20T16:42:10.429300+00:00"
+   "as_of": "2026-10-20T16:44:13.953491+00:00"
   }
  ],
  "steps": {
@@ -45,11 +45,11 @@
    "cache_entries": 39,
    "contact_sites": 43,
    "offer_documents": 6,
-   "hunter_domains": 18,
+   "hunter_domains": 21,
    "thai_filings": 13
   },
-  "hunter": "3 searched, 3 addresses kept, 17 domains still due",
-  "hunter_verify": "2 guesses checked, 0 still due",
+  "hunter": "3 searched, 2 addresses kept, 14 domains still due",
+  "hunter_verify": "no guesses to check",
   "fx": "ECB reference rates, dated per record"
  },
  "records": [
@@ -107,10 +107,10 @@
    ],
    "gem_fit_score": 100,
    "gem_fit_rationale": "growth board: mai (+35); raise under $10m (~$5.4m) (+30); emerging market: Thailand (+20); capital-hungry sector: Software & Internet (+15)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -190,10 +190,10 @@
    "underwriters": [],
    "gem_fit_score": 85,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); capital-hungry sector: Energy (+15)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -268,10 +268,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -351,10 +351,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -434,10 +434,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -507,10 +507,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -590,10 +590,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Media & Services (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -669,10 +669,10 @@
    "underwriters": [],
    "gem_fit_score": 70,
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Industrials (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=mai&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -752,10 +752,10 @@
    "underwriters": [],
    "gem_fit_score": 35,
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -830,10 +830,10 @@
    "underwriters": [],
    "gem_fit_score": 50,
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); capital-hungry sector: FinTech (+15)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -913,10 +913,10 @@
    "underwriters": [],
    "gem_fit_score": 35,
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -991,10 +991,10 @@
    "underwriters": [],
    "gem_fit_score": 35,
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1074,10 +1074,10 @@
    "underwriters": [],
    "gem_fit_score": 35,
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
-   "source_url": "https://www.set.or.th/api/set/ipo/upcoming?type=set&lang=en",
+   "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
    "source_as_of": "2026-10-19T00:00:00+07:00",
-   "fetched_at": "2026-10-20T16:42:10.433128+00:00",
+   "fetched_at": "2026-10-20T16:44:13.955331+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1155,7 +1155,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/metasurface-technologies-holdings-limited/2026-09-28",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1249,7 +1249,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/kin-global-limited/2026-03-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1315,7 +1315,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/assembly-place-holdings-ltd/2025-12-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1416,7 +1416,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/toku-ltd/2025-12-10",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1482,7 +1482,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/leong-guan-holdings-limited/2025-09-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1548,7 +1548,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/infinity-development-holdings-company-limited/2025-09-29",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:15.218988+00:00",
+   "fetched_at": "2026-10-20T16:44:18.277201+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -5678,7 +5678,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/AxiesVenturesLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:30.879963+00:00",
+   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5749,7 +5749,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/LibertyMinerals",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:30.879963+00:00",
+   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5819,7 +5819,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/TEK4Group",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:30.879963+00:00",
+   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5889,7 +5889,7 @@
    "source_url": "https://profile.lsegissuerservices.com/upcoming-issues/VoltageXLimited",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:30.879963+00:00",
+   "fetched_at": "2026-10-20T16:44:33.933405+00:00",
    "data_warnings": [],
    "field_sources": {
     "sector": {
@@ -5943,7 +5943,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@yesiang.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7909)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7909",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -5955,12 +5955,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7909)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7909",
      "quote": "總經理 (President): 莊士杰"
     },
     "sector": {
@@ -6021,7 +6021,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "service@fltmkt.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6798)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6798",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6033,17 +6033,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6798)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6798",
      "quote": "總經理 (President): 張憲銘"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6798)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6798",
      "quote": "發言人 (Spokesperson): 詹克群; 職稱 (Title): 財務長"
     },
     "sector": {
@@ -6104,7 +6104,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "investment@bionettx.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7808)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7808",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6118,12 +6118,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7808)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7808",
      "quote": "總經理 (President): 李黛苹"
     },
     "sector": {
@@ -6184,7 +6184,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "info@elixiron.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7871)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7871",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6198,17 +6198,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7871)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7871",
      "quote": "總經理 (President): 陳泓愷; 訴訟及非訟代理人 (legal representative): 陳泓愷, CHEN, HUNG-KAI"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7871)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7871",
      "quote": "發言人 (Spokesperson): 許志宏; 職稱 (Title): 財務長"
     },
     "sector": {
@@ -6283,7 +6283,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -6329,7 +6329,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "service@nexora-tech.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6842)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6842",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6343,17 +6343,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6842)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6842",
      "quote": "總經理 (President): 蕭豐格"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6842)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6842",
      "quote": "發言人 (Spokesperson): 莊姿櫻; 職稱 (Title): 財務長"
     },
     "sector": {
@@ -6414,7 +6414,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "vien@superqin.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8345)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8345",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6426,12 +6426,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8345)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8345",
      "quote": "總經理 (President): 陳建利"
     },
     "sector": {
@@ -6492,7 +6492,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@steminent.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7729)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7729",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6504,12 +6504,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7729)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7729",
      "quote": "總經理 (President): 柯景懷"
     },
     "sector": {
@@ -6570,7 +6570,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@dadabroadband.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7901)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7901",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6582,12 +6582,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7901)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7901",
      "quote": "總經理 (President): 劉登榮"
     },
     "sector": {
@@ -6648,7 +6648,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "service@eatogether.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7883)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7883",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6660,12 +6660,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7883)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7883",
      "quote": "總經理 (President): 陳毅航"
     },
     "sector": {
@@ -6726,7 +6726,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "finance@shng.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8908)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8908",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6738,12 +6738,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8908)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8908",
      "quote": "總經理 (President): 王定中"
     }
    },
@@ -6790,7 +6790,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@embestor.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7843)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7843",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6802,12 +6802,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7843)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7843",
      "quote": "總經理 (President): 林傳生"
     },
     "sector": {
@@ -6868,7 +6868,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ellie@nytex.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8058)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8058",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6880,12 +6880,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 8058)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=8058",
      "quote": "總經理 (President): 陳宇涵"
     },
     "sector": {
@@ -6946,7 +6946,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "iemc@iemtw.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6959)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6959",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -6960,12 +6960,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6959)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6959",
      "quote": "總經理 (President): 顧大成"
     },
     "sector": {
@@ -7038,7 +7038,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -7084,7 +7084,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "stmc@shuztung.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4537)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4537",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7096,12 +7096,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4537)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4537",
      "quote": "總經理 (President): 黃棨杉"
     },
     "sector": {
@@ -7162,7 +7162,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "asrockind_investor@asrockind.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7710)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7710",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7174,12 +7174,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7710)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7710",
      "quote": "總經理 (President): 曾瑛俊"
     },
     "sector": {
@@ -7240,7 +7240,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@bellwether-corp.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7861)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7861",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7252,17 +7252,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7861)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7861",
      "quote": "總經理 (President): 徐瑞瑛"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7861)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7861",
      "quote": "發言人 (Spokesperson): 王俊智; 職稱 (Title): 財務長"
     },
     "sector": {
@@ -7323,7 +7323,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@tmytek.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7812)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7812",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7335,17 +7335,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7812)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7812",
      "quote": "總經理 (President): 張書維"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7812)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7812",
      "quote": "發言人 (Spokesperson): 王秀華; 職稱 (Title): 財務副總"
     }
    },
@@ -7392,7 +7392,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "t-fin-stock@tlwgo.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7867)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7867",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7404,12 +7404,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7867)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7867",
      "quote": "總經理 (President): 張栢青"
     },
     "sector": {
@@ -7470,7 +7470,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "admintwn@npiccorporate.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7874)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7874",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7482,12 +7482,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7874)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7874",
      "quote": "總經理 (President): 康潤生"
     },
     "sector": {
@@ -7548,7 +7548,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@johnson-fine.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7763)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7763",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7560,17 +7560,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7763)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7763",
      "quote": "總經理 (President): 陳南超"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7763)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7763",
      "quote": "發言人 (Spokesperson): 莊忠學; 職稱 (Title): 財務長"
     },
     "sector": {
@@ -7631,7 +7631,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@sunplusit.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 5236)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=5236",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7643,12 +7643,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 5236)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=5236",
      "quote": "總經理 (President): 蔡建忠"
     }
    },
@@ -7695,7 +7695,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "investor@hotaileasing.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7855)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7855",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7707,12 +7707,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7855)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7855",
      "quote": "總經理 (President): 謝富來"
     }
    },
@@ -7759,7 +7759,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@climax.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7689)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7689",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7771,12 +7771,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7689)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7689",
      "quote": "總經理 (President): 張再發"
     }
    },
@@ -7823,7 +7823,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@tahopharma.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6467)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6467",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7835,12 +7835,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6467)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6467",
      "quote": "總經理 (President): 李世仁"
     },
     "sector": {
@@ -7901,7 +7901,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "angel13@hengs.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4582)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4582",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7915,12 +7915,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4582)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4582",
      "quote": "總經理 (President): 周曉艷"
     }
    },
@@ -7967,7 +7967,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "invest@tech-zone.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6947)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6947",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -7979,12 +7979,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 6947)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=6947",
      "quote": "總經理 (President): 張德鈞、林學堅、陳國進"
     }
    },
@@ -8031,7 +8031,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@genomics.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4195)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4195",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8045,12 +8045,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4195)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4195",
      "quote": "總經理 (President): 江俊奇"
     }
    },
@@ -8097,7 +8097,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "contact@racev.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 2237)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=2237",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8111,12 +8111,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 2237)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=2237",
      "quote": "總經理 (President): 蔡裕慶"
     }
    },
@@ -8163,7 +8163,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@h2u.ai",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7835)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7835",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8175,17 +8175,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7835)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7835",
      "quote": "總經理 (President): 陳俊嘉"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7835)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7835",
      "quote": "發言人 (Spokesperson): 邱惲翔; 職稱 (Title): 財務長"
     }
    },
@@ -8232,7 +8232,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@swsktv.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7760)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7760",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8244,12 +8244,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7760)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7760",
      "quote": "總經理 (President): 李奇霖"
     }
    },
@@ -8296,7 +8296,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "service@apistek.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7807)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7807",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8308,12 +8308,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7807)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7807",
      "quote": "總經理 (President): 張國鋒"
     },
     "sector": {
@@ -8374,7 +8374,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "hanchorbio_tw@hanchorbio.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7827)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7827",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8388,17 +8388,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7827)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7827",
      "quote": "總經理 (President): 劉世高"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7827)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7827",
      "quote": "發言人 (Spokesperson): 曾木增; 職稱 (Title): 財務長"
     }
    },
@@ -8445,7 +8445,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "pr@aetherai.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7803)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7803",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8459,12 +8459,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7803)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7803",
      "quote": "總經理 (President): 葉肇元"
     }
    },
@@ -8511,7 +8511,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "investors@stemcytebio.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4178)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4178",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8523,12 +8523,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 4178)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=4178",
      "quote": "總經理 (President): 路孔明"
     }
    },
@@ -8575,7 +8575,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "stock@mitacmdt.com",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7821)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7821",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8587,12 +8587,12 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7821)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7821",
      "quote": "總經理 (President): 張樂羣"
     }
    },
@@ -8639,7 +8639,7 @@
    "cfo_email_evidence": null,
    "cfo_email_check": null,
    "company_email": "ir@ pvichem.com.tw",
-   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7768)",
+   "company_email_evidence": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7768",
    "company_email_method": "exchange",
    "ir_contact_name": null,
    "ir_contact_email": null,
@@ -8651,17 +8651,17 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-20T16:42:35.449870+00:00",
+   "fetched_at": "2026-10-20T16:44:36.850792+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7768)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7768",
      "quote": "總經理 (President): 施文昌"
     },
     "cfo_name": {
      "method": "exchange-filing",
-     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03 (company 7768)",
+     "source_url": "https://mops.twse.com.tw/mops/#/web/t05st03?companyId=7768",
      "quote": "發言人 (Spokesperson): 林順陽; 職稱 (Title): 副總經理暨財務長"
     }
    },
