@@ -1,27 +1,27 @@
 {
  "schema_version": "6",
- "generated_at": "2026-10-27T18:00:29.465033+00:00",
+ "generated_at": "2026-10-27T22:13:59.434684+00:00",
  "sources": [
   {
    "name": "Thailand (SET, mai)",
    "tier": "automated",
    "rows": 13,
    "status": "fresh",
-   "as_of": "2026-10-27T18:00:29.465033+00:00"
+   "as_of": "2026-10-27T22:13:59.434684+00:00"
   },
   {
    "name": "Singapore (SGX Catalist)",
    "tier": "automated",
    "rows": 6,
    "status": "fresh",
-   "as_of": "2026-10-27T18:00:29.465033+00:00"
+   "as_of": "2026-10-27T22:13:59.434684+00:00"
   },
   {
    "name": "Malaysia (Bursa)",
    "tier": "semi-automated",
    "rows": 70,
    "status": "fresh",
-   "as_of": "2026-10-27T18:00:29.465033+00:00"
+   "as_of": "2026-10-27T22:13:59.434684+00:00"
   },
   {
    "name": "London (LSE AIM)",
@@ -35,11 +35,11 @@
    "tier": "automated",
    "rows": 37,
    "status": "fresh",
-   "as_of": "2026-10-27T18:00:29.465033+00:00"
+   "as_of": "2026-10-27T22:13:59.434684+00:00"
   }
  ],
  "steps": {
-  "filings": "Thai SEC: 12 parsed, 0 failed",
+  "filings": "Thai SEC: 0 parsed, 0 failed",
   "enrich": {
    "fields_filled": 61,
    "cache_entries": 39,
@@ -108,8 +108,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); capital-hungry sector: Energy (+15)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -186,8 +186,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -269,8 +269,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -352,8 +352,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -425,8 +425,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -508,8 +508,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Media & Services (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -587,8 +587,8 @@
    "gem_fit_rationale": "growth board: mai (+35); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Industrials (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/mai",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -670,8 +670,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -748,8 +748,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); capital-hungry sector: FinTech (+15)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -831,8 +831,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -909,8 +909,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Consumer (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -992,8 +992,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector: Real Estate & Construction (+0)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1070,8 +1070,8 @@
    "gem_fit_rationale": "main board: SET (+0); deal size unknown (+15 of 30, neutral); emerging market: Thailand (+20); sector unknown (+7 of 15, neutral)",
    "source_url": "https://www.set.or.th/en/listing/ipo/upcoming-ipo/set",
    "source_type": "EXCHANGE_API",
-   "source_as_of": "2026-10-26T00:00:00+07:00",
-   "fetched_at": "2026-10-27T18:00:29.469273+00:00",
+   "source_as_of": "2026-10-27T00:00:00+07:00",
+   "fetched_at": "2026-10-27T22:13:59.438936+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -1142,7 +1142,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/metasurface-technologies-holdings-limited/2026-09-28",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1236,7 +1236,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/kin-global-limited/2026-03-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1302,7 +1302,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/assembly-place-holdings-ltd/2025-12-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1403,7 +1403,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/toku-ltd/2025-12-10",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1469,7 +1469,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/leong-guan-holdings-limited/2025-09-30",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -1535,7 +1535,7 @@
    "source_url": "https://www.sgx.com/regco/catalodge/infinity-development-holdings-company-limited/2025-09-29",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:00:35.611663+00:00",
+   "fetched_at": "2026-10-27T22:14:05.462424+00:00",
    "data_warnings": [],
    "field_sources": {
     "company_url": {
@@ -5661,7 +5661,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5739,7 +5739,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5824,7 +5824,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5904,7 +5904,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -5989,7 +5989,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -6049,7 +6049,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6132,7 +6132,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6210,7 +6210,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6288,7 +6288,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6366,7 +6366,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6444,7 +6444,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6508,7 +6508,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6586,7 +6586,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6666,7 +6666,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6744,7 +6744,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {},
    "schema_version": "6"
@@ -6802,7 +6802,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6880,7 +6880,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -6958,7 +6958,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7041,7 +7041,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7110,7 +7110,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7188,7 +7188,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7266,7 +7266,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7349,7 +7349,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7413,7 +7413,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7477,7 +7477,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7541,7 +7541,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7621,7 +7621,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7685,7 +7685,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7751,7 +7751,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7817,7 +7817,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7881,7 +7881,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -7950,7 +7950,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8014,7 +8014,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8094,7 +8094,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8165,7 +8165,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8229,7 +8229,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8293,7 +8293,7 @@
    "source_url": "https://www.twse.com.tw/en/listed/listed/apply-listing.html",
    "source_type": "EXCHANGE_API",
    "source_as_of": null,
-   "fetched_at": "2026-10-27T18:01:03.176437+00:00",
+   "fetched_at": "2026-10-27T22:14:30.114721+00:00",
    "data_warnings": [],
    "field_sources": {
     "ceo_name": {
@@ -8579,645 +8579,645 @@
   }
  ],
  "translations": {
-  "李世仁": {
-   "en": "Shih-Jen Li",
-   "kind": "name"
-  },
-  "王秀華": {
-   "en": "Hsiu-Hua Wang",
-   "kind": "name"
-  },
-  "Main business: 散熱風扇及散熱模組之研發、製造及銷售": {
-   "en": "Main business: R&D, manufacture and sale of cooling fans and thermal modules",
-   "kind": "text"
-  },
-  "Main business: 高科技電子產業製程精密設備製造及銷售。、自行車及自動化專用機械製造及銷售。、液壓管件、模具製造及銷售。": {
-   "en": "Main business: Manufacture and sale of precision process equipment for the high-tech electronics industry; manufacture and sale of bicycles and dedicated automation machinery; manufacture and sale of hydraulic fittings and moulds",
-   "kind": "text"
-  },
-  "Main business: 餐館業": {
-   "en": "Main business: Restaurants",
-   "kind": "text"
-  },
-  "ประพันธ์ อังอติชาติ — ประธานเจ้าหน้าที่บริหาร": {
-   "en": "Praphan Angatichat — Chief Executive Officer",
-   "kind": "text"
-  },
-  "หิรัญ ตันมิตร": {
-   "en": "Hiran Tanmit",
-   "kind": "name"
-  },
-  "李黛苹": {
-   "en": "Tai-Ping Li",
-   "kind": "name"
-  },
-  "Main business: 居家裝修相關商品及服務之銷售": {
-   "en": "Main business: Sale of home improvement products and services",
-   "kind": "text"
-  },
-  "總經理 (President): 陳毅航": {
-   "en": "President: Yi-Hang Chen",
-   "kind": "text"
-  },
-  "อัครวัฒน์ ฉันทแดนสุวรรณ — ประธานเจ้าหน้าที่บริหาร (Chief Executive Officer)": {
-   "en": "Akarawat Chantadansuwan — Chief Executive Officer",
-   "kind": "text"
-  },
-  "วาทินี พ่วงอนุเคราะห์ — ประธานเจ้าหน้าที่บริหาร สายงานบัญชีและการเงิน": {
-   "en": "Watinee Puanganukroh — Chief Executive Officer, Accounting and Finance Line",
-   "kind": "text"
-  },
-  "曾木增": {
-   "en": "Mu-Tseng Tseng",
-   "kind": "name"
-  },
-  "อัครวัฒน์ ฉันทแดนสุวรรณ": {
-   "en": "Akarawat Chantadansuwan",
-   "kind": "name"
-  },
-  "邱惲翔": {
-   "en": "Yun-Hsiang Chiu",
-   "kind": "name"
-  },
-  "張樂羣": {
-   "en": "Le-Chun Chang",
-   "kind": "name"
-  },
-  "ธัญลักษณ์ ปรีชาติวงศ์ — กรรมการ / ประธานเจ้าหน้าที่สายงานการเงิน / เลขานุการบริษัท": {
-   "en": "Thanyaluck Preechatiwong — Director / Chief Officer, Finance / Company Secretary",
-   "kind": "text"
-  },
-  "วิเศษศักดิ์ ระเบียบพนา": {
-   "en": "Wisetsak Rabiabpana",
-   "kind": "name"
-  },
-  "ก้องกิต โกกนุทาภรณ์ — กรรมการบริษัท / ประธานเจ้าหน้าที่บริหาร / กรรมการบริหารความเสี่ยงและความยั่งยืนองค์กร": {
-   "en": "Kongkit Koknuthaporn — Director / Chief Executive Officer / Member of the Risk Management and Corporate Sustainability Committee",
-   "kind": "text"
-  },
-  "กาย นันต์ธนะ": {
-   "en": "Kai Nantana",
-   "kind": "name"
-  },
-  "總經理 (President): 蕭豐格": {
-   "en": "President: Feng-Ko Hsiao",
-   "kind": "text"
-  },
-  "總經理 (President): 江俊奇": {
-   "en": "President: Chun-Chi Chiang",
-   "kind": "text"
-  },
-  "李奇霖": {
-   "en": "Chi-Lin Li",
-   "kind": "name"
-  },
-  "許志宏": {
-   "en": "Chih-Hung Hsu",
-   "kind": "name"
-  },
-  "เกริกไกรวัล แสงประดิษฐ์": {
-   "en": "Krerkkraiwan Saengpradit",
-   "kind": "name"
-  },
-  "總經理 (President): 劉登榮": {
-   "en": "President: Teng-Jung Liu",
-   "kind": "text"
-  },
-  "總經理 (President): 莊士杰": {
-   "en": "General Manager (President): Shih-Chieh Chuang",
-   "kind": "text"
-  },
-  "กาญจนา เพ็งหนู": {
-   "en": "Kanjana Pengnu",
-   "kind": "name"
-  },
-  "อรปิยะ อังอติชาติ": {
-   "en": "Ornpiya Angatichat",
-   "kind": "name"
-  },
-  "陳建利": {
-   "en": "Chien-Li Chen",
-   "kind": "name"
-  },
-  "蕭豐格": {
-   "en": "Feng-Ko Hsiao",
-   "kind": "name"
-  },
-  "總經理 (President): 柯景懷": {
-   "en": "President: Ching-Huai Ko",
-   "kind": "text"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญของบริษัทฯ เป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ จัดตั้งนักลงทุนสัมพันธ์ เพื่อทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและนักลงทุน รวมทั้งข้อมูลทางการเงินของบริษัทฯ เช่น ผลการดำเนินงาน งบการเงิน และคำอธิบายและวิเคราะห์ของฝ่ายจัดการ (MD&A) เป็นต้น ให้ผู้ถือหุ้นและนักลงทุนได้รับทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อหน่วยงานนักลงทุนสัมพันธ์ได้ที่ | ชื่อ-สกุล: นายวัฒนา โมรากุล | ตำแหน่ง: ประธานเจ้าหน้าที่ฝ่ายบัญชีการเงิน (CFO) | Email: ir@petpal.co.th |": {
-   "en": "Head of Investor Relations and Contact Information | To ensure that the Company's material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function to serve as the central point for disclosing material information to shareholders and investors, including the Company's financial information such as operating results, financial statements and management discussion and analysis (MD&A), so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations unit can be contacted at | Name: Mr. Wattana Morakul | Position: Chief Officer, Accounting and Finance (CFO) | Email: ir@petpal.co.th |",
-   "kind": "text"
-  },
-  "วิชญ์ สุทธิพงษ์ฉวีกุล — ประธานเจ้าหน้าที่สายงานการเงิน": {
-   "en": "Wit Suttipongchaweekul — Chief Officer, Finance",
-   "kind": "text"
-  },
-  "總經理 (President): 李黛苹": {
-   "en": "President: Tai-Ping Li",
-   "kind": "text"
-  },
-  "Main business: 再生醫療製劑研發、外泌體代工服務(Exosome Foundry)": {
-   "en": "Main business: Regenerative medicine product R&D; exosome contract manufacturing (Exosome Foundry)",
-   "kind": "text"
-  },
-  "ประพันธ์ อังอติชาติ": {
-   "en": "Praphan Angatichat",
-   "kind": "name"
-  },
-  "วิชญ์ สุทธิพงษ์ฉวีกุล": {
-   "en": "Wit Suttipongchaweekul",
-   "kind": "name"
-  },
-  "วิเศษศักดิ์ ระเบียบพนา — ประธานเจ้าหน้าที่บริหาร": {
-   "en": "Wisetsak Rabiabpana — Chief Executive Officer",
-   "kind": "text"
-  },
-  "張書維": {
-   "en": "Shu-Wei Chang",
-   "kind": "name"
-  },
   "ก้องกิต โกกนุทาภรณ์": {
    "en": "Kongkit Koknuthaporn",
-   "kind": "name"
-  },
-  "สุธีพงศ์ อินทุสุต": {
-   "en": "Sutheepong Inthusut",
-   "kind": "name"
-  },
-  "總經理 (President): 陳泓愷; 訴訟及非訟代理人 (legal representative): 陳泓愷, CHEN, HUNG-KAI": {
-   "en": "President: Hung-Kai Chen; legal representative: Hung-Kai Chen, CHEN, HUNG-KAI",
-   "kind": "text"
-  },
-  "發言人 (Spokesperson): 王俊智; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Chun-Chih Wang; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | บริษัทฯ ได้มอบหมายให้นายชยุตม์ กิตติสมุทร์ ตำแหน่ง นักพัฒนาธุรกิจและวิเคราะห์การลงุทน ทำหน้าที่ติดต่อสื่อสารกับผู้ลงทุน ผู้ถือหุ้น นักวิเคราะห์ นักลงทุนสถาบัน และประชาชนทั่วไป ซึ่งสามารถติดต่อขอทราบข้อมูลบริษัทฯ ได้ตามช่องทางดังต่อไปนี้ | หมายเลขโทรศัพท์ : 065-863-3499 | Email : chayut.k@thaieasternbiopower.co.th |": {
-   "en": "Head of Investor Relations and Contact Information | The Company has assigned Mr. Chayut Kittisamut, Business Development and Investment Analyst, to communicate with investors, shareholders, analysts, institutional investors and the general public, who can contact the Company for information through the following channels | Telephone: 065-863-3499 | Email : chayut.k@thaieasternbiopower.co.th |",
-   "kind": "text"
-  },
-  "Main business: 幹細胞新藥研發": {
-   "en": "Main business: Stem-cell new drug R&D",
-   "kind": "text"
-  },
-  "葉肇元": {
-   "en": "Chao-Yuan Yeh",
-   "kind": "name"
-  },
-  "總經理 (President): 徐瑞瑛": {
-   "en": "President: Jui-Ying Hsu",
-   "kind": "text"
-  },
-  "劉世高": {
-   "en": "Shih-Kao Liu",
-   "kind": "name"
-  },
-  "Main business: 電宰家禽及生鮮肉品買賣、肉品加工及加工肉品買賣、商品買賣": {
-   "en": "Main business: Poultry slaughtering and fresh meat trading; meat processing and processed meat trading; merchandise trading",
-   "kind": "text"
-  },
-  "Main business: 特殊胺類固化劑、特殊異氰酸酯固化劑、功能性塗料及其他": {
-   "en": "Main business: Specialty amine curing agents, specialty isocyanate curing agents, functional coatings and others",
-   "kind": "text"
-  },
-  "總經理 (President): 張國鋒": {
-   "en": "President: Kuo-Feng Chang",
-   "kind": "text"
-  },
-  "總經理 (President): 黃棨杉": {
-   "en": "President: Chi-Shan Huang",
-   "kind": "text"
-  },
-  "總經理 (President): 謝富來": {
-   "en": "President: Fu-Lai Hsieh",
-   "kind": "text"
-  },
-  "蔡建忠": {
-   "en": "Chien-Chung Tsai",
-   "kind": "name"
-  },
-  "สมชัยอัครวิทยาภูมิ": {
-   "en": "Somchai Akarawitthayaphum",
-   "kind": "name"
-  },
-  "Main business: 免疫療法醫藥研發": {
-   "en": "Main business: Immunotherapy drug R&D",
-   "kind": "text"
-  },
-  "謝富來": {
-   "en": "Fu-Lai Hsieh",
-   "kind": "name"
-  },
-  "張德鈞、林學堅、陳國進": {
-   "en": "Te-Chun Chang, Hsueh-Chien Lin, Kuo-Chin Chen",
-   "kind": "name"
-  },
-  "ทิฆัมพร ไทรหอมหวล": {
-   "en": "Tikhamporn Saihomhuan",
-   "kind": "name"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ | บริษัทมอบหมายให้ นายชานนท์ นุชถนอม": {
-   "en": "Head of Investor Relations | The Company has assigned Mr. Chanon Nutthanom",
-   "kind": "text"
-  },
-  "ธีระยุทธ์ รัตนโพธิ์แสงศรี — ประธานเจ้าหน้าที่ฝ่ายการเงิน (Chief Financial Officer)": {
-   "en": "Theerayut Rattanaphosaengsri — Chief Financial Officer",
-   "kind": "text"
-  },
-  "總經理 (President): 路孔明": {
-   "en": "President: Kung-Ming Lu",
-   "kind": "text"
-  },
-  "Main business: 運動活動服務 （體育賽事舉辦、運動品牌行銷、運動經紀)、運動場館運營及運動教育課程、自有IP運動相關及廣告業務": {
-   "en": "Main business: Sports event services (sports event organisation, sports brand marketing, sports agency), sports venue operation and sports education courses, proprietary-IP sports and advertising business",
-   "kind": "text"
-  },
-  "Main business: 微污染解決方案服務、化學濾網研發、再生及銷售": {
-   "en": "Main business: Micro-contamination solution services; chemical filter R&D, regeneration and sales",
-   "kind": "text"
-  },
-  "Main business: 經營各式電腦、電子及通訊產品有關之電子連接器之銷售": {
-   "en": "Main business: Sale of electronic connectors for computer, electronic and communications products",
-   "kind": "text"
-  },
-  "康潤生": {
-   "en": "Jun-Sheng Kang",
-   "kind": "name"
-  },
-  "總經理 (President): 張樂羣": {
-   "en": "President: Le-Chun Chang",
-   "kind": "text"
-  },
-  "陳宇涵": {
-   "en": "Yu-Han Chen",
-   "kind": "name"
-  },
-  "總經理 (President): 陳宇涵": {
-   "en": "President: Yu-Han Chen",
-   "kind": "text"
-  },
-  "王俊智": {
-   "en": "Chun-Chih Wang",
-   "kind": "name"
-  },
-  "สินีรัตน์ โตบารมีกุล": {
-   "en": "Sineerat Tobaramikul",
-   "kind": "name"
-  },
-  "總經理 (President): 李奇霖": {
-   "en": "President: Chi-Lin Li",
-   "kind": "text"
-  },
-  "周曉艷": {
-   "en": "Hsiao-Yen Chou",
-   "kind": "name"
-  },
-  "徐瑞瑛": {
-   "en": "Jui-Ying Hsu",
-   "kind": "name"
-  },
-  "黃棨杉": {
-   "en": "Chi-Shan Huang",
-   "kind": "name"
-  },
-  "Main business: 工業級快閃記憶體模組、工業級快閃記憶體控制器與方案": {
-   "en": "Main business: Industrial-grade flash memory modules; industrial-grade flash memory controllers and solutions",
-   "kind": "text"
-  },
-  "詹克群": {
-   "en": "Ko-Chun Chan",
-   "kind": "name"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์ และมอบหมายให้ นายนพดล สีหปัญญา และนางสาววรรณวิษา ตุลย์มงคล ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อฝ่ายนักลงทุนสัมพันธ์ได้ที่ | นายนพดล สีหปัญญา | โทร: 081-987-7018 | Email: nophadon@sia.co.th |": {
-   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Mr. Nophadon Sihapanya and Ms. Wanwisa Tunmongkol as heads of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations function can be contacted at | Mr. Nophadon Sihapanya | Tel: 081-987-7018 | Email: nophadon@sia.co.th |",
-   "kind": "text"
-  },
-  "總經理 (President): 蔡裕慶": {
-   "en": "President: Yu-Ching Tsai",
-   "kind": "text"
-  },
-  "กาญจนา เพ็งหนู — ผู้อำนวยการฝ่ายการเงินและบัญชี": {
-   "en": "Kanjana Pengnu — Director, Finance and Accounting",
-   "kind": "text"
-  },
-  "總經理 (President): 曾瑛俊": {
-   "en": "President: Ying-Chun Tseng",
-   "kind": "text"
-  },
-  "江俊奇": {
-   "en": "Chun-Chi Chiang",
-   "kind": "name"
-  },
-  "總經理 (President): 張憲銘": {
-   "en": "President: Hsien-Ming Chang",
-   "kind": "text"
-  },
-  "Industry: 半導體業": {
-   "en": "Industry: Semiconductors",
-   "kind": "text"
-  },
-  "總經理 (President): 陳俊嘉": {
-   "en": "President: Chun-Chia Chen",
-   "kind": "text"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ | ชื่อ | นางสาววาทินี พ่วงอนุเคราะห์ | อีเมล | watinee.po@suparich.co.th |": {
-   "en": "Head of Investor Relations | Name | Ms. Watinee Puanganukroh | Email | watinee.po@suparich.co.th |",
-   "kind": "text"
-  },
-  "總經理 (President): 葉肇元": {
-   "en": "President: Chao-Yuan Yeh",
-   "kind": "text"
-  },
-  "หิรัญ ตันมิตร — กรรมการบริษัท / กรรมการสรรหาและพิจารณาค่าตอบแทน / ประธานคณะกรรมการบริหาร / ประธานเจ้าหน้าที่บริหาร / รักษาการประธานเจ้าหน้าที่บริหารสายงานปฏิบัติการ": {
-   "en": "Hiran Tanmit — Director / Member of the Nomination and Remuneration Committee / Chairman of the Executive Committee / Chief Executive Officer / Acting Chief Executive Officer, Operations Line",
-   "kind": "text"
-  },
-  "陳南超": {
-   "en": "Nan-Chao Chen",
-   "kind": "name"
-  },
-  "總經理 (President): 蔡建忠": {
-   "en": "President: Chien-Chung Tsai",
-   "kind": "text"
-  },
-  "總經理 (President): 陳建利": {
-   "en": "President: Chien-Li Chen",
-   "kind": "text"
-  },
-  "莊士杰": {
-   "en": "Shih-Chieh Chuang",
-   "kind": "name"
-  },
-  "อรปิยะ อังอติชาติ — ประธานเจ้าหน้าที่ฝ่ายบัญชีและการเงิน": {
-   "en": "Ornpiya Angatichat — Chief Officer, Accounting and Finance",
-   "kind": "text"
-  },
-  "總經理 (President): 張書維": {
-   "en": "President: Shu-Wei Chang",
-   "kind": "text"
-  },
-  "สมชัยอัครวิทยาภูมิ — กรรมการผู้จัดการ": {
-   "en": "Somchai Akarawitthayaphum — Managing Director",
-   "kind": "text"
-  },
-  "บุญชัย เดชาโภคิน — ประธานเจ้าหน้าที่บริหาร": {
-   "en": "Boonchai Dechaphokin — Chief Executive Officer",
-   "kind": "text"
-  },
-  "莊姿櫻": {
-   "en": "Tzu-Ying Chuang",
-   "kind": "name"
-  },
-  "วาทินี พ่วงอนุเคราะห์": {
-   "en": "Watinee Puanganukroh",
-   "kind": "name"
-  },
-  "王定中": {
-   "en": "Ting-Chung Wang",
-   "kind": "name"
-  },
-  "สุธีพงศ์ อินทุสุต — กรรมการผู้จัดการ / รองกรรมการผู้จัดการฝ่ายพัฒนาธุรกิจ": {
-   "en": "Sutheepong Inthusut — Managing Director / Deputy Managing Director, Business Development",
-   "kind": "text"
-  },
-  "ชานนท์ นุชถนอม": {
-   "en": "Chanon Nutthanom",
-   "kind": "name"
-  },
-  "劉登榮": {
-   "en": "Teng-Jung Liu",
-   "kind": "name"
-  },
-  "發言人 (Spokesperson): 王秀華; 職稱 (Title): 財務副總": {
-   "en": "Spokesperson: Hsiu-Hua Wang; Title: Vice President, Finance",
-   "kind": "text"
-  },
-  "Main business: 寬頻服務": {
-   "en": "Main business: Broadband services",
-   "kind": "text"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | บริษัทฯ มอบหมายให้ นางสาวทิฆัมพร ไทรหอมหวล ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ข้อมูลเพื่อการติดต่อ: | ที่อยู่ : | 689 ถนนสวนผัก แขวงตลิ่งชัน เขตตลิ่งชัน กรุงเทพมหานคร 10170 | โทรศัพท์ : | 02-402-8288 | อีเมล : | ir@richestsupply.com |": {
-   "en": "Head of Investor Relations and Contact Information | The Company has assigned Ms. Tikhamporn Saihomhuan as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | Contact information: | Address: | 689 Suan Phak Road, Taling Chan Subdistrict, Taling Chan District, Bangkok 10170 | Telephone: | 02-402-8288 | Email: | ir@richestsupply.com |",
-   "kind": "text"
-  },
-  "總經理 (President): 劉世高": {
-   "en": "President: Shih-Kao Liu",
-   "kind": "text"
-  },
-  "ชยุตม์ กิตติสมุทร์": {
-   "en": "Chayut Kittisamut",
-   "kind": "name"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์และมอบหมายให้ นายยศรัณย์ วัณณะพันธุ์ ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง โดยมีข้อมูลติดต่อของนักลงทุนสัมพันธ์ได้ที่ | ที่อยู่ | : | 8899 หมู่ 4 ตำบลปลวกแดง อำเภอปลวกแดง จังหวัดระยอง 21140 | เบอร์โทรศัพท์ | : | 038-029-888 / 061-641-9642 | อีเมล์ | : | yosarun.wa@suen.co.th |": {
-   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Mr. Yosarun Wannaphan as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts. Investor relations contact details: | Address | : | 8899 Moo 4, Pluak Daeng Subdistrict, Pluak Daeng District, Rayong 21140 | Telephone | : | 038-029-888 / 061-641-9642 | Email | : | yosarun.wa@suen.co.th |",
-   "kind": "text"
-  },
-  "ยศรัณย์ วัณณะพันธุ์": {
-   "en": "Yosarun Wannaphan",
-   "kind": "name"
-  },
-  "發言人 (Spokesperson): 曾木增; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Mu-Tseng Tseng; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "วสกร โมรากุล": {
-   "en": "Wasakorn Morakul",
-   "kind": "name"
-  },
-  "張栢青": {
-   "en": "Pai-Ching Chang",
-   "kind": "name"
-  },
-  "總經理 (President): 張德鈞、林學堅、陳國進": {
-   "en": "President: Te-Chun Chang, Hsueh-Chien Lin, Kuo-Chin Chen",
-   "kind": "text"
-  },
-  "กาย นันต์ธนะ — ประธานเจ้าหน้าที่บริหาร": {
-   "en": "Kai Nantana — Chief Executive Officer",
-   "kind": "text"
-  },
-  "張國鋒": {
-   "en": "Kuo-Feng Chang",
-   "kind": "name"
-  },
-  "林傳生": {
-   "en": "Chuan-Sheng Lin",
-   "kind": "name"
-  },
-  "發言人 (Spokesperson): 邱惲翔; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Yun-Hsiang Chiu; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "總經理 (President): 陳南超": {
-   "en": "President: Nan-Chao Chen",
-   "kind": "text"
-  },
-  "總經理 (President): 王定中": {
-   "en": "President: Ting-Chung Wang",
-   "kind": "text"
-  },
-  "發言人 (Spokesperson): 莊忠學; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Chung-Hsueh Chuang; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "莊忠學": {
-   "en": "Chung-Hsueh Chuang",
-   "kind": "name"
-  },
-  "เจษฎา สุขทิศ — ประธานเจ้าหน้าที่บริหารกลุ่มบริษัทฯ": {
-   "en": "Jessada Sukthit — Group Chief Executive Officer",
-   "kind": "text"
-  },
-  "陳毅航": {
-   "en": "Yi-Hang Chen",
-   "kind": "name"
-  },
-  "發言人 (Spokesperson): 詹克群; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Ko-Chun Chan; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "สินีรัตน์ โตบารมีกุล — กรรมการบริษัท / กรรมการบริหาร / ประธานเจ้าหน้าที่บริหารสายงานการเงิน": {
-   "en": "Sineerat Tobaramikul — Director / Executive Director / Chief Executive Officer, Finance Line",
-   "kind": "text"
-  },
-  "發言人 (Spokesperson): 許志宏; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Chih-Hung Hsu; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "บุญชัย เดชาโภคิน": {
-   "en": "Boonchai Dechaphokin",
-   "kind": "name"
-  },
-  "總經理 (President): 周曉艷": {
-   "en": "President: Hsiao-Yen Chou",
-   "kind": "text"
-  },
-  "วสกร โมรากุล — ประธานกรรมการบริหาร/ กรรมการบริษัท/ ประธานเจ้าหน้าที่บริหาร (CEO)/ ประธานเจ้าหน้าที่ฝ่ายการตลาด (CMO)": {
-   "en": "Wasakorn Morakul — Chairman of the Executive Committee / Director / Chief Executive Officer (CEO) / Chief Marketing Officer (CMO)",
-   "kind": "text"
-  },
-  "發言人 (Spokesperson): 莊姿櫻; 職稱 (Title): 財務長": {
-   "en": "Spokesperson: Tzu-Ying Chuang; Title: Chief Financial Officer",
-   "kind": "text"
-  },
-  "柯景懷": {
-   "en": "Ching-Huai Ko",
-   "kind": "name"
-  },
-  "總經理 (President): 林傳生": {
-   "en": "President: Chuan-Sheng Lin",
-   "kind": "text"
-  },
-  "總經理 (President): 張栢青": {
-   "en": "President: Pai-Ching Chang",
-   "kind": "text"
-  },
-  "Main business: 新劑型藥物(505b(2)NDA)開發、透皮及透黏膜藥物傳輸平台技術": {
-   "en": "Main business: Development of new-formulation drugs (505(b)(2) NDA); transdermal and transmucosal drug delivery platform technology",
-   "kind": "text"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้มอบหมายให้นายวิชญ์ สุทธิพงษ์ฉวีกุล ดำรงตำแหน่งเป็นหัวหน้านักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อหัวหน้านักลงทุนสัมพันธ์ ได้ที่ | โทร 02-026-5100 | Email: wit@finnomena.com |": {
-   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has assigned Mr. Wit Suttipongchaweekul as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The head of investor relations can be contacted at | Tel 02-026-5100 | Email: wit@finnomena.com |",
-   "kind": "text"
-  },
-  "Main business: 國防航太控制、通訊模組、半導體晶片設計驗證平台(EDA)、金融科技及其他產品服務": {
-   "en": "Main business: Defence and aerospace control, communication modules, semiconductor chip design verification platform (EDA), fintech and other products and services",
-   "kind": "text"
-  },
-  "วัฒนา โมรากุล": {
-   "en": "Wattana Morakul",
-   "kind": "name"
-  },
-  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์ และมอบหมายให้ นางสาวสินีรัตน์ โตบารมีกุลเป็นหัวหน้างานนักลงทุนสัมพันธ์ และทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อฝ่ายนักลงทุนสัมพันธ์ได้ที่ | โทร 02-080 9188 | Email: ir@eveandboy.com |": {
-   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Ms. Sineerat Tobaramikul as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations function can be contacted at | Tel 02-080 9188 | Email: ir@eveandboy.com |",
-   "kind": "text"
-  },
-  "นพดล สีหปัญญา": {
-   "en": "Nophadon Sihapanya",
-   "kind": "name"
-  },
-  "總經理 (President): 張再發": {
-   "en": "President: Tsai-Fa Chang",
-   "kind": "text"
-  },
-  "總經理 (President): 李世仁": {
-   "en": "President: Shih-Jen Li",
-   "kind": "text"
-  },
-  "張憲銘": {
-   "en": "Hsien-Ming Chang",
-   "kind": "name"
-  },
-  "Main business: 電子化學特殊氣體": {
-   "en": "Main business: Electronic specialty chemical gases",
-   "kind": "text"
-  },
-  "เกริกไกรวัล แสงประดิษฐ์ — กรรมการ / ประธานเจ้าหน้าที่บริหาร": {
-   "en": "Krerkkraiwan Saengpradit — Director / Chief Executive Officer",
-   "kind": "text"
-  },
-  "Main business: 工業電腦主機板、嵌入式工業電腦系統、工業級強固邊緣AIoT系統平台": {
-   "en": "Main business: Industrial computer motherboards, embedded industrial computer systems, industrial-grade rugged edge AIoT system platforms",
-   "kind": "text"
-  },
-  "ธัญลักษณ์ ปรีชาติวงศ์": {
-   "en": "Thanyaluck Preechatiwong",
-   "kind": "name"
-  },
-  "陳俊嘉": {
-   "en": "Chun-Chia Chen",
-   "kind": "name"
-  },
-  "ธีระยุทธ์ รัตนโพธิ์แสงศรี": {
-   "en": "Theerayut Rattanaphosaengsri",
-   "kind": "name"
-  },
-  "總經理 (President): 顧大成": {
-   "en": "President: Ta-Cheng Ku",
-   "kind": "text"
-  },
-  "เจษฎา สุขทิศ": {
-   "en": "Jessada Sukthit",
-   "kind": "name"
-  },
-  "顧大成": {
-   "en": "Ta-Cheng Ku",
-   "kind": "name"
-  },
-  "曾瑛俊": {
-   "en": "Ying-Chun Tseng",
-   "kind": "name"
-  },
-  "總經理 (President): 康潤生": {
-   "en": "President: Jun-Sheng Kang",
-   "kind": "text"
-  },
-  "張再發": {
-   "en": "Tsai-Fa Chang",
    "kind": "name"
   },
   "路孔明": {
    "en": "Kung-Ming Lu",
    "kind": "name"
   },
-  "วัฒนา โมรากุล — กรรมการบริหาร/ กรรมการบริษัท/ ประธานเจ้าหน้าที่ฝ่ายบัญชีการเงิน (CFO)": {
-   "en": "Wattana Morakul — Executive Director / Director / Chief Officer, Accounting and Finance (CFO)",
+  "สินีรัตน์ โตบารมีกุล": {
+   "en": "Sineerat Tobaramikul",
+   "kind": "name"
+  },
+  "總經理 (President): 張再發": {
+   "en": "President: Tsai-Fa Chang",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ | บริษัทมอบหมายให้ นายชานนท์ นุชถนอม": {
+   "en": "Head of Investor Relations | The Company has assigned Mr. Chanon Nutthanom",
+   "kind": "text"
+  },
+  "總經理 (President): 路孔明": {
+   "en": "President: Kung-Ming Lu",
+   "kind": "text"
+  },
+  "蕭豐格": {
+   "en": "Feng-Ko Hsiao",
+   "kind": "name"
+  },
+  "อรปิยะ อังอติชาติ": {
+   "en": "Ornpiya Angatichat",
+   "kind": "name"
+  },
+  "林傳生": {
+   "en": "Chuan-Sheng Lin",
+   "kind": "name"
+  },
+  "總經理 (President): 陳毅航": {
+   "en": "President: Yi-Hang Chen",
+   "kind": "text"
+  },
+  "วิเศษศักดิ์ ระเบียบพนา": {
+   "en": "Wisetsak Rabiabpana",
+   "kind": "name"
+  },
+  "Main business: 再生醫療製劑研發、外泌體代工服務(Exosome Foundry)": {
+   "en": "Main business: Regenerative medicine product R&D; exosome contract manufacturing (Exosome Foundry)",
+   "kind": "text"
+  },
+  "總經理 (President): 江俊奇": {
+   "en": "President: Chun-Chi Chiang",
+   "kind": "text"
+  },
+  "總經理 (President): 蔡裕慶": {
+   "en": "President: Yu-Ching Tsai",
+   "kind": "text"
+  },
+  "總經理 (President): 張書維": {
+   "en": "President: Shu-Wei Chang",
+   "kind": "text"
+  },
+  "總經理 (President): 張國鋒": {
+   "en": "President: Kuo-Feng Chang",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | บริษัทฯ มอบหมายให้ นางสาวทิฆัมพร ไทรหอมหวล ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ข้อมูลเพื่อการติดต่อ: | ที่อยู่ : | 689 ถนนสวนผัก แขวงตลิ่งชัน เขตตลิ่งชัน กรุงเทพมหานคร 10170 | โทรศัพท์ : | 02-402-8288 | อีเมล : | ir@richestsupply.com |": {
+   "en": "Head of Investor Relations and Contact Information | The Company has assigned Ms. Tikhamporn Saihomhuan as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | Contact information: | Address: | 689 Suan Phak Road, Taling Chan Subdistrict, Taling Chan District, Bangkok 10170 | Telephone: | 02-402-8288 | Email: | ir@richestsupply.com |",
+   "kind": "text"
+  },
+  "ประพันธ์ อังอติชาติ": {
+   "en": "Praphan Angatichat",
+   "kind": "name"
+  },
+  "Main business: 高科技電子產業製程精密設備製造及銷售。、自行車及自動化專用機械製造及銷售。、液壓管件、模具製造及銷售。": {
+   "en": "Main business: Manufacture and sale of precision process equipment for the high-tech electronics industry; manufacture and sale of bicycles and dedicated automation machinery; manufacture and sale of hydraulic fittings and moulds",
    "kind": "text"
   },
   "Main business: 依客戶之產品設計及功能需求，提供高性能複合材料解決方案": {
    "en": "Main business: High-performance composite material solutions to customers' product design and functional requirements",
    "kind": "text"
   },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์และมอบหมายให้ นายยศรัณย์ วัณณะพันธุ์ ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง โดยมีข้อมูลติดต่อของนักลงทุนสัมพันธ์ได้ที่ | ที่อยู่ | : | 8899 หมู่ 4 ตำบลปลวกแดง อำเภอปลวกแดง จังหวัดระยอง 21140 | เบอร์โทรศัพท์ | : | 038-029-888 / 061-641-9642 | อีเมล์ | : | yosarun.wa@suen.co.th |": {
+   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Mr. Yosarun Wannaphan as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts. Investor relations contact details: | Address | : | 8899 Moo 4, Pluak Daeng Subdistrict, Pluak Daeng District, Rayong 21140 | Telephone | : | 038-029-888 / 061-641-9642 | Email | : | yosarun.wa@suen.co.th |",
+   "kind": "text"
+  },
+  "總經理 (President): 陳泓愷; 訴訟及非訟代理人 (legal representative): 陳泓愷, CHEN, HUNG-KAI": {
+   "en": "President: Hung-Kai Chen; legal representative: Hung-Kai Chen, CHEN, HUNG-KAI",
+   "kind": "text"
+  },
+  "總經理 (President): 蕭豐格": {
+   "en": "President: Feng-Ko Hsiao",
+   "kind": "text"
+  },
+  "總經理 (President): 陳俊嘉": {
+   "en": "President: Chun-Chia Chen",
+   "kind": "text"
+  },
+  "Main business: 工業電腦主機板、嵌入式工業電腦系統、工業級強固邊緣AIoT系統平台": {
+   "en": "Main business: Industrial computer motherboards, embedded industrial computer systems, industrial-grade rugged edge AIoT system platforms",
+   "kind": "text"
+  },
+  "發言人 (Spokesperson): 王秀華; 職稱 (Title): 財務副總": {
+   "en": "Spokesperson: Hsiu-Hua Wang; Title: Vice President, Finance",
+   "kind": "text"
+  },
+  "Main business: 工業級快閃記憶體模組、工業級快閃記憶體控制器與方案": {
+   "en": "Main business: Industrial-grade flash memory modules; industrial-grade flash memory controllers and solutions",
+   "kind": "text"
+  },
+  "ประพันธ์ อังอติชาติ — ประธานเจ้าหน้าที่บริหาร": {
+   "en": "Praphan Angatichat — Chief Executive Officer",
+   "kind": "text"
+  },
+  "張再發": {
+   "en": "Tsai-Fa Chang",
+   "kind": "name"
+  },
   "Main business: 寵物潔牙骨及機能軟點心之研發、製造及銷售": {
    "en": "Main business: R&D, manufacture and sale of pet dental chews and functional soft treats",
    "kind": "text"
   },
+  "陳毅航": {
+   "en": "Yi-Hang Chen",
+   "kind": "name"
+  },
+  "李世仁": {
+   "en": "Shih-Jen Li",
+   "kind": "name"
+  },
+  "莊忠學": {
+   "en": "Chung-Hsueh Chuang",
+   "kind": "name"
+  },
+  "วาทินี พ่วงอนุเคราะห์ — ประธานเจ้าหน้าที่บริหาร สายงานบัญชีและการเงิน": {
+   "en": "Watinee Puanganukroh — Chief Executive Officer, Accounting and Finance Line",
+   "kind": "text"
+  },
+  "Main business: 國防航太控制、通訊模組、半導體晶片設計驗證平台(EDA)、金融科技及其他產品服務": {
+   "en": "Main business: Defence and aerospace control, communication modules, semiconductor chip design verification platform (EDA), fintech and other products and services",
+   "kind": "text"
+  },
+  "張憲銘": {
+   "en": "Hsien-Ming Chang",
+   "kind": "name"
+  },
+  "陳宇涵": {
+   "en": "Yu-Han Chen",
+   "kind": "name"
+  },
+  "王定中": {
+   "en": "Ting-Chung Wang",
+   "kind": "name"
+  },
+  "曾木增": {
+   "en": "Mu-Tseng Tseng",
+   "kind": "name"
+  },
+  "李黛苹": {
+   "en": "Tai-Ping Li",
+   "kind": "name"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ | ชื่อ | นางสาววาทินี พ่วงอนุเคราะห์ | อีเมล | watinee.po@suparich.co.th |": {
+   "en": "Head of Investor Relations | Name | Ms. Watinee Puanganukroh | Email | watinee.po@suparich.co.th |",
+   "kind": "text"
+  },
+  "張栢青": {
+   "en": "Pai-Ching Chang",
+   "kind": "name"
+  },
+  "กาญจนา เพ็งหนู — ผู้อำนวยการฝ่ายการเงินและบัญชี": {
+   "en": "Kanjana Pengnu — Director, Finance and Accounting",
+   "kind": "text"
+  },
+  "ธีระยุทธ์ รัตนโพธิ์แสงศรี": {
+   "en": "Theerayut Rattanaphosaengsri",
+   "kind": "name"
+  },
+  "總經理 (President): 徐瑞瑛": {
+   "en": "President: Jui-Ying Hsu",
+   "kind": "text"
+  },
+  "กาญจนา เพ็งหนู": {
+   "en": "Kanjana Pengnu",
+   "kind": "name"
+  },
+  "發言人 (Spokesperson): 莊忠學; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Chung-Hsueh Chuang; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 陳南超": {
+   "en": "President: Nan-Chao Chen",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์ และมอบหมายให้ นายนพดล สีหปัญญา และนางสาววรรณวิษา ตุลย์มงคล ดำรงตำแหน่งเป็นหัวหน้างานนักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อฝ่ายนักลงทุนสัมพันธ์ได้ที่ | นายนพดล สีหปัญญา | โทร: 081-987-7018 | Email: nophadon@sia.co.th |": {
+   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Mr. Nophadon Sihapanya and Ms. Wanwisa Tunmongkol as heads of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations function can be contacted at | Mr. Nophadon Sihapanya | Tel: 081-987-7018 | Email: nophadon@sia.co.th |",
+   "kind": "text"
+  },
+  "徐瑞瑛": {
+   "en": "Jui-Ying Hsu",
+   "kind": "name"
+  },
   "蔡裕慶": {
    "en": "Yu-Ching Tsai",
    "kind": "name"
+  },
+  "總經理 (President): 劉世高": {
+   "en": "President: Shih-Kao Liu",
+   "kind": "text"
+  },
+  "เกริกไกรวัล แสงประดิษฐ์ — กรรมการ / ประธานเจ้าหน้าที่บริหาร": {
+   "en": "Krerkkraiwan Saengpradit — Director / Chief Executive Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 曾瑛俊": {
+   "en": "President: Ying-Chun Tseng",
+   "kind": "text"
+  },
+  "อัครวัฒน์ ฉันทแดนสุวรรณ — ประธานเจ้าหน้าที่บริหาร (Chief Executive Officer)": {
+   "en": "Akarawat Chantadansuwan — Chief Executive Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 張樂羣": {
+   "en": "President: Le-Chun Chang",
+   "kind": "text"
+  },
+  "周曉艷": {
+   "en": "Hsiao-Yen Chou",
+   "kind": "name"
+  },
+  "เกริกไกรวัล แสงประดิษฐ์": {
+   "en": "Krerkkraiwan Saengpradit",
+   "kind": "name"
+  },
+  "ธัญลักษณ์ ปรีชาติวงศ์": {
+   "en": "Thanyaluck Preechatiwong",
+   "kind": "name"
+  },
+  "ก้องกิต โกกนุทาภรณ์ — กรรมการบริษัท / ประธานเจ้าหน้าที่บริหาร / กรรมการบริหารความเสี่ยงและความยั่งยืนองค์กร": {
+   "en": "Kongkit Koknuthaporn — Director / Chief Executive Officer / Member of the Risk Management and Corporate Sustainability Committee",
+   "kind": "text"
+  },
+  "張國鋒": {
+   "en": "Kuo-Feng Chang",
+   "kind": "name"
+  },
+  "Main business: 餐館業": {
+   "en": "Main business: Restaurants",
+   "kind": "text"
+  },
+  "王秀華": {
+   "en": "Hsiu-Hua Wang",
+   "kind": "name"
+  },
+  "總經理 (President): 顧大成": {
+   "en": "President: Ta-Cheng Ku",
+   "kind": "text"
+  },
+  "總經理 (President): 李黛苹": {
+   "en": "President: Tai-Ping Li",
+   "kind": "text"
+  },
+  "發言人 (Spokesperson): 邱惲翔; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Yun-Hsiang Chiu; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญของบริษัทฯ เป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ จัดตั้งนักลงทุนสัมพันธ์ เพื่อทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและนักลงทุน รวมทั้งข้อมูลทางการเงินของบริษัทฯ เช่น ผลการดำเนินงาน งบการเงิน และคำอธิบายและวิเคราะห์ของฝ่ายจัดการ (MD&A) เป็นต้น ให้ผู้ถือหุ้นและนักลงทุนได้รับทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อหน่วยงานนักลงทุนสัมพันธ์ได้ที่ | ชื่อ-สกุล: นายวัฒนา โมรากุล | ตำแหน่ง: ประธานเจ้าหน้าที่ฝ่ายบัญชีการเงิน (CFO) | Email: ir@petpal.co.th |": {
+   "en": "Head of Investor Relations and Contact Information | To ensure that the Company's material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function to serve as the central point for disclosing material information to shareholders and investors, including the Company's financial information such as operating results, financial statements and management discussion and analysis (MD&A), so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations unit can be contacted at | Name: Mr. Wattana Morakul | Position: Chief Officer, Accounting and Finance (CFO) | Email: ir@petpal.co.th |",
+   "kind": "text"
+  },
+  "ธีระยุทธ์ รัตนโพธิ์แสงศรี — ประธานเจ้าหน้าที่ฝ่ายการเงิน (Chief Financial Officer)": {
+   "en": "Theerayut Rattanaphosaengsri — Chief Financial Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 葉肇元": {
+   "en": "President: Chao-Yuan Yeh",
+   "kind": "text"
+  },
+  "วิชญ์ สุทธิพงษ์ฉวีกุล — ประธานเจ้าหน้าที่สายงานการเงิน": {
+   "en": "Wit Suttipongchaweekul — Chief Officer, Finance",
+   "kind": "text"
+  },
+  "วัฒนา โมรากุล": {
+   "en": "Wattana Morakul",
+   "kind": "name"
+  },
+  "陳俊嘉": {
+   "en": "Chun-Chia Chen",
+   "kind": "name"
+  },
+  "เจษฎา สุขทิศ — ประธานเจ้าหน้าที่บริหารกลุ่มบริษัทฯ": {
+   "en": "Jessada Sukthit — Group Chief Executive Officer",
+   "kind": "text"
+  },
+  "กาย นันต์ธนะ — ประธานเจ้าหน้าที่บริหาร": {
+   "en": "Kai Nantana — Chief Executive Officer",
+   "kind": "text"
+  },
+  "Industry: 半導體業": {
+   "en": "Industry: Semiconductors",
+   "kind": "text"
+  },
+  "莊姿櫻": {
+   "en": "Tzu-Ying Chuang",
+   "kind": "name"
+  },
+  "柯景懷": {
+   "en": "Ching-Huai Ko",
+   "kind": "name"
+  },
+  "總經理 (President): 李奇霖": {
+   "en": "President: Chi-Lin Li",
+   "kind": "text"
+  },
+  "總經理 (President): 陳建利": {
+   "en": "President: Chien-Li Chen",
+   "kind": "text"
+  },
+  "總經理 (President): 陳宇涵": {
+   "en": "President: Yu-Han Chen",
+   "kind": "text"
+  },
+  "葉肇元": {
+   "en": "Chao-Yuan Yeh",
+   "kind": "name"
+  },
+  "Main business: 免疫療法醫藥研發": {
+   "en": "Main business: Immunotherapy drug R&D",
+   "kind": "text"
+  },
+  "劉世高": {
+   "en": "Shih-Kao Liu",
+   "kind": "name"
+  },
+  "康潤生": {
+   "en": "Jun-Sheng Kang",
+   "kind": "name"
+  },
+  "วาทินี พ่วงอนุเคราะห์": {
+   "en": "Watinee Puanganukroh",
+   "kind": "name"
+  },
+  "總經理 (President): 劉登榮": {
+   "en": "President: Teng-Jung Liu",
+   "kind": "text"
+  },
+  "Main business: 電宰家禽及生鮮肉品買賣、肉品加工及加工肉品買賣、商品買賣": {
+   "en": "Main business: Poultry slaughtering and fresh meat trading; meat processing and processed meat trading; merchandise trading",
+   "kind": "text"
+  },
+  "Main business: 新劑型藥物(505b(2)NDA)開發、透皮及透黏膜藥物傳輸平台技術": {
+   "en": "Main business: Development of new-formulation drugs (505(b)(2) NDA); transdermal and transmucosal drug delivery platform technology",
+   "kind": "text"
+  },
+  "หิรัญ ตันมิตร": {
+   "en": "Hiran Tanmit",
+   "kind": "name"
+  },
+  "Main business: 幹細胞新藥研發": {
+   "en": "Main business: Stem-cell new drug R&D",
+   "kind": "text"
+  },
+  "發言人 (Spokesperson): 王俊智; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Chun-Chih Wang; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 李世仁": {
+   "en": "President: Shih-Jen Li",
+   "kind": "text"
+  },
+  "Main business: 電子化學特殊氣體": {
+   "en": "Main business: Electronic specialty chemical gases",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้จัดตั้งฝ่ายนักลงทุนสัมพันธ์ และมอบหมายให้ นางสาวสินีรัตน์ โตบารมีกุลเป็นหัวหน้างานนักลงทุนสัมพันธ์ และทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อฝ่ายนักลงทุนสัมพันธ์ได้ที่ | โทร 02-080 9188 | Email: ir@eveandboy.com |": {
+   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has established an investor relations function and assigned Ms. Sineerat Tobaramikul as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The investor relations function can be contacted at | Tel 02-080 9188 | Email: ir@eveandboy.com |",
+   "kind": "text"
+  },
+  "莊士杰": {
+   "en": "Shih-Chieh Chuang",
+   "kind": "name"
+  },
+  "總經理 (President): 柯景懷": {
+   "en": "President: Ching-Huai Ko",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | บริษัทฯ ได้มอบหมายให้นายชยุตม์ กิตติสมุทร์ ตำแหน่ง นักพัฒนาธุรกิจและวิเคราะห์การลงุทน ทำหน้าที่ติดต่อสื่อสารกับผู้ลงทุน ผู้ถือหุ้น นักวิเคราะห์ นักลงทุนสถาบัน และประชาชนทั่วไป ซึ่งสามารถติดต่อขอทราบข้อมูลบริษัทฯ ได้ตามช่องทางดังต่อไปนี้ | หมายเลขโทรศัพท์ : 065-863-3499 | Email : chayut.k@thaieasternbiopower.co.th |": {
+   "en": "Head of Investor Relations and Contact Information | The Company has assigned Mr. Chayut Kittisamut, Business Development and Investment Analyst, to communicate with investors, shareholders, analysts, institutional investors and the general public, who can contact the Company for information through the following channels | Telephone: 065-863-3499 | Email : chayut.k@thaieasternbiopower.co.th |",
+   "kind": "text"
+  },
+  "許志宏": {
+   "en": "Chih-Hung Hsu",
+   "kind": "name"
+  },
+  "ทิฆัมพร ไทรหอมหวล": {
+   "en": "Tikhamporn Saihomhuan",
+   "kind": "name"
+  },
+  "總經理 (President): 周曉艷": {
+   "en": "President: Hsiao-Yen Chou",
+   "kind": "text"
+  },
+  "ชยุตม์ กิตติสมุทร์": {
+   "en": "Chayut Kittisamut",
+   "kind": "name"
+  },
+  "วสกร โมรากุล — ประธานกรรมการบริหาร/ กรรมการบริษัท/ ประธานเจ้าหน้าที่บริหาร (CEO)/ ประธานเจ้าหน้าที่ฝ่ายการตลาด (CMO)": {
+   "en": "Wasakorn Morakul — Chairman of the Executive Committee / Director / Chief Executive Officer (CEO) / Chief Marketing Officer (CMO)",
+   "kind": "text"
+  },
+  "總經理 (President): 張德鈞、林學堅、陳國進": {
+   "en": "President: Te-Chun Chang, Hsueh-Chien Lin, Kuo-Chin Chen",
+   "kind": "text"
+  },
+  "เจษฎา สุขทิศ": {
+   "en": "Jessada Sukthit",
+   "kind": "name"
+  },
+  "บุญชัย เดชาโภคิน": {
+   "en": "Boonchai Dechaphokin",
+   "kind": "name"
+  },
+  "陳南超": {
+   "en": "Nan-Chao Chen",
+   "kind": "name"
+  },
+  "Main business: 特殊胺類固化劑、特殊異氰酸酯固化劑、功能性塗料及其他": {
+   "en": "Main business: Specialty amine curing agents, specialty isocyanate curing agents, functional coatings and others",
+   "kind": "text"
+  },
+  "張樂羣": {
+   "en": "Le-Chun Chang",
+   "kind": "name"
+  },
+  "張德鈞、林學堅、陳國進": {
+   "en": "Te-Chun Chang, Hsueh-Chien Lin, Kuo-Chin Chen",
+   "kind": "name"
+  },
+  "李奇霖": {
+   "en": "Chi-Lin Li",
+   "kind": "name"
+  },
+  "陳建利": {
+   "en": "Chien-Li Chen",
+   "kind": "name"
+  },
+  "สินีรัตน์ โตบารมีกุล — กรรมการบริษัท / กรรมการบริหาร / ประธานเจ้าหน้าที่บริหารสายงานการเงิน": {
+   "en": "Sineerat Tobaramikul — Director / Executive Director / Chief Executive Officer, Finance Line",
+   "kind": "text"
+  },
+  "總經理 (President): 謝富來": {
+   "en": "President: Fu-Lai Hsieh",
+   "kind": "text"
+  },
+  "Main business: 居家裝修相關商品及服務之銷售": {
+   "en": "Main business: Sale of home improvement products and services",
+   "kind": "text"
+  },
+  "สมชัยอัครวิทยาภูมิ — กรรมการผู้จัดการ": {
+   "en": "Somchai Akarawitthayaphum — Managing Director",
+   "kind": "text"
+  },
+  "วิชญ์ สุทธิพงษ์ฉวีกุล": {
+   "en": "Wit Suttipongchaweekul",
+   "kind": "name"
+  },
+  "曾瑛俊": {
+   "en": "Ying-Chun Tseng",
+   "kind": "name"
+  },
+  "發言人 (Spokesperson): 許志宏; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Chih-Hung Hsu; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "Main business: 運動活動服務 （體育賽事舉辦、運動品牌行銷、運動經紀)、運動場館運營及運動教育課程、自有IP運動相關及廣告業務": {
+   "en": "Main business: Sports event services (sports event organisation, sports brand marketing, sports agency), sports venue operation and sports education courses, proprietary-IP sports and advertising business",
+   "kind": "text"
+  },
+  "顧大成": {
+   "en": "Ta-Cheng Ku",
+   "kind": "name"
+  },
+  "總經理 (President): 張憲銘": {
+   "en": "President: Hsien-Ming Chang",
+   "kind": "text"
+  },
+  "Main business: 寬頻服務": {
+   "en": "Main business: Broadband services",
+   "kind": "text"
+  },
+  "王俊智": {
+   "en": "Chun-Chih Wang",
+   "kind": "name"
+  },
+  "วิเศษศักดิ์ ระเบียบพนา — ประธานเจ้าหน้าที่บริหาร": {
+   "en": "Wisetsak Rabiabpana — Chief Executive Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 張栢青": {
+   "en": "President: Pai-Ching Chang",
+   "kind": "text"
+  },
+  "詹克群": {
+   "en": "Ko-Chun Chan",
+   "kind": "name"
+  },
+  "ธัญลักษณ์ ปรีชาติวงศ์ — กรรมการ / ประธานเจ้าหน้าที่สายงานการเงิน / เลขานุการบริษัท": {
+   "en": "Thanyaluck Preechatiwong — Director / Chief Officer, Finance / Company Secretary",
+   "kind": "text"
+  },
+  "หัวหน้างานนักลงทุนสัมพันธ์ และข้อมูลเพื่อการติดต่อ | เพื่อให้การเปิดเผยข้อมูลที่สำคัญเป็นไปอย่างถูกต้อง รวดเร็ว และโปร่งใส บริษัทฯ ได้มอบหมายให้นายวิชญ์ สุทธิพงษ์ฉวีกุล ดำรงตำแหน่งเป็นหัวหน้านักลงทุนสัมพันธ์ ทำหน้าที่เป็นศูนย์กลางในการเปิดเผยข้อมูลสำคัญต่อผู้ถือหุ้นและผู้ลงทุน รวมทั้งข้อมูลทางการเงิน เช่น ผลการดำเนินงานและงบการเงินรายไตรมาส รายงานและการวิเคราะห์ของฝ่ายบริหารรายไตรมาส เป็นต้น ให้ผู้ถือหุ้นและผู้ลงทุนได้ทราบอย่างสม่ำเสมอ เท่าเทียม และครบถ้วนตามความเป็นจริง | ทั้งนี้ สามารถติดต่อหัวหน้านักลงทุนสัมพันธ์ ได้ที่ | โทร 02-026-5100 | Email: wit@finnomena.com |": {
+   "en": "Head of Investor Relations and Contact Information | To ensure that material information is disclosed accurately, promptly and transparently, the Company has assigned Mr. Wit Suttipongchaweekul as head of investor relations, serving as the central point for disclosing material information to shareholders and investors, including financial information such as quarterly operating results and financial statements and quarterly management reports and analysis, so that shareholders and investors are informed regularly, equally and completely in line with the facts | The head of investor relations can be contacted at | Tel 02-026-5100 | Email: wit@finnomena.com |",
+   "kind": "text"
+  },
+  "หิรัญ ตันมิตร — กรรมการบริษัท / กรรมการสรรหาและพิจารณาค่าตอบแทน / ประธานคณะกรรมการบริหาร / ประธานเจ้าหน้าที่บริหาร / รักษาการประธานเจ้าหน้าที่บริหารสายงานปฏิบัติการ": {
+   "en": "Hiran Tanmit — Director / Member of the Nomination and Remuneration Committee / Chairman of the Executive Committee / Chief Executive Officer / Acting Chief Executive Officer, Operations Line",
+   "kind": "text"
+  },
+  "สุธีพงศ์ อินทุสุต": {
+   "en": "Sutheepong Inthusut",
+   "kind": "name"
+  },
+  "總經理 (President): 林傳生": {
+   "en": "President: Chuan-Sheng Lin",
+   "kind": "text"
+  },
+  "總經理 (President): 王定中": {
+   "en": "President: Ting-Chung Wang",
+   "kind": "text"
+  },
+  "บุญชัย เดชาโภคิน — ประธานเจ้าหน้าที่บริหาร": {
+   "en": "Boonchai Dechaphokin — Chief Executive Officer",
+   "kind": "text"
+  },
+  "ชานนท์ นุชถนอม": {
+   "en": "Chanon Nutthanom",
+   "kind": "name"
+  },
+  "ยศรัณย์ วัณณะพันธุ์": {
+   "en": "Yosarun Wannaphan",
+   "kind": "name"
+  },
+  "วสกร โมรากุล": {
+   "en": "Wasakorn Morakul",
+   "kind": "name"
+  },
+  "蔡建忠": {
+   "en": "Chien-Chung Tsai",
+   "kind": "name"
+  },
+  "發言人 (Spokesperson): 詹克群; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Ko-Chun Chan; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "อัครวัฒน์ ฉันทแดนสุวรรณ": {
+   "en": "Akarawat Chantadansuwan",
+   "kind": "name"
+  },
+  "發言人 (Spokesperson): 曾木增; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Mu-Tseng Tseng; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "總經理 (President): 莊士杰": {
+   "en": "General Manager (President): Shih-Chieh Chuang",
+   "kind": "text"
+  },
+  "นพดล สีหปัญญา": {
+   "en": "Nophadon Sihapanya",
+   "kind": "name"
+  },
+  "วัฒนา โมรากุล — กรรมการบริหาร/ กรรมการบริษัท/ ประธานเจ้าหน้าที่ฝ่ายบัญชีการเงิน (CFO)": {
+   "en": "Wattana Morakul — Executive Director / Director / Chief Officer, Accounting and Finance (CFO)",
+   "kind": "text"
+  },
+  "劉登榮": {
+   "en": "Teng-Jung Liu",
+   "kind": "name"
+  },
+  "發言人 (Spokesperson): 莊姿櫻; 職稱 (Title): 財務長": {
+   "en": "Spokesperson: Tzu-Ying Chuang; Title: Chief Financial Officer",
+   "kind": "text"
+  },
+  "張書維": {
+   "en": "Shu-Wei Chang",
+   "kind": "name"
+  },
+  "กาย นันต์ธนะ": {
+   "en": "Kai Nantana",
+   "kind": "name"
+  },
+  "黃棨杉": {
+   "en": "Chi-Shan Huang",
+   "kind": "name"
+  },
+  "邱惲翔": {
+   "en": "Yun-Hsiang Chiu",
+   "kind": "name"
+  },
+  "謝富來": {
+   "en": "Fu-Lai Hsieh",
+   "kind": "name"
+  },
+  "總經理 (President): 蔡建忠": {
+   "en": "President: Chien-Chung Tsai",
+   "kind": "text"
+  },
+  "總經理 (President): 康潤生": {
+   "en": "President: Jun-Sheng Kang",
+   "kind": "text"
+  },
+  "江俊奇": {
+   "en": "Chun-Chi Chiang",
+   "kind": "name"
+  },
+  "Main business: 經營各式電腦、電子及通訊產品有關之電子連接器之銷售": {
+   "en": "Main business: Sale of electronic connectors for computer, electronic and communications products",
+   "kind": "text"
+  },
+  "สุธีพงศ์ อินทุสุต — กรรมการผู้จัดการ / รองกรรมการผู้จัดการฝ่ายพัฒนาธุรกิจ": {
+   "en": "Sutheepong Inthusut — Managing Director / Deputy Managing Director, Business Development",
+   "kind": "text"
+  },
+  "總經理 (President): 黃棨杉": {
+   "en": "President: Chi-Shan Huang",
+   "kind": "text"
+  },
+  "อรปิยะ อังอติชาติ — ประธานเจ้าหน้าที่ฝ่ายบัญชีและการเงิน": {
+   "en": "Ornpiya Angatichat — Chief Officer, Accounting and Finance",
+   "kind": "text"
+  },
+  "สมชัยอัครวิทยาภูมิ": {
+   "en": "Somchai Akarawitthayaphum",
+   "kind": "name"
+  },
+  "Main business: 微污染解決方案服務、化學濾網研發、再生及銷售": {
+   "en": "Main business: Micro-contamination solution services; chemical filter R&D, regeneration and sales",
+   "kind": "text"
+  },
+  "Main business: 散熱風扇及散熱模組之研發、製造及銷售": {
+   "en": "Main business: R&D, manufacture and sale of cooling fans and thermal modules",
+   "kind": "text"
   }
  }
 }
