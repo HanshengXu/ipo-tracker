@@ -1,12 +1,6 @@
 {
  "record_id": "XBKK|ARK",
  "filing_url": "https://market.sec.or.th/public/ipos/IPOSEQ01.aspx?TransID=768317",
- "governance_url": "https://market.sec.or.th/public/ipos/IPOSGetFile.aspx?TransID=768318&TransFileSeq=15",
- "ceo": {
-  "name": "สมชัยอัครวิทยาภูมิ",
-  "quote": "สมชัยอัครวิทยาภูมิ — กรรมการผู้จัดการ"
- },
- "cfo": null,
- "ir": null,
- "parsed_at": "2026-11-11T06:19:29.696507+00:00"
+ "governance_url": null,
+ "parsed_at": "2026-11-18T07:28:51.443033+00:00"
 }
