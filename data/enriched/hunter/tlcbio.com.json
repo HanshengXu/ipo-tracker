@@ -1,0 +1,8 @@
+{
+ "domain": "tlcbio.com",
+ "pattern": "{first}",
+ "emails": [],
+ "returned": 10,
+ "dropped": 10,
+ "searched_at": "2026-11-18T20:31:03.353395+00:00"
+}

@@ -1,0 +1,15 @@
+{
+ "domain": "rbt.co.th",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "info@rbt.co.th",
+   "source_url": "https://khaosanroad.org/listing/my-darling-khaosan",
+   "hunter_confidence": 81,
+   "hunter_type": "generic"
+  }
+ ],
+ "returned": 8,
+ "dropped": 7,
+ "searched_at": "2026-11-18T20:31:02.549158+00:00"
+}
