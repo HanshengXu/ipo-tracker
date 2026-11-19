@@ -1,0 +1,15 @@
+{
+ "domain": "nytex.com.tw",
+ "pattern": "{first}",
+ "emails": [
+  {
+   "email": "ir@nytex.com.tw",
+   "source_url": "https://nytex.com.tw/tw/investors.phtml",
+   "hunter_confidence": 78,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 8,
+ "dropped": 7,
+ "searched_at": "2026-11-19T07:25:26.088464+00:00"
+}
