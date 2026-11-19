@@ -1,0 +1,15 @@
+{
+ "domain": "johnson-fine.com",
+ "pattern": "{first}",
+ "emails": [
+  {
+   "email": "ir@johnson-fine.com",
+   "source_url": "https://unlistedstock.com.tw/company/info/%E5%B4%87%E8%88%9C",
+   "hunter_confidence": 75,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 3,
+ "dropped": 2,
+ "searched_at": "2026-11-19T20:37:00.882825+00:00"
+}
