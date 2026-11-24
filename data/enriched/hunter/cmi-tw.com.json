@@ -1,0 +1,15 @@
+{
+ "domain": "cmi-tw.com",
+ "pattern": null,
+ "emails": [
+  {
+   "email": "ir@cmi-tw.com",
+   "source_url": "https://cmi-tw.com/cn/esg/category/%E5%88%A9%E5%AE%B3%E5%85%B3%E4%BF%82%E4%BA%BA",
+   "hunter_confidence": 79,
+   "hunter_type": "personal"
+  }
+ ],
+ "returned": 5,
+ "dropped": 4,
+ "searched_at": "2026-11-24T09:54:20.370998+00:00"
+}
